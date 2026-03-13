@@ -105,7 +105,7 @@
     .nav-logo {
       display: flex; align-items: center; gap: 12px;
     }
-    .nav-logo img { width: 44px; height: 44px; object-fit: contain; }
+    .nav-logo svg { width: 44px; height: 44px; }
     .nav-logo-text {
       font-family: 'Playfair Display', serif;
       font-size: 1.25rem; font-weight: 700;
@@ -183,7 +183,7 @@
       width: 140px; height: 140px; margin: 0 auto 30px;
       animation: float 4s ease-in-out infinite;
     }
-    .hero-logo-main img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3)); }
+    .hero-logo-main svg { width: 100%; height: 100%; filter: drop-shadow(0 4px 20px rgba(0,0,0,0.3)); }
 
     .hero h1 {
       font-size: clamp(3rem, 7vw, 5.5rem);
@@ -270,11 +270,11 @@
     }
     .about-card::before {
       content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(90deg, var(--blue-sv), var(--white), var(--blue-sv));
+      background: linear-gradient(90deg, var(--tan), var(--gold), var(--tan));
     }
     .about-map-illustration {
       width: 100%; aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #e8f0e0, #d4e4c8);
+      background: linear-gradient(135deg, var(--cream-warm), var(--tan-light));
       border-radius: var(--radius);
       display: flex; align-items: center; justify-content: center;
       position: relative; overflow: hidden;
@@ -282,7 +282,7 @@
     .about-map-illustration svg { width: 80%; max-width: 280px; }
     .about-badge {
       position: absolute; bottom: -20px; right: -10px;
-      background: var(--blue-sv); color: var(--white);
+      background: var(--coffee); color: var(--white);
       padding: 16px 24px; border-radius: var(--radius);
       font-family: 'Dancing Script', cursive; font-size: 1.1rem;
       box-shadow: var(--shadow-medium);
@@ -292,7 +292,7 @@
       font-size: clamp(2rem, 3.5vw, 2.8rem);
       color: var(--coffee-dark); margin-bottom: 20px;
     }
-    .about-text h2 .highlight { color: var(--blue-sv); }
+    .about-text h2 .highlight { color: var(--coffee-medium); }
     .about-text p {
       color: var(--text-muted); line-height: 1.8; margin-bottom: 16px;
       font-size: 1.02rem;
@@ -355,7 +355,7 @@
     }
     .menu-card-image .card-tag {
       position: absolute; bottom: 16px; left: 16px;
-      background: var(--blue-sv); color: var(--white);
+      background: var(--coffee); color: var(--white);
       padding: 6px 14px; border-radius: 50px;
       font-size: 0.7rem; font-weight: 700;
       letter-spacing: 1.5px; text-transform: uppercase;
@@ -380,11 +380,11 @@
     /* Coffee card gradient */
     .card-coffee { background: linear-gradient(135deg, #3a2518, #5C3D2E, #8B6914); }
     .card-baked { background: linear-gradient(135deg, #D4A574, #C45D3E, #8B4513); }
-    .card-salvadorian { background: linear-gradient(135deg, #0047AB, #1a5a3a, #003580); }
+    .card-salvadorian { background: linear-gradient(135deg, #5C3D2E, #6F4E37, #3a2518); }
 
     /* ===================== EL SALVADOR BANNER ===================== */
     .sv-banner {
-      background: linear-gradient(135deg, var(--blue-sv) 0%, var(--blue-deep) 50%, #1a4a2e 100%);
+      background: linear-gradient(135deg, var(--coffee) 0%, var(--coffee-dark) 50%, #4a3222 100%);
       color: var(--white); position: relative; overflow: hidden;
       padding: 80px 0;
     }
@@ -445,7 +445,7 @@
       overflow: hidden;
     }
     .order-top {
-      background: linear-gradient(135deg, var(--blue-sv), var(--blue-deep));
+      background: linear-gradient(135deg, var(--coffee), var(--coffee-dark));
       color: var(--white);
       padding: 50px 40px;
       text-align: center;
@@ -463,7 +463,7 @@
     }
     .order-step-num {
       width: 48px; height: 48px; border-radius: 50%;
-      background: var(--cream-warm); color: var(--blue-sv);
+      background: var(--cream-warm); color: var(--coffee);
       display: flex; align-items: center; justify-content: center;
       font-family: 'Playfair Display', serif; font-weight: 700;
       font-size: 1.2rem; margin: 0 auto 16px;
@@ -536,15 +536,15 @@
     }
     .contact-item-icon {
       width: 48px; height: 48px; flex-shrink: 0;
-      background: var(--blue-sv); color: var(--white);
+      background: var(--coffee); color: var(--white);
       border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
     }
     .contact-item-icon svg { width: 22px; height: 22px; }
     .contact-item-text h4 { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--coffee); margin-bottom: 2px; }
     .contact-item-text p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
-    .contact-item-text a { color: var(--blue-sv); transition: color 0.3s; }
-    .contact-item-text a:hover { color: var(--blue-deep); }
+    .contact-item-text a { color: var(--coffee-medium); transition: color 0.3s; }
+    .contact-item-text a:hover { color: var(--coffee-dark); }
 
     .contact-social { margin-top: 40px; }
     .contact-social h4 { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--coffee); margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
@@ -569,14 +569,14 @@
     }
     .contact-map {
       height: 240px;
-      background: linear-gradient(135deg, #e8f0e0, #d4e4c8, #b5d4a0);
+      background: linear-gradient(135deg, var(--cream-warm), var(--tan-light), var(--cream));
       display: flex; align-items: center; justify-content: center;
       position: relative;
     }
     .contact-map-pin {
       text-align: center;
     }
-    .contact-map-pin svg { width: 48px; height: 48px; margin-bottom: 8px; color: var(--terracotta); }
+    .contact-map-pin svg { width: 48px; height: 48px; margin-bottom: 8px; color: var(--coffee); }
     .contact-map-pin p { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
     .contact-map-body { padding: 28px; }
     .contact-map-body h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--coffee-dark); margin-bottom: 8px; }
@@ -616,7 +616,7 @@
     .footer-bottom .sv-love {
       display: inline-flex; align-items: center; gap: 6px;
     }
-    .footer-bottom .heart { color: var(--terracotta); }
+    .footer-bottom .heart { color: var(--gold); }
 
     /* ===================== MOBILE MENU ===================== */
     .mobile-menu {
@@ -672,7 +672,19 @@
   <nav class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#" class="nav-logo">
-        <img src="logo.webp" alt="Coffee & Crumbs logo" />
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#fdf8f3" stroke="#D4A574" stroke-width="2"/>
+          <!-- Mug rim -->
+          <line x1="27" y1="38" x2="69" y2="38" stroke="#5C3D2E" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Mug body -->
+          <path d="M27 38 L29 64 C30 71, 38 75, 50 75 C62 75, 70 71, 71 64 L73 38" fill="none" stroke="#5C3D2E" stroke-width="2.5" stroke-linejoin="round"/>
+          <!-- Handle -->
+          <path d="M69 44 C78 44, 82 50, 82 56 C82 62, 78 66, 69 66" fill="none" stroke="#5C3D2E" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- Steam -->
+          <path d="M40 34 C38 28, 42 24, 40 18" fill="none" stroke="#D4A574" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+          <path d="M50 32 C48 26, 52 22, 50 16" fill="none" stroke="#D4A574" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+          <path d="M60 34 C58 28, 62 24, 60 18" fill="none" stroke="#D4A574" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+        </svg>
         <div class="nav-logo-text">
           Coffee & Crumbs
           <span>Northern Virginia</span>
@@ -706,13 +718,39 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-flag-accent">
-        <span class="flag-bar flag-blue"></span>
-        <span class="flag-bar flag-white"></span>
-        <span class="flag-bar flag-blue"></span>
+        <svg width="30" height="20" viewBox="0 0 30 20" style="border-radius:3px; flex-shrink:0; overflow:hidden;">
+          <rect width="30" height="7" fill="#0047AB"/>
+          <rect y="7" width="30" height="6" fill="#FFFFFF"/>
+          <rect y="13" width="30" height="7" fill="#0047AB"/>
+          <!-- Simplified coat of arms -->
+          <g transform="translate(15,10)">
+            <polygon points="0,-4 2.5,2 -2.5,2" fill="#2D7A3A" opacity="0.8"/>
+            <circle cx="0" cy="0" r="1.2" fill="#D4A574"/>
+          </g>
+        </svg>
         Inspired by El Salvador
       </div>
       <div class="hero-logo-main">
-        <img src="logo.webp" alt="Coffee & Crumbs logo" />
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="96" fill="rgba(255,255,255,0.05)" stroke="rgba(212,165,116,0.3)" stroke-width="2"/>
+          <!-- Mug rim -->
+          <line x1="54" y1="78" x2="138" y2="78" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Mug body -->
+          <path d="M54 78 L58 132 C60 145, 76 153, 100 153 C124 153, 140 145, 142 132 L146 78" fill="none" stroke="white" stroke-width="3.5" stroke-linejoin="round"/>
+          <!-- Handle -->
+          <path d="M138 90 C156 90, 164 102, 164 114 C164 126, 156 136, 138 136" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Steam with animation -->
+          <path d="M82 72 C80 62, 84 56, 82 46" fill="none" stroke="#D4A574" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite"/>
+          </path>
+          <path d="M100 68 C98 58, 102 52, 100 42" fill="none" stroke="#D4A574" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+            <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.5s" repeatCount="indefinite"/>
+          </path>
+          <path d="M118 72 C116 62, 120 56, 118 46" fill="none" stroke="#D4A574" stroke-width="2.5" stroke-linecap="round" opacity="0.6">
+            <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.5s" repeatCount="indefinite"/>
+          </path>
+          <ellipse cx="100" cy="166" rx="28" ry="6" fill="#D4A574" opacity="0.15"/>
+        </svg>
       </div>
       <h1>Coffee <span class="ampersand">&</span> Crumbs</h1>
       <p class="hero-sub">Hecho con amor en Virginia</p>
@@ -737,22 +775,22 @@
             <div class="about-map-illustration">
               <svg viewBox="0 0 300 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <!-- Stylized El Salvador map shape -->
-                <path d="M60 130 C70 110, 90 90, 120 85 C140 82, 160 78, 190 80 C210 82, 230 90, 245 100 C255 108, 250 125, 240 135 C225 148, 200 150, 175 148 C150 146, 130 150, 110 145 C90 140, 70 140, 60 130Z" fill="#0047AB" opacity="0.15" stroke="#0047AB" stroke-width="2"/>
+                <path d="M60 130 C70 110, 90 90, 120 85 C140 82, 160 78, 190 80 C210 82, 230 90, 245 100 C255 108, 250 125, 240 135 C225 148, 200 150, 175 148 C150 146, 130 150, 110 145 C90 140, 70 140, 60 130Z" fill="#5C3D2E" opacity="0.15" stroke="#5C3D2E" stroke-width="2"/>
                 <!-- Coffee bean -->
                 <ellipse cx="150" cy="115" rx="18" ry="24" fill="#5C3D2E" transform="rotate(-15 150 115)"/>
                 <path d="M145 98 C148 108, 148 122, 145 132" fill="none" stroke="#3a2518" stroke-width="1.5" stroke-linecap="round"/>
                 <!-- Volcano silhouette -->
-                <path d="M80 155 L110 100 L120 105 L130 95 L160 155Z" fill="#2D7A3A" opacity="0.3"/>
-                <path d="M170 155 L200 110 L210 115 L220 108 L240 155Z" fill="#2D7A3A" opacity="0.25"/>
+                <path d="M80 155 L110 100 L120 105 L130 95 L160 155Z" fill="#6F4E37" opacity="0.3"/>
+                <path d="M170 155 L200 110 L210 115 L220 108 L240 155Z" fill="#6F4E37" opacity="0.25"/>
                 <!-- Stars -->
                 <circle cx="90" cy="70" r="2" fill="#D4A574"/>
                 <circle cx="200" cy="65" r="2" fill="#D4A574"/>
                 <circle cx="150" cy="55" r="2.5" fill="#D4A574"/>
                 <!-- Coffee plant leaves -->
-                <path d="M260 70 C250 60, 260 45, 270 50 C280 55, 270 70, 260 70Z" fill="#2D7A3A" opacity="0.4"/>
-                <path d="M255 80 C245 70, 255 55, 265 60 C275 65, 265 80, 255 80Z" fill="#2D7A3A" opacity="0.3"/>
+                <path d="M260 70 C250 60, 260 45, 270 50 C280 55, 270 70, 260 70Z" fill="#6F4E37" opacity="0.4"/>
+                <path d="M255 80 C245 70, 255 55, 265 60 C275 65, 265 80, 255 80Z" fill="#6F4E37" opacity="0.3"/>
                 <!-- Text -->
-                <text x="150" y="180" text-anchor="middle" font-family="Dancing Script, cursive" font-size="18" fill="#0047AB">El Salvador</text>
+                <text x="150" y="180" text-anchor="middle" font-family="Dancing Script, cursive" font-size="18" fill="#5C3D2E">El Salvador</text>
                 <text x="150" y="200" text-anchor="middle" font-family="Lato, sans-serif" font-size="9" fill="#6b5a4e" letter-spacing="3">CENTRAL AMERICA</text>
               </svg>
             </div>
@@ -779,7 +817,7 @@
               </div>
             </div>
             <div class="about-feature">
-              <div class="about-feature-icon">🇸🇻</div>
+              <div class="about-feature-icon">&#127480;&#127483;</div>
               <div>
                 <h4>Salvadorian Quesadillas</h4>
                 <p>Authentic family recipes</p>
@@ -904,14 +942,18 @@
                 <circle cx="35" cy="48" r="2" fill="rgba(255,255,255,0.5)"/>
                 <circle cx="45" cy="47" r="2.5" fill="rgba(255,255,255,0.5)"/>
                 <circle cx="40" cy="52" r="1.5" fill="rgba(255,255,255,0.5)"/>
-                <!-- Flag colors on top -->
-                <line x1="18" y1="22" x2="62" y2="22" stroke="#0047AB" stroke-width="3" stroke-linecap="round"/>
-                <line x1="18" y1="27" x2="62" y2="27" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-                <line x1="18" y1="32" x2="62" y2="32" stroke="#0047AB" stroke-width="3" stroke-linecap="round"/>
+                <!-- El Salvador flag -->
+                <rect x="18" y="18" width="44" height="6" rx="1" fill="#0047AB"/>
+                <rect x="18" y="24" width="44" height="5" rx="1" fill="#FFFFFF" opacity="0.9"/>
+                <rect x="18" y="29" width="44" height="6" rx="1" fill="#0047AB"/>
+                <g transform="translate(40,27)">
+                  <polygon points="0,-3 2,1.5 -2,1.5" fill="#2D7A3A" opacity="0.7"/>
+                  <circle cx="0" cy="0" r="1" fill="#D4A574" opacity="0.8"/>
+                </g>
               </svg>
             </div>
             <div class="card-overlay"></div>
-            <div class="card-icon">&#127790;</div>
+            <div class="card-icon">&#127480;&#127483;</div>
             <div class="card-tag">Authentic</div>
           </div>
           <div class="menu-card-body">
@@ -949,11 +991,15 @@
         </div>
         <div class="sv-banner-visual animate-on-scroll">
           <div class="sv-circle">
-            <div class="sv-flag">
-              <div class="sv-flag-stripe"></div>
-              <div class="sv-flag-stripe"></div>
-              <div class="sv-flag-stripe"></div>
-            </div>
+            <svg width="80" height="52" viewBox="0 0 80 52" style="border-radius:6px; overflow:hidden; margin-bottom:12px;">
+              <rect width="80" height="18" fill="#0047AB"/>
+              <rect y="18" width="80" height="16" fill="#FFFFFF"/>
+              <rect y="34" width="80" height="18" fill="#0047AB"/>
+              <g transform="translate(40,26)">
+                <polygon points="0,-8 5,4 -5,4" fill="#2D7A3A" opacity="0.8"/>
+                <circle cx="0" cy="0" r="2.5" fill="#D4A574"/>
+              </g>
+            </svg>
             <div class="sv-text">El Salvador</div>
             <div class="sv-subtext">Coffee Region</div>
           </div>
@@ -1079,7 +1125,12 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="logo.webp" alt="Coffee & Crumbs logo" style="width:36px;height:36px;object-fit:contain;" />
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="rgba(255,255,255,0.05)" stroke="rgba(212,165,116,0.3)" stroke-width="2"/>
+            <line x1="27" y1="38" x2="69" y2="38" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M27 38 L29 64 C30 71, 38 75, 50 75 C62 75, 70 71, 71 64 L73 38" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M69 44 C78 44, 82 50, 82 56 C82 62, 78 66, 69 66" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
           <div class="footer-brand-text">
             Coffee & Crumbs
             <span>Northern Virginia</span>
