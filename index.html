@@ -4,15 +4,17 @@
   <meta charset="UTF-8" />
   <title>Coffee & Crumbs | Salvadoran Coffee & Bakes in Northern Virginia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Handcrafted Salvadoran coffees, fresh baked goods, and quesadilla salvadoreña from a home kitchen in Northern Virginia." />
+  <meta name="description" content="Colorful Salvadoran coffee, handcrafted drinks, quesadilla salvadoreña, and fresh baked goods from a home kitchen in Northern Virginia." />
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --blue: #0047ab;           /* Salvadoran blue */
-      --cream: #f5e1c8;          /* Warm pastry cream */
+      --blue: #0057d9;       /* Deep tropical blue */
+      --teal: #00b8a9;       /* Ocean teal */
+      --sun: #ffb347;        /* Warm sun orange */
+      --sand: #fff5e6;       /* Soft sand */
       --dark: #111111;
       --light: #ffffff;
     }
@@ -25,7 +27,7 @@
 
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--light);
+      background: radial-gradient(circle at top left, #fffaf0, #ffe8d5 35%, #fff 70%);
       color: var(--dark);
       line-height: 1.6;
     }
@@ -40,9 +42,8 @@
       color: inherit;
     }
 
-    /* Layout helpers */
     .container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
@@ -51,10 +52,10 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid #eee;
-      backdrop-filter: blur(10px);
+      z-index: 20;
+      background: linear-gradient(90deg, rgba(255,245,230,0.96), rgba(255,255,255,0.96));
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
     }
 
     .nav {
@@ -77,20 +78,37 @@
 
     .nav-title {
       font-weight: 600;
-      letter-spacing: 0.12em;
-      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      font-size: 0.82rem;
       text-transform: uppercase;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1.3rem;
       font-size: 0.9rem;
     }
 
     .nav-links a {
-      opacity: 0.8;
+      position: relative;
+      opacity: 0.85;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--sun), var(--teal));
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
     .nav-links a:hover {
@@ -102,140 +120,133 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.65rem 1.4rem;
+      padding: 0.7rem 1.5rem;
       border-radius: 999px;
       font-size: 0.9rem;
       font-weight: 500;
-      border: 1px solid var(--dark);
+      border: none;
       cursor: pointer;
-      transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      white-space: nowrap;
     }
 
     .btn-primary {
-      background: var(--blue);
-      border-color: var(--blue);
+      background: linear-gradient(135deg, var(--blue), var(--teal));
       color: #fff;
     }
 
     .btn-primary:hover {
-      background: #00327a;
-      border-color: #00327a;
       transform: translateY(-1px);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.18);
     }
 
-    .btn-outline {
-      background: transparent;
+    .btn-ghost {
+      background: rgba(255,255,255,0.92);
       color: var(--dark);
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
-    .btn-outline:hover {
-      background: #f5f5f5;
+    .btn-ghost:hover {
       transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.16);
     }
 
     /* Hero */
     .hero {
-      min-height: 80vh;
-      display: flex;
-      flex-wrap: wrap;
+      padding: 4rem 0 3.5rem;
+      background: radial-gradient(circle at top left, #fffbf2, #ffe4c5 42%, #ffe7d0 60%, #fff 85%);
     }
 
-    .hero-left {
-      flex: 0 0 30%;
-      min-height: 280px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1rem;
-      background: linear-gradient(
-        180deg,
-        var(--blue) 0%,
-        var(--blue) 33%,
-        #ffffff 33%,
-        #ffffff 66%,
-        var(--blue) 66%,
-        var(--blue) 100%
-      );
-    }
-
-    .hero-left-inner {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 1.5rem 1.75rem;
-      border-radius: 1.5rem;
-      border: 1px solid rgba(0,0,0,0.05);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.10);
-      text-align: center;
-      max-width: 260px;
-    }
-
-    .hero-logo {
-      max-width: 120px;
-      margin: 0 auto 0.75rem;
-    }
-
-    .hero-tagline {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      opacity: 0.8;
-    }
-
-    .hero-right {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      padding: 2.5rem 1.5rem;
-    }
-
-    .hero-right-inner {
+    .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-      gap: 2rem;
-      width: 100%;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2.5rem;
       align-items: center;
     }
 
-    .hero-text h1 {
-      font-size: clamp(2rem, 2.7vw, 2.6rem);
-      line-height: 1.15;
-      margin-bottom: 0.75rem;
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.85);
+      border: 1px solid rgba(0,0,0,0.04);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    .hero-tag-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--teal);
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 3.3vw, 3rem);
+      line-height: 1.08;
+      margin: 1.25rem 0 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.14em;
     }
 
+    .hero-highlight {
+      background: linear-gradient(120deg, rgba(255,179,71,0.25), rgba(0,184,169,0.12));
+      display: inline-block;
+      padding: 0.15rem 0.4rem;
+      border-radius: 0.9rem;
+    }
+
     .hero-sub {
-      font-size: 0.95rem;
-      max-width: 420px;
-      margin-bottom: 1.25rem;
+      font-size: 0.98rem;
+      max-width: 460px;
+      margin-bottom: 1.4rem;
       opacity: 0.9;
     }
 
     .hero-meta {
       font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      opacity: 0.7;
-      margin-bottom: 1.25rem;
+      letter-spacing: 0.18em;
+      opacity: 0.72;
+      margin-bottom: 1.1rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.8rem;
-      margin-bottom: 1rem;
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
     }
 
     .hero-note {
       font-size: 0.8rem;
-      opacity: 0.7;
+      opacity: 0.72;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-card-bg {
+      position: absolute;
+      inset: 8%;
+      border-radius: 2rem;
+      background: linear-gradient(145deg, rgba(0,87,217,0.14), rgba(255,179,71,0.18));
+      filter: blur(1px);
+      z-index: 0;
     }
 
     .hero-image-wrap {
-      border-radius: 1.5rem;
+      position: relative;
+      border-radius: 2rem;
       overflow: hidden;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.18);
-      background: #f8f8f8;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+      z-index: 1;
     }
 
     .hero-image {
@@ -244,65 +255,113 @@
       object-fit: cover;
     }
 
-    /* Sections */
-    section {
-      padding: 4rem 0;
+    .hero-pill {
+      position: absolute;
+      bottom: 1.4rem;
+      left: 1.4rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
     }
 
-    section:nth-of-type(odd) {
-      background: #faf7f2;
+    .hero-pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--sun);
+    }
+
+    /* Sections */
+    section {
+      padding: 3.5rem 0;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.25rem;
     }
 
     .section-label {
       font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.18em;
-      opacity: 0.7;
-      margin-bottom: 0.4rem;
+      letter-spacing: 0.19em;
+      opacity: 0.8;
     }
 
     .section-title {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       text-transform: uppercase;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
+      margin-top: 0.4rem;
+    }
+
+    .section-underline {
+      width: 80px;
+      height: 3px;
+      border-radius: 999px;
+      margin: 0.75rem auto 0;
+      background: linear-gradient(90deg, var(--sun), var(--teal));
     }
 
     /* Signature items */
+    .signature {
+      background: linear-gradient(180deg, #fff, #fff5e6);
+    }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
+      gap: 1.7rem;
     }
 
     .card {
       background: #fff;
-      border-radius: 1.1rem;
-      border: 1px solid rgba(0,0,0,0.08);
-      padding: 1.25rem;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(0,0,0,0.04);
+      padding: 1.25rem 1.25rem 1.35rem;
       display: flex;
       flex-direction: column;
       gap: 0.75rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.06);
     }
 
     .card img {
-      border-radius: 0.9rem;
+      border-radius: 1.2rem;
       margin-bottom: 0.1rem;
     }
 
+    .card-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,245,230,0.9);
+    }
+
+    .card-pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--teal);
+    }
+
     .card-title {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
     }
 
     .card-text {
       font-size: 0.9rem;
-      opacity: 0.8;
+      opacity: 0.85;
       flex: 1;
     }
 
@@ -310,50 +369,54 @@
       font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.18em;
-      opacity: 0.8;
       margin-top: 0.35rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
 
     .card-link span {
-      border-bottom: 1px solid rgba(0,0,0,0.2);
+      border-bottom: 1px solid rgba(0,0,0,0.3);
     }
 
     /* Story */
     .story {
-      background: #faf7f2; /* light cream, same as other odd sections */
-      color: var(--dark);
-    }
-
-    .story .section-header {
-      margin-bottom: 1.5rem;
-    }
-
-    .story .section-title {
-      color: var(--dark);
+      background: linear-gradient(135deg, #fff5e6, #ffe0c2);
     }
 
     .story-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 2rem;
+      gap: 2.25rem;
       align-items: center;
     }
 
     .story-text {
-      font-size: 0.95rem;
-      opacity: 0.93;
+      font-size: 0.96rem;
+      opacity: 0.94;
     }
 
     .story-text p + p {
       margin-top: 0.9rem;
     }
 
+    .story-highlight {
+      font-weight: 500;
+    }
+
     .story-image {
       max-width: 360px;
       margin: 0 auto;
+      border-radius: 1.6rem;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
     }
 
     /* How to order */
+    .order {
+      background: #fff;
+    }
+
     .steps {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -362,18 +425,23 @@
 
     .step {
       text-align: center;
+      padding: 1.1rem 1rem 1rem;
+      border-radius: 1.3rem;
+      background: #fff8ed;
+      border: 1px dashed rgba(0,0,0,0.06);
     }
 
     .step-number {
       width: 32px;
       height: 32px;
       border-radius: 999px;
-      border: 1px solid var(--dark);
+      background: linear-gradient(135deg, var(--sun), var(--teal));
+      color: #fff;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 0.8rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.45rem;
     }
 
     .step-title {
@@ -384,21 +452,25 @@
 
     .step-text {
       font-size: 0.85rem;
-      opacity: 0.8;
+      opacity: 0.85;
     }
 
     /* Social */
+    .social {
+      background: radial-gradient(circle at top, #fff9f0, #ffffff 70%);
+    }
+
     .social-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 1.5rem;
+      gap: 1.3rem;
+      margin-bottom: 1.7rem;
     }
 
     .social-thumb {
-      border-radius: 1rem;
+      border-radius: 1.3rem;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 16px 38px rgba(0,0,0,0.18);
       background: #f3f3f3;
     }
 
@@ -418,8 +490,9 @@
     /* Footer */
     footer {
       padding: 2.5rem 0;
-      border-top: 1px solid #eee;
       font-size: 0.8rem;
+      background: #0f172a;
+      color: rgba(255,255,255,0.82);
     }
 
     .footer-row {
@@ -431,20 +504,32 @@
     }
 
     .footer-meta {
-      opacity: 0.7;
+      opacity: 0.86;
     }
 
     @media (max-width: 900px) {
-      .hero {
+      .nav {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
       }
 
-      .hero-left {
-        flex: 0 0 auto;
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        font-size: 0.78rem;
       }
 
-      .hero-right-inner {
+      .hero {
+        padding-top: 3.2rem;
+      }
+
+      .hero-inner {
         grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-media {
+        order: -1;
       }
 
       .hero-image-wrap {
@@ -454,22 +539,13 @@
 
       .cards,
       .steps,
-      .social-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
+      .social-grid,
       .story-grid {
         grid-template-columns: minmax(0, 1fr);
-        text-align: left;
       }
 
-      .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 0.75rem;
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
+      .step {
+        text-align: left;
       }
     }
   </style>
@@ -480,7 +556,6 @@
   <header>
     <div class="container nav">
       <div class="nav-left">
-        <!-- Replace logo.png with your actual logo file -->
         <img src="logo.png" alt="Coffee & Crumbs logo" class="nav-logo">
         <div class="nav-title">Coffee &amp; Crumbs</div>
       </div>
@@ -499,88 +574,110 @@
   <!-- Hero -->
   <main>
     <section class="hero">
-      <div class="hero-left">
-        <div class="hero-left-inner">
-          <!-- Logo inside the flag stripe -->
-          <img src="logo.png" alt="Coffee & Crumbs logo" class="hero-logo">
-          <div class="hero-tagline">Salvadoran Coffee &amp; Bakes</div>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="container hero-right-inner">
-          <div class="hero-text">
-            <div class="hero-meta">Northern Virginia &bull; Home-Based</div>
-            <h1>A Taste of El Salvador in Every Cup</h1>
-            <p class="hero-sub">
-              Handcrafted coffees, warm quesadilla salvadoreña, and fresh baked goods from our home kitchen in Northern Virginia.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
-                Order Now for Pickup
-              </a>
-              <a class="btn btn-outline" href="#menu">
-                View Signature Items
-              </a>
-            </div>
-            <div class="hero-note">
-              Powered by Square. Secure online ordering, local pickup only.
-            </div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <div class="hero-tag">
+            <span class="hero-tag-dot"></span>
+            <span>Salvadoran Coffee &amp; Bakes</span>
           </div>
+          <h1 class="hero-title">
+            A Taste of <span class="hero-highlight">El Salvador</span><br />
+            in Northern Virginia
+          </h1>
+          <p class="hero-sub">
+            Colorful, handcrafted drinks, warm quesadilla salvadore f1a, and fresh baked goods  5bfrom our home kitchen 5d 5b in Northern Virginia.
+          </p>
+          <div class="hero-meta">Home-Based  b7 Online Ordering  b7 Local Pickup</div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
+              Order Now on Square
+            </a>
+            <a class="btn btn-ghost" href="#signature">
+              Explore the Favorites
+            </a>
+          </div>
+          <div class="hero-note">
+            Powered by Square. Secure online ordering, pickup only.
+          </div>
+        </div>
 
+        <div class="hero-media">
+          <div class="hero-card-bg"></div>
           <div class="hero-image-wrap">
-            <!-- Replace hero.jpg with your Banksy hero image -->
             <img src="Drinks/IMG_3910.webp" alt="Hand crafted Salvadoran coffee drink" class="hero-image">
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              <span>Handcrafted drinks &amp; home-baked treats</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Signature Items -->
-    <section id="menu">
+    <section id="signature" class="signature">
       <div class="container">
         <div class="section-header">
-          <div class="section-label">Signature</div>
-          <h2 class="section-title">What We’re Known For</h2>
+          <div class="section-label">House Favorites</div>
+          <h2 class="section-title">From Our Kitchen</h2>
+          <div class="section-underline"></div>
         </div>
 
         <div class="cards">
           <article class="card">
             <img src="Drinks/IMG_3265.webp" alt="Hand crafted drinks">
+            <div class="card-pill">
+              <span class="card-pill-dot"></span>
+              <span>Handcrafted Drinks</span>
+            </div>
             <h3 class="card-title">Hand Crafted Drinks</h3>
             <p class="card-text">
-              A rotating selection of hand crafted coffees, espresso drinks, and specialty creations made to order.
+              From creamy lattes to bold pour-overs, our drinks are made to order with Salvadoran-inspired warmth and flavor.
             </p>
             <div class="card-link">
               <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
-                <span>Order on Square</span>
+                <span>Order a Drink</span>
               </a>
+               b7
+              <span>Square</span>
             </div>
           </article>
 
           <article class="card">
             <img src="quesadilla.webp" alt="Whole Salvadoran quesadilla topped with sesame seeds">
-            <h3 class="card-title">Quesadilla Salvadoreña</h3>
+            <div class="card-pill">
+              <span class="card-pill-dot" style="background: var(--sun);"></span>
+              <span>Salvadoran Star</span>
+            </div>
+            <h3 class="card-title">Quesadilla Salvadore f1a</h3>
             <p class="card-text">
-              Our star bake: a rich, slightly sweet Salvadoran quesadilla with sesame seeds, perfect with coffee.
+              Our signature bake: rich, slightly sweet Salvadoran quesadilla with sesame seeds  b7 perfect with your morning coffee.
             </p>
             <div class="card-link">
               <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
                 <span>Add a Slice</span>
               </a>
+               b7
+              <span>Limited batches</span>
             </div>
           </article>
 
           <article class="card">
             <img src="Cakes/A58B23F7-F72C-4D9C-95C2-D9ECC7428908.webp" alt="Fresh baked goods">
-            <h3 class="card-title">Fresh Baked Goods</h3>
+            <div class="card-pill">
+              <span class="card-pill-dot" style="background: var(--blue);"></span>
+              <span>Fresh Bakes</span>
+            </div>
+            <h3 class="card-title">Home Baked Goods</h3>
             <p class="card-text">
-              Rotating treats from our home oven – from sweet breads to cookies – always baked in small batches.
+              Rotating cakes, sweet breads, and cookies baked in small batches  b7 always best enjoyed the same day.
             </p>
             <div class="card-link">
               <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
-                <span>See Today’s Bakes</span>
+                <span>See Today 5cs Treats</span>
               </a>
+               b7
+              <span>Menu on Square</span>
             </div>
           </article>
         </div>
@@ -588,30 +685,27 @@
     </section>
 
     <!-- Story -->
-    <section id="story" class="story">
+    <section class="story">
       <div class="container">
         <div class="section-header">
           <div class="section-label">Our Story</div>
           <h2 class="section-title">From El Salvador to Northern Virginia</h2>
+          <div class="section-underline"></div>
         </div>
 
         <div class="story-grid">
           <div class="story-text">
-            <p>
-              Coffee &amp; Crumbs was born in a cozy Northern Virginia kitchen, but its heart is in El Salvador.
-              Our family recipes, love for coffee, and memories of Salvadoran bakeries shape everything we serve.
+            <p class="story-highlight">
+              Coffee &amp; Crumbs was born in a cozy Northern Virginia kitchen, but its heart will always be in El Salvador.
             </p>
             <p>
-              Every cup is handcrafted, every bake is made in small batches, and every order is a little piece
-              of home shared with our community.
+              Family recipes, Salvadoran coffee, and memories of warm bakery mornings inspire everything we make  b7 from our quesadilla salvadore f1a to each handcrafted drink.
             </p>
             <p>
-              Whether you grew up with quesadilla salvadoreña or you’re trying it for the first time, we’re here
-              to make your coffee break feel warm, welcoming, and a little bit special.
+              Every batch is small, every order is personal, and every pickup is a little taste of home shared with our NOVA community.
             </p>
           </div>
           <div class="story-image">
-            <!-- Replace story-illustration.svg with your flag/landscape illustration -->
             <img src="Cakes/9504E3B4-F03C-49A8-9332-41860A6641B8.webp" alt="Salvadoran quesadilla and baked goods">
           </div>
         </div>
@@ -619,27 +713,28 @@
     </section>
 
     <!-- How to Order -->
-    <section id="order">
+    <section class="order" id="order">
       <div class="container">
         <div class="section-header">
           <div class="section-label">How It Works</div>
           <h2 class="section-title">Order in Three Simple Steps</h2>
+          <div class="section-underline"></div>
         </div>
 
         <div class="steps">
           <div class="step">
             <div class="step-number">1</div>
-            <div class="step-title">Browse Our Menu</div>
+            <div class="step-title">Open Our Square Menu</div>
             <div class="step-text">
-              Tap “Order Now” to open our Square site and see coffees, quesadilla, and fresh bakes.
+              Tap  b3Order Now b2 to browse drinks, quesadilla, and baked goods online.
             </div>
           </div>
 
           <div class="step">
             <div class="step-number">2</div>
-            <div class="step-title">Choose Pickup Time</div>
+            <div class="step-title">Choose Your Pickup Time</div>
             <div class="step-text">
-              Select your items and pickup time that works best for you.
+              Select the day and time that works best  b7 we 5cll have everything ready.
             </div>
           </div>
 
@@ -647,12 +742,12 @@
             <div class="step-number">3</div>
             <div class="step-title">Swing By &amp; Enjoy</div>
             <div class="step-text">
-              Come by our pickup spot in Northern Virginia and take home a taste of El Salvador.
+              Pick up in Northern Virginia and take home a colorful taste of El Salvador.
             </div>
           </div>
         </div>
 
-        <div style="text-align:center; margin-top:2rem;">
+        <div style="text-align:center; margin-top:2.2rem;">
           <a class="btn btn-primary" href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
             Order Now on Square
           </a>
@@ -660,16 +755,16 @@
       </div>
     </section>
 
-    <!-- Social / Visit -->
-    <section id="visit">
+    <!-- Social / Community -->
+    <section class="social" id="visit">
       <div class="container">
         <div class="section-header">
           <div class="section-label">Community</div>
-          <h2 class="section-title">Follow Coffee &amp; Crumbs</h2>
+          <h2 class="section-title">Coffee, Crumbs &amp; Colorful Moments</h2>
+          <div class="section-underline"></div>
         </div>
 
         <div class="social-grid">
-          <!-- Replace these with actual IG/Facebook content or Banksy lifestyle shots -->
           <div class="social-thumb">
             <img src="Cookies/IMG_3573.webp" alt="Coffee & Crumbs cookies and treats">
           </div>
@@ -682,8 +777,8 @@
         </div>
 
         <div class="social-links">
-          <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener">Instagram &mdash; @coffeeandcrumbsva</a>
-          <a href="https://www.facebook.com/Coffeeandcrumbsva/" target="_blank" rel="noopener">Facebook &mdash; Coffee and Crumbs VA</a>
+          <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener">Instagram  b7 @coffeeandcrumbsva</a>
+          <a href="https://www.facebook.com/Coffeeandcrumbsva/" target="_blank" rel="noopener">Facebook  b7 Coffee and Crumbs VA</a>
         </div>
       </div>
     </section>
@@ -696,13 +791,12 @@
         &copy; <span id="year"></span> Coffee &amp; Crumbs. All rights reserved.
       </div>
       <div class="footer-meta">
-        Ordering powered by Square. Home-based operation in Northern Virginia.
+        Home-based operation in Northern Virginia  b7 Ordering powered by Square.
       </div>
     </div>
   </footer>
 
   <script>
-    // Simple year updater
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
