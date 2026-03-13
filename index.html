@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Coffee & Crumbs | Salvadoran Coffee & Bakes in Northern Virginia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Handcrafted Salvadoran coffees, fresh baked goods, and quesadilla salvadoreña from a home kitchen in Northern Virginia." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #0047ab;           /* Salvadoran blue */
+      --cream: #f5e1c8;          /* Warm pastry cream */
+      --dark: #111111;
+      --light: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Layout helpers */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid #eee;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-title {
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      opacity: 0.8;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid var(--dark);
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #00327a;
+      border-color: #00327a;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--dark);
+    }
+
+    .btn-outline:hover {
+      background: #f5f5f5;
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .hero-left {
+      flex: 0 0 30%;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background: linear-gradient(
+        180deg,
+        var(--blue) 0%,
+        var(--blue) 33%,
+        #ffffff 33%,
+        #ffffff 66%,
+        var(--blue) 66%,
+        var(--blue) 100%
+      );
+    }
+
+    .hero-left-inner {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1.5rem 1.75rem;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.10);
+      text-align: center;
+      max-width: 260px;
+    }
+
+    .hero-logo {
+      max-width: 120px;
+      margin: 0 auto 0.75rem;
+    }
+
+    .hero-tagline {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .hero-right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .hero-right-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 2rem;
+      width: 100%;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2rem, 2.7vw, 2.6rem);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      max-width: 420px;
+      margin-bottom: 1.25rem;
+      opacity: 0.9;
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      opacity: 0.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .hero-image-wrap {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.18);
+      background: #f8f8f8;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 0;
+    }
+
+    section:nth-of-type(odd) {
+      background: #faf7f2;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      opacity: 0.7;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    /* Signature items */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1.1rem;
+      border: 1px solid rgba(0,0,0,0.08);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    }
+
+    .card img {
+      border-radius: 0.9rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      flex: 1;
+    }
+
+    .card-link {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      opacity: 0.8;
+      margin-top: 0.35rem;
+    }
+
+    .card-link span {
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    /* Story */
+    .story {
+      background: var(--blue);
+      color: #ffffff;
+    }
+
+    .story .section-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .story .section-title {
+      color: #fff;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .story-text {
+      font-size: 0.95rem;
+      opacity: 0.93;
+    }
+
+    .story-text p + p {
+      margin-top: 0.9rem;
+    }
+
+    .story-image {
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    /* How to order */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: 1px solid var(--dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .step-text {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    /* Social */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-thumb {
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      background: #f3f3f3;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .social-links a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid #eee;
+      font-size: 0.8rem;
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-meta {
+      opacity: 0.7;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .hero-left {
+        flex: 0 0 auto;
+      }
+
+      .hero-right-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-image-wrap {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .cards,
+      .steps,
+      .social-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .story-grid {
+        grid-template-columns: minmax(0, 1fr);
+        text-align: left;
+      }
+
+      .nav-links {
+        display: none; /* keep header super simple on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="nav-left">
+        <!-- Replace logo.png with your actual logo file -->
+        <img src="logo.png" alt="Coffee & Crumbs logo" class="nav-logo">
+        <div class="nav-title">Coffee &amp; Crumbs</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#order">How to Order</a>
+        <a href="#visit">Visit</a>
+        <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="btn btn-primary">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-left-inner">
+          <!-- Logo inside the flag stripe -->
+          <img src="logo.png" alt="Coffee & Crumbs logo" class="hero-logo">
+          <div class="hero-tagline">Salvadoran Coffee &amp; Bakes</div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="container hero-right-inner">
+          <div class="hero-text">
+            <div class="hero-meta">Northern Virginia &bull; Home-Based</div>
+            <h1>A Taste of El Salvador in Every Cup</h1>
+            <p class="hero-sub">
+              Handcrafted coffees, warm quesadilla salvadoreña, and fresh baked goods from our home kitchen in Northern Virginia.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
+                Order Now for Pickup
+              </a>
+              <a class="btn btn-outline" href="#menu">
+                View Signature Items
+              </a>
+            </div>
+            <div class="hero-note">
+              Powered by Square. Secure online ordering, local pickup only.
+            </div>
+          </div>
+
+          <div class="hero-image-wrap">
+            <!-- Replace hero.jpg with your Banksy hero image -->
+            <img src="hero.jpg" alt="Coffee and Salvadoran quesadilla on a table" class="hero-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Signature Items -->
+    <section id="menu">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Signature</div>
+          <h2 class="section-title">What We’re Known For</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <img src="signature-latte.jpg" alt="Salvadoran latte">
+            <h3 class="card-title">Salvadoran Latte</h3>
+            <p class="card-text">
+              A handcrafted latte inspired by traditional Salvadoran flavors, balanced, smooth, and made to order.
+            </p>
+            <div class="card-link">
+              <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
+                <span>Order on Square</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="quesadilla.jpg" alt="Salvadoran quesadilla">
+            <h3 class="card-title">Quesadilla Salvadoreña</h3>
+            <p class="card-text">
+              Our star bake: a rich, slightly sweet Salvadoran quesadilla with sesame seeds, perfect with coffee.
+            </p>
+            <div class="card-link">
+              <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
+                <span>Add a Slice</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="fresh-bakes.jpg" alt="Fresh baked goods">
+            <h3 class="card-title">Fresh Baked Goods</h3>
+            <p class="card-text">
+              Rotating treats from our home oven – from sweet breads to cookies – always baked in small batches.
+            </p>
+            <div class="card-link">
+              <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
+                <span>See Today’s Bakes</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section id="story" class="story">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title">From El Salvador to Northern Virginia</h2>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-text">
+            <p>
+              Coffee &amp; Crumbs was born in a cozy Northern Virginia kitchen, but its heart is in El Salvador.
+              Our family recipes, love for coffee, and memories of Salvadoran bakeries shape everything we serve.
+            </p>
+            <p>
+              Every cup is handcrafted, every bake is made in small batches, and every order is a little piece
+              of home shared with our community.
+            </p>
+            <p>
+              Whether you grew up with quesadilla salvadoreña or you’re trying it for the first time, we’re here
+              to make your coffee break feel warm, welcoming, and a little bit special.
+            </p>
+          </div>
+          <div class="story-image">
+            <!-- Replace story-illustration.svg with your flag/landscape illustration -->
+            <img src="story-illustration.svg" alt="Minimal Salvadoran coffee landscape illustration">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Order -->
+    <section id="order">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">How It Works</div>
+          <h2 class="section-title">Order in Three Simple Steps</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-title">Browse Our Menu</div>
+            <div class="step-text">
+              Tap “Order Now” to open our Square site and see coffees, quesadilla, and fresh bakes.
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-title">Choose Pickup Time</div>
+            <div class="step-text">
+              Select your items and pickup time that works best for you.
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-title">Swing By &amp; Enjoy</div>
+            <div class="step-text">
+              Come by our pickup spot in Northern Virginia and take home a taste of El Salvador.
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2rem;">
+          <a class="btn btn-primary" href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">
+            Order Now on Square
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social / Visit -->
+    <section id="visit">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-label">Community</div>
+          <h2 class="section-title">Follow Coffee &amp; Crumbs</h2>
+        </div>
+
+        <div class="social-grid">
+          <!-- Replace these with actual IG/Facebook content or Banksy lifestyle shots -->
+          <div class="social-thumb">
+            <img src="social-1.jpg" alt="Coffee & Crumbs social photo 1">
+          </div>
+          <div class="social-thumb">
+            <img src="social-2.jpg" alt="Coffee & Crumbs social photo 2">
+          </div>
+          <div class="social-thumb">
+            <img src="social-3.jpg" alt="Coffee & Crumbs social photo 3">
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener">Instagram &mdash; @coffeeandcrumbsva</a>
+          <a href="https://www.facebook.com/Coffeeandcrumbsva/" target="_blank" rel="noopener">Facebook &mdash; Coffee and Crumbs VA</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-row">
+      <div class="footer-meta">
+        &copy; <span id="year"></span> Coffee &amp; Crumbs. All rights reserved.
+      </div>
+      <div class="footer-meta">
+        Ordering powered by Square. Home-based operation in Northern Virginia.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple year updater
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
