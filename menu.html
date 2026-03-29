@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Coffee & Crumbs VA | Menu</title>
+ <meta name="description" content="Browse the Coffee & Crumbs menu – handcrafted drinks, fresh crumbs, and Salvadoran specials. Order online for pickup in Northern Virginia." />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet" />
+ <style>
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; font-size: 16px; }
+ body { font-family: 'Lato', sans-serif; color: #2a1f14; background: #fdf8f3; overflow-x: hidden; line-height: 1.6; }
+ a { text-decoration: none; color: inherit; }
+ img { max-width: 100%; display: block; }
+
+ :root {
+  --blue-sv: #0047AB;
+  --coffee: #5C3D2E;
+  --coffee-dark: #3a2518;
+  --coffee-medium: #6F4E37;
+  --cream: #fdf8f3;
+  --cream-warm: #f5ead9;
+  --tan: #C4A882;
+  --gold: #D4A574;
+  --text-dark: #2a1f14;
+  --text-muted: #6b5a4e;
+  --white: #ffffff;
+  --shadow-soft: 0 4px 20px rgba(42, 31, 20, 0.08);
+  --shadow-medium: 0 8px 40px rgba(42, 31, 20, 0.12);
+  --radius: 12px;
+  --radius-lg: 20px;
+ }
+
+ h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.2; }
+ .script { font-family: 'Dancing Script', cursive; }
+ .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+ .section-pad { padding: 90px 0; }
+
+ /* NAVBAR */
+ .navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(253, 248, 243, 0.96);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 165, 116, 0.15);
+ }
+ .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+ .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--coffee); }
+ .nav-logo-text span { display: block; font-size: 0.7rem; font-family: 'Lato', sans-serif; font-weight: 300; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; }
+ .nav-links { display: flex; align-items: center; gap: 32px; font-size: 0.9rem; }
+ .nav-links a { color: var(--text-muted); position: relative; letter-spacing: .5px; }
+ .nav-links a::after {
+  content: ""; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+  background: var(--gold); border-radius: 2px; transition: width .25s;
+ }
+ .nav-links a:hover { color: var(--coffee); }
+ .nav-links a:hover::after { width: 100%; }
+ .nav-cta {
+  background: var(--blue-sv); color: var(--white);
+  padding: 10px 24px; border-radius: 999px;
+  font-size: 0.85rem; font-weight: 700; letter-spacing: .5px;
+ }
+ .nav-cta::after { display: none; }
+
+ .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; background: none; border: none; }
+ .hamburger span { width: 24px; height: 2px; background: var(--coffee); border-radius: 2px; }
+
+ .mobile-menu {
+  display: none; position: fixed; inset: 0; z-index: 999;
+  background: rgba(253,248,243,0.98);
+  backdrop-filter: blur(20px);
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 20px; opacity: 0; pointer-events: none; transition: opacity .25s;
+ }
+ .mobile-menu.open { opacity: 1; pointer-events: auto; }
+ .mobile-menu a { font-size: 1.2rem; font-family: 'Playfair Display', serif; color: var(--coffee); }
+
+ /* MENU HERO */
+ .menu-hero { padding-top: 90px; min-height: 80vh; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at top, rgba(0,0,0,0.18), transparent 55%), url('hero-table.jpg') center/cover no-repeat; color: #fff; }
+ .menu-hero-inner { padding: 80px 0 70px; text-align: center; text-shadow: 0 2px 30px rgba(0,0,0,0.6); }
+ .menu-hero-kicker { font-size: .8rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 10px; }
+ .menu-hero h1 { font-size: clamp(2.4rem, 5vw, 3.3rem); margin-bottom: 10px; }
+ .menu-hero p { max-width: 560px; margin: 0 auto 24px; font-size: .98rem; color: rgba(255,255,255,0.9); }
+ .menu-hero-tabs { display: inline-flex; gap: 10px; padding: 4px; border-radius: 999px; background: rgba(0,0,0,0.35); }
+ .menu-hero-tab { padding: 8px 18px; border-radius: 999px; font-size: 0.85rem; color: rgba(255,255,255,0.8); cursor: pointer; }
+ .menu-hero-tab-active { background: #fff; color: #2a1f14; }
+
+ /* MENU SECTIONS */
+ .menu-section-header { margin-bottom: 26px; display: flex; align-items: baseline; gap: 10px; justify-content: space-between; flex-wrap: wrap; }
+ .menu-section-header h2 { font-size: 1.8rem; color: var(--coffee-dark); }
+ .menu-section-header p { font-size: .95rem; color: var(--text-muted); max-width: 460px; }
+
+ .menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
+ .menu-card { background: var(--cream); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-soft); }
+ .menu-card-body { padding: 20px 22px 18px; }
+ .menu-card-body h3 { font-size: 1.05rem; color: var(--coffee-dark); margin-bottom: 4px; }
+ .menu-subheading {
+  border-top: 2px solid rgba(42,31,20,0.9);
+  padding-top: 10px;
+  margin-top: 16px;
+ }
+ .menu-card-body p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 8px; }
+ .menu-items { display: flex; flex-direction: column; gap: 4px; }
+ .menu-item { font-size: 0.9rem; color: var(--text-dark); }
+ .menu-item-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 6px; }
+
+ .menu-section { margin-bottom: 60px; }
+ .menu-section:last-of-type { margin-bottom: 0; }
+
+ .menu-cta { margin-top: 40px; text-align: center; }
+ .menu-cta p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; }
+ .btn-order { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 999px; background: var(--blue-sv); color: #fff; font-size: 0.95rem; font-weight: 700; box-shadow: 0 4px 20px rgba(0,71,171,0.4); }
+
+ /* FOOTER */
+ .footer { background: var(--coffee-dark); color: rgba(255,255,255,0.6); padding: 32px 0; margin-top: 80px; }
+ .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 0.8rem; }
+ .footer-brand-text { font-family: 'Playfair Display', serif; color: #fff; }
+ .footer-links { display: flex; gap: 16px; font-size: 0.8rem; }
+ .footer-links a { color: rgba(255,255,255,0.55); }
+ .footer-links a:hover { color: var(--gold); }
+
+ @media (max-width: 900px) {
+  .menu-grid { grid-template-columns: 1fr; }
+ }
+
+ @media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu { display: flex; }
+  .menu-hero-inner { padding: 70px 0 60px; }
+ }
+
+ @media (max-width: 480px) {
+  .section-pad { padding: 70px 0; }
+  .menu-hero-inner { padding: 64px 0 50px; }
+  .menu-section-header { align-items: flex-start; }
+ }
+ </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+ <div class="container nav-inner">
+  <a href="/" class="nav-logo-text">
+   Coffee &amp; Crumbs
+   <span>Northern Virginia</span>
+  </a>
+  <div class="nav-links">
+   <a href="/">Home</a>
+   <a href="#drinks" data-menu-target="drinks">Drinks</a>
+   <a href="#crumbs" data-menu-target="crumbs">Crumbs</a>
+   <a href="#salvadoran" data-menu-target="salvadoran">Salvadoran specials</a>
+   <a href="#bottom">Contact</a>
+   <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="nav-cta">Order Online</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+   <span></span><span></span><span></span>
+  </button>
+ </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" onclick="closeMobile()">Home</a>
+ <a href="#drinks" data-menu-target="drinks" onclick="closeMobile()">Drinks</a>
+ <a href="#crumbs" data-menu-target="crumbs" onclick="closeMobile()">Crumbs</a>
+ <a href="#salvadoran" data-menu-target="salvadoran" onclick="closeMobile()">Salvadoran specials</a>
+ <a href="#bottom" onclick="closeMobile()">Contact</a>
+ <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="nav-cta" onclick="closeMobile()">Order Online</a>
+</div>
+
+<section class="menu-hero">
+ <div class="container menu-hero-inner">
+  <div class="menu-hero-kicker">OUR MENU</div>
+  <h1>Handcrafted drinks, crumbs &amp; Salvadoran specials</h1>
+  <p>Browse what we&apos;re pouring and baking at Coffee &amp; Crumbs. Order online through our Square shop and pick up in Northern Virginia.</p>
+  <div class="menu-hero-tabs">
+   <a href="#drinks" class="menu-hero-tab menu-hero-tab-active">Drinks</a>
+   <a href="#crumbs" class="menu-hero-tab">Crumbs</a>
+   <a href="#salvadoran" class="menu-hero-tab">Salvadoran specials</a>
+  </div>
+ </div>
+</section>
+
+<main class="section-pad">
+ <div class="container">
+  <!-- Drinks -->
+  <section id="drinks" class="menu-section">
+   <div class="menu-section-header">
+    <div>
+     <h2>Drinks</h2>
+     <p>Lattes inspired by Salvadoran flavors plus a few cozy café classics.</p>
+    </div>
+   </div>
+   <div class="menu-grid">
+    <!-- Left column: core drink categories -->
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Latte's</h3>
+      <p>All available hot or iced.</p>
+      <div class="menu-items">
+       <div class="menu-item">Fresas con Crema Latte</div>
+       <div class="menu-item">Horchata Latte</div>
+       <div class="menu-item">Banana Cream Latte</div>
+       <div class="menu-item">Vanilla Latte</div>
+       <div class="menu-item">&amp; More Custom Creations</div>
+      </div>
+     </div>
+    </article>
+
+    <!-- Right column: milk & foam options, same card style as others -->
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Milk Options</h3>
+      <p>Pick the base that works best for you.</p>
+      <div class="menu-items">
+       <div class="menu-item">Whole milk</div>
+       <div class="menu-item">Oat milk</div>
+       <div class="menu-item">Almond milk</div>
+      </div>
+     </div>
+    </article>
+
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Matcha's &amp; Chai's</h3>
+      <div class="menu-items">
+       <div class="menu-item">Iced matcha</div>
+       <div class="menu-item">Strawberry banana matcha</div>
+       <div class="menu-item">Chai lattes (seasonal)</div>
+      </div>
+     </div>
+    </article>
+
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Cold Foam Options</h3>
+      <p>Add a little extra on top.</p>
+      <div class="menu-items">
+       <div class="menu-item">Vanilla cold foam</div>
+       <div class="menu-item">Banana cream cold foam</div>
+       <div class="menu-item">Seasonal cold foam flavors</div>
+      </div>
+     </div>
+    </article>
+
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Juice's &amp; Lemonade's</h3>
+      <p>Refreshing options, great for kids or non‑coffee drinkers.</p>
+      <div class="menu-items">
+       <div class="menu-item">Rotating fresh juices</div>
+       <div class="menu-item">Ask what we&apos;re pouring this week</div>
+       <div class="menu-item">House lemonade</div>
+       <div class="menu-item">Seasonal lemonades</div>
+      </div>
+     </div>
+    </article>
+   </div>
+  </section>
+
+  <!-- Crumbs -->
+  <section id="crumbs" class="menu-section">
+   <div class="menu-section-header">
+    <div>
+     <h2>Crumbs</h2>
+     <p>Small-batch sweets baked in our home kitchen.</p>
+    </div>
+   </div>
+   <div class="menu-grid">
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Mini cakes</h3>
+      <div class="menu-items">
+       <div class="menu-item">Strawberry mini cakes</div>
+       <div class="menu-item">Cookies &amp; cream mini cakes</div>
+       <div class="menu-item">Vanilla &amp; seasonal flavors</div>
+      </div>
+     </div>
+    </article>
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Cookies</h3>
+      <div class="menu-items">
+       <div class="menu-item">Assorted cookies</div>
+       <div class="menu-item">Rotating flavors</div>
+      </div>
+     </div>
+    </article>
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>More crumbs</h3>
+      <div class="menu-items">
+       <div class="menu-item">Muffins</div>
+       <div class="menu-item">Cinnamon rolls</div>
+       <div class="menu-item">Other rotating bakes</div>
+      </div>
+     </div>
+    </article>
+   </div>
+  </section>
+
+  <!-- Salvadoran Specials -->
+  <section id="salvadoran" class="menu-section">
+   <div class="menu-section-header">
+    <div>
+     <h2>Salvadoran specials</h2>
+     <p>Family recipes from El Salvador that pair perfectly with coffee or weekend brunch.</p>
+    </div>
+   </div>
+   <div class="menu-grid">
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Quesadillas</h3>
+      <div class="menu-items">
+       <div class="menu-item">Traditional Salvadoran quesadillas</div>
+       <div class="menu-item">Mini quesadillas (perfect for sharing)</div>
+      </div>
+     </div>
+    </article>
+    <article class="menu-card">
+     <div class="menu-card-body">
+      <h3>Peperechas</h3>
+      <div class="menu-items">
+       <div class="menu-item">Peperechas</div>
+       <div class="menu-item">Other rotating Salvadoran sweets</div>
+      </div>
+     </div>
+    </article>
+   </div>
+  </section>
+
+  <div class="menu-cta">
+   <p>Ready to order? See live availability and pricing on our Square site.</p>
+   <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="btn-order">
+    Order online on Square
+   </a>
+  </div>
+ </div>
+</main>
+
+<footer class="footer" id="bottom">
+ <div class="container footer-inner">
+  <div class="footer-brand-text">Coffee &amp; Crumbs · Northern Virginia</div>
+  <div class="footer-links">
+   <a href="/">Home</a>
+   <a href="#drinks">Drinks</a>
+   <a href="#crumbs">Crumbs</a>
+   <a href="#salvadoran">Salvadoran specials</a>
+  </div>
+ </div>
+</footer>
+
+<script>
+ const navbar = document.getElementById('navbar');
+ window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+ });
+
+ const hamburger = document.getElementById('hamburger');
+ const mobileMenu = document.getElementById('mobileMenu');
+ function closeMobile() {
+  hamburger.classList.remove('active');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+ }
+ hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+ });
+
+ // Tab switching: show only one section at a time
+ const tabs = document.querySelectorAll('.menu-hero-tab');
+ const sections = {
+  drinks: document.getElementById('drinks'),
+  crumbs: document.getElementById('crumbs'),
+  salvadoran: document.getElementById('salvadoran'),
+ };
+
+ function showSection(key) {
+  Object.entries(sections).forEach(([name, el]) => {
+   if (!el) return;
+   el.style.display = name === key ? 'block' : 'none';
+  });
+  tabs.forEach((tab) => {
+   const target = tab.getAttribute('href')?.replace('#', '') || '';
+   if (target === key) {
+    tab.classList.add('menu-hero-tab-active');
+   } else {
+    tab.classList.remove('menu-hero-tab-active');
+   }
+  });
+ }
+
+ tabs.forEach((tab) => {
+  tab.addEventListener('click', (e) => {
+   const target = tab.getAttribute('href')?.replace('#', '');
+   if (!target || !sections[target]) return;
+   e.preventDefault();
+   showSection(target);
+   const top = document.querySelector('.menu-hero').offsetTop + 10;
+   window.scrollTo({ top, behavior: 'smooth' });
+  });
+ });
+
+ // Header/mobile nav links controlling the same tabs
+ document.querySelectorAll('[data-menu-target]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+   const target = link.getAttribute('data-menu-target');
+   if (!target || !sections[target]) return;
+   e.preventDefault();
+   showSection(target);
+   // scroll to hero top
+   const top = document.querySelector('.menu-hero').offsetTop + 10;
+   window.scrollTo({ top, behavior: 'smooth' });
+  });
+ });
+
+ // Default: show tab based on hash, fallback to drinks
+ const hash = window.location.hash.replace('#', '');
+ if (hash && sections[hash]) {
+  showSection(hash);
+ } else {
+  showSection('drinks');
+ }
+</script>
+
+</body>
+</html>

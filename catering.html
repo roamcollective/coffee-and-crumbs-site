@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Coffee & Crumbs VA | Catering & Events</title>
+ <meta name="description" content="Catering from Coffee & Crumbs VA – lattes, mini cakes, cookies, and Salvadoran specials for your next event in Northern Virginia." />
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet" />
+ <style>
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; font-size: 16px; }
+ body { font-family: 'Lato', sans-serif; color: #2a1f14; background: #fdf8f3; overflow-x: hidden; line-height: 1.6; }
+ a { text-decoration: none; color: inherit; }
+ img { max-width: 100%; display: block; }
+ ul { list-style: none; }
+ :root {
+  --blue-sv: #0047AB;
+  --coffee: #5C3D2E;
+  --coffee-dark: #3a2518;
+  --coffee-medium: #6F4E37;
+  --cream: #fdf8f3;
+  --cream-warm: #f5ead9;
+  --tan: #C4A882;
+  --gold: #D4A574;
+  --text-dark: #2a1f14;
+  --text-muted: #6b5a4e;
+  --white: #ffffff;
+  --shadow-soft: 0 4px 20px rgba(42, 31, 20, 0.08);
+  --shadow-medium: 0 8px 40px rgba(42, 31, 20, 0.12);
+  --radius: 12px;
+  --radius-lg: 20px;
+ }
+ h1,h2,h3,h4 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.2; }
+ .script { font-family: 'Dancing Script', cursive; }
+ .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+ .section-pad { padding: 90px 0; }
+
+ /* NAV */
+ .navbar { position: fixed; top:0; left:0; right:0; z-index:1000; background: rgba(253,248,243,0.96); backdrop-filter: blur(20px); border-bottom:1px solid rgba(212,165,116,0.15); }
+ .nav-inner { display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
+ .nav-logo-text { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; color:var(--coffee); }
+ .nav-logo-text span { display:block; font-size:.7rem; font-family:'Lato',sans-serif; font-weight:300; color:var(--text-muted); letter-spacing:2px; text-transform:uppercase; }
+ .nav-links { display:flex; align-items:center; gap:32px; font-size:.9rem; }
+ .nav-links a { color:var(--text-muted); position:relative; letter-spacing:.5px; }
+ .nav-links a::after { content:""; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--gold); border-radius:2px; transition:width .25s; }
+ .nav-links a:hover { color:var(--coffee); }
+ .nav-links a:hover::after { width:100%; }
+ .nav-cta { background:var(--blue-sv); color:#fff; padding:10px 24px; border-radius:999px; font-size:.85rem; font-weight:700; letter-spacing:.5px; }
+ .nav-cta::after { display:none; }
+ .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; background:none; border:none; }
+ .hamburger span { width:24px; height:2px; background:var(--coffee); border-radius:2px; }
+ .mobile-menu { display:none; position:fixed; inset:0; z-index:999; background:rgba(253,248,243,0.98); backdrop-filter:blur(20px); flex-direction:column; align-items:center; justify-content:center; gap:20px; opacity:0; pointer-events:none; transition:opacity .25s; }
+ .mobile-menu.open { opacity:1; pointer-events:auto; }
+ .mobile-menu a { font-size:1.2rem; font-family:'Playfair Display',serif; color:var(--coffee); }
+
+ /* HERO */
+ .hero { padding-top:90px; min-height:80vh; display:flex; align-items:center; justify-content:center; background: radial-gradient(circle at top, rgba(0,0,0,0.18), transparent 55%), url('hero-table.jpg') center/cover no-repeat; color:#fff; text-align:center; }
+ .hero-inner { text-shadow:0 2px 30px rgba(0,0,0,0.6); padding:80px 0 70px; }
+ .hero-kicker { font-size:.8rem; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.75); margin-bottom:10px; }
+ .hero h1 { font-size:clamp(2.4rem,5vw,3.3rem); margin-bottom:10px; }
+ .hero p { max-width:580px; margin:0 auto 22px; font-size:.98rem; color:rgba(255,255,255,0.9); }
+ .hero-cta { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+ .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 32px; border-radius:999px; font-size:.95rem; font-weight:700; border:none; cursor:pointer; }
+ .btn-primary { background:var(--blue-sv); color:#fff; box-shadow:0 4px 20px rgba(0,71,171,0.4); }
+ .btn-primary:hover { background:#003580; }
+ .btn-outline { background:transparent; color:#fff; border:2px solid rgba(255,255,255,0.6); }
+ .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+
+ /* CONTENT SECTIONS */
+ .two-col { display:grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); gap:40px; align-items:start; }
+ .pill { display:inline-flex; align-items:center; gap:8px; padding:6px 14px; border-radius:999px; background:rgba(92,61,46,0.08); font-size:0.75rem; text-transform:uppercase; letter-spacing:2px; color:var(--coffee); margin-bottom:10px; }
+ .two-col h2 { font-size:2rem; color:var(--coffee-dark); margin-bottom:10px; }
+ .two-col p { font-size:0.98rem; color:var(--text-muted); margin-bottom:12px; }
+ .tag-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+ .tag { padding:6px 12px; border-radius:999px; background:#fff; border:1px solid rgba(0,0,0,0.06); font-size:0.8rem; color:var(--coffee-medium); }
+
+ .package-grid { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:20px; }
+ .card { background:#fff; border-radius:var(--radius-lg); box-shadow:var(--shadow-soft); padding:20px 20px 18px; }
+ .card h3 { font-size:1.1rem; color:var(--coffee-dark); margin-bottom:6px; }
+ .card p { font-size:0.9rem; color:var(--text-muted); margin-bottom:8px; }
+ .card ul { margin-top:6px; padding-left:0; }
+ .card li { font-size:0.85rem; color:var(--text-dark); margin-bottom:4px; }
+
+ .note { font-size:0.85rem; color:var(--text-muted); margin-top:16px; }
+
+ .contact-block { margin-top:40px; padding:20px 22px; border-radius:var(--radius-lg); background:var(--cream-warm); border:1px solid rgba(212,165,116,0.4); }
+ .contact-block h3 { font-size:1rem; color:var(--coffee-dark); margin-bottom:6px; }
+ .contact-block p { font-size:0.9rem; color:var(--text-muted); }
+
+ /* FOOTER */
+ .footer { background:var(--coffee-dark); color:rgba(255,255,255,0.6); padding:32px 0; margin-top:80px; }
+ .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:0.8rem; }
+ .footer-brand-text { font-family:'Playfair Display',serif; color:#fff; }
+ .footer-links { display:flex; gap:16px; }
+ .footer-links a { color:rgba(255,255,255,0.55); }
+ .footer-links a:hover { color:var(--gold); }
+
+ @media (max-width:900px) {
+  .two-col { grid-template-columns:1fr; }
+  .package-grid { grid-template-columns:1fr 1fr; }
+ }
+ @media (max-width:768px) {
+  .nav-links { display:none; }
+  .hamburger { display:flex; }
+  .mobile-menu { display:flex; }
+  .hero-inner { padding:70px 0 60px; }
+ }
+ @media (max-width:480px) {
+  .section-pad { padding:70px 0; }
+  .hero-inner { padding:64px 0 50px; }
+  .hero-cta { flex-direction:column; }
+  .btn { width:100%; max-width:280px; }
+  .package-grid { grid-template-columns:1fr; }
+ }
+ </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+ <div class="container nav-inner">
+  <a href="/" class="nav-logo-text">
+   Coffee &amp; Crumbs
+   <span>Northern Virginia</span>
+  </a>
+  <div class="nav-links">
+   <a href="/">Home</a>
+   <a href="/menu.html#drinks">Drinks</a>
+   <a href="/menu.html#crumbs">Crumbs</a>
+   <a href="/menu.html#salvadoran">Salvadoran specials</a>
+   <a href="#contact">Contact</a>
+   <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="nav-cta">Order Online</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+   <span></span><span></span><span></span>
+  </button>
+ </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+ <a href="/" onclick="closeMobile()">Home</a>
+ <a href="/menu.html#drinks" onclick="closeMobile()">Drinks</a>
+ <a href="/menu.html#crumbs" onclick="closeMobile()">Crumbs</a>
+ <a href="/menu.html#salvadoran" onclick="closeMobile()">Salvadoran specials</a>
+ <a href="#contact" onclick="closeMobile()">Contact</a>
+ <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="nav-cta" onclick="closeMobile()">Order Online</a>
+</div>
+
+<section class="hero">
+ <div class="container hero-inner">
+  <div class="hero-kicker">CATERING &amp; EVENTS</div>
+  <h1>Bring Coffee &amp; Crumbs to your next gathering</h1>
+  <p>Lattes, mini cakes, cookies, and Salvadoran pastries made fresh for your office, birthday, or family event in Northern Virginia.</p>
+  <div class="hero-cta">
+   <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="btn btn-primary">Start a catering order</a>
+   <a href="#packages" class="btn btn-outline">View sample packages</a>
+  </div>
+ </div>
+</section>
+
+<main class="section-pad">
+ <div class="container">
+  <section class="two-col" id="packages">
+   <div>
+    <div class="pill">HOW IT WORKS</div>
+    <h2>Small-batch catering from our home kitchen</h2>
+    <p>We keep catering simple: a focused menu of drinks, crumbs, and Salvadoran specials that scale from a cozy brunch to a full office spread.</p>
+    <p>Tell us your headcount and vibe, and we&apos;ll help you mix and match drinks, mini cakes, cookies, quesadilla loaves, and other Salvadoran pastries.</p>
+    <div class="tag-list">
+     <span class="tag">Office mornings</span>
+     <span class="tag">Birthdays</span>
+     <span class="tag">Baby showers</span>
+     <span class="tag">Family gatherings</span>
+    </div>
+   </div>
+   <div class="card">
+    <h3>What we can include</h3>
+    <ul>
+     <li>Latte&apos;s, matcha&apos;s &amp; chai&apos;s</li>
+     <li>Mini cakes &amp; cookies</li>
+     <li>Quesadillas &amp; peperechas</li>
+     <li>Juices &amp; lemonades</li>
+    </ul>
+    <p class="note">All catering is pickup only from our home kitchen in Northern Virginia.</p>
+   </div>
+  </section>
+
+  <section class="section-pad" style="padding-top:60px; padding-bottom:0;" id="contact">
+   <div class="package-grid">
+    <div class="card">
+     <h3>Morning coffee &amp; crumbs</h3>
+     <p>Perfect for small offices or team meetings.</p>
+     <ul>
+      <li>Latte&apos;s for the group</li>
+      <li>Mini cakes &amp; cookies assortment</li>
+      <li>Optional quesadilla loaf</li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Brunch &amp; Salvadoran specials</h3>
+     <p>Great for family gatherings and celebrations.</p>
+     <ul>
+      <li>Quesadillas (full or mini)</li>
+      <li>Peperechas &amp; other Salvadoran sweets</li>
+      <li>Coffee, juices &amp; lemonades</li>
+     </ul>
+    </div>
+    <div class="card">
+     <h3>Custom spread</h3>
+     <p>Have something specific in mind?</p>
+     <ul>
+      <li>Mix &amp; match from the full menu</li>
+      <li>We&apos;ll help you plan quantities</li>
+      <li>Pickup window timed to your event</li>
+     </ul>
+    </div>
+   </div>
+
+   <div class="contact-block" style="margin-top:30px;">
+    <h3>How to book catering</h3>
+    <p>For now, we keep it personal. To start a catering order:</p>
+    <p style="margin-top:6px;">
+     1. Visit our Square site and start an order.<br/>
+     2. Use the notes section to mention <strong>"catering"</strong> and your event date &amp; headcount.<br/>
+     3. We&apos;ll follow up to confirm details, pickup time, and any special requests.
+    </p>
+    <p class="note">You can also reach out via Instagram DM at <strong>@coffeeandcrumbsva</strong> for questions before you place an order.</p>
+   </div>
+  </section>
+ </div>
+</main>
+
+<footer class="footer">
+ <div class="container footer-inner">
+  <div class="footer-brand-text">Coffee &amp; Crumbs · Northern Virginia</div>
+  <div class="footer-links">
+   <a href="/">Home</a>
+   <a href="/menu.html#drinks">Drinks</a>
+   <a href="/menu.html#crumbs">Crumbs</a>
+   <a href="/menu.html#salvadoran">Salvadoran specials</a>
+  </div>
+ </div>
+ <div class="container" style="margin-top:6px; text-align:center; font-size:0.8rem; color:rgba(255,255,255,0.7);">
+  Built &amp; powered by Roam Collective.
+ </div>
+</footer>
+
+<script>
+ const navbar = document.getElementById('navbar');
+ window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+ });
+
+ const hamburger = document.getElementById('hamburger');
+ const mobileMenu = document.getElementById('mobileMenu');
+ function closeMobile() {
+  hamburger.classList.remove('active');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+ }
+ hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+ });
+</script>
+
+</body>
+</html>
