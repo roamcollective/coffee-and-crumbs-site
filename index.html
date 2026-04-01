@@ -5,6 +5,52 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Coffee & Crumbs VA | Handcrafted Coffee, Fresh Baked Goods & Salvadoran Quesadillas</title>
  <meta name="description" content="Coffee & Crumbs - Northern Virginia's home-based shop for handcrafted coffees, fresh baked goods, and authentic Salvadoran pastries. Order online for pickup!">
+ <meta name="keywords" content="coffee shop Northern Virginia, Salvadoran pastries, handcrafted coffee, baked goods NoVA, quesadillas Virginia, coffee delivery pickup, Coffee and Crumbs VA">
+ <link rel="canonical" href="https://coffee-and-crumbs-site-vert.vercel.app/">
+ <!-- Open Graph -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Coffee & Crumbs VA | Handcrafted Coffee, Fresh Baked Goods & Salvadoran Quesadillas">
+ <meta property="og:description" content="Handcrafted coffees, fresh-baked goods & authentic Salvadoran pastries, made with love in Northern Virginia. Order online for pickup!">
+ <meta property="og:url" content="https://coffee-and-crumbs-site-vert.vercel.app/">
+ <meta property="og:site_name" content="Coffee & Crumbs VA">
+ <meta property="og:locale" content="en_US">
+ <!-- Twitter -->
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Coffee & Crumbs VA | Handcrafted Coffee & Salvadoran Pastries">
+ <meta name="twitter:description" content="Handcrafted coffees, fresh-baked goods & authentic Salvadoran pastries in Northern Virginia. Order online for pickup!">
+ <!-- Robots -->
+ <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+ <!-- Structured Data -->
+ <script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "Coffee & Crumbs VA",
+  "description": "Northern Virginia's home-based shop for handcrafted coffees, fresh baked goods, and authentic Salvadoran pastries.",
+  "url": "https://coffee-and-crumbs-site-vert.vercel.app/",
+  "servesCuisine": ["Coffee", "Salvadoran", "Bakery"],
+  "address": {
+   "@type": "PostalAddress",
+   "addressRegion": "Virginia",
+   "addressLocality": "Northern Virginia",
+   "addressCountry": "US"
+  },
+  "sameAs": [
+   "https://www.facebook.com/Coffeeandcrumbsva/",
+   "https://www.instagram.com/coffeeandcrumbsva/"
+  ],
+  "menu": "https://coffee-and-crumbs-site-vert.vercel.app/menu.html",
+  "hasMenu": {
+   "@type": "Menu",
+   "url": "https://coffee-and-crumbs-site-vert.vercel.app/menu.html"
+  },
+  "priceRange": "$",
+  "openingHoursSpecification": {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+  }
+ }
+ </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
@@ -834,16 +880,23 @@
   .footer-links { flex-wrap: wrap; justify-content: center; }
  }
  @media (max-width: 480px) {
-  .section-pad { padding: 70px 0; }
+  .section-pad { padding: 60px 0; }
   .hero-logo-main { width: 110px; height: auto; }
-  .hero-content { padding: 110px 16px 56px; }
+  .hero-content { padding: 100px 16px 48px; }
   .hero-sub { margin-bottom: 14px; }
-  .hero-tagline { font-size: 0.95rem; margin-bottom: 28px; }
+  .hero-tagline { font-size: 0.95rem; margin-bottom: 24px; }
   .hero-buttons { flex-direction: column; align-items: center; gap: 10px; }
-  .btn { width: 100%; max-width: 280px; justify-content: center; }
+  .btn { width: 100%; max-width: 280px; justify-content: center; min-height: 48px; font-size: 0.95rem; }
   .menu-grid { gap: 20px; }
   .menu-card-body { padding: 20px; }
-  .gallery-grid { gap: 8px; }
+  .gallery-grid { gap: 6px; border-radius: 8px; }
+  .contact-grid { gap: 24px; }
+  .about-features { gap: 16px; }
+  .order-embed-wrapper iframe { min-height: 450px; max-height: 75vh; }
+  .sv-banner { padding: 48px 16px; }
+  .quote-section { padding: 48px 16px; }
+  h2 { font-size: clamp(1.6rem, 6vw, 2rem); }
+  .mobile-menu a { font-size: 1.2rem; min-height: 48px; display: flex; align-items: center; }
  }
  </style>
 </head>
@@ -1183,7 +1236,7 @@
       </div>
      </div>
      <div class="order-iframe-wrap">
-      <iframe src="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" width="100%" height="800" frameborder="0" style="border:0; border-radius:16px;" title="Coffee and Crumbs Square ordering" loading="lazy"></iframe>
+      <iframe src="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" width="100%" height="700" frameborder="0" style="border:0; border-radius:16px; min-height:500px; max-height:85vh;" title="Coffee and Crumbs Square ordering" loading="lazy"></iframe>
      </div>
      <div class="order-btn-wrap" style="margin-top:30px;">
       <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="btn-order">
