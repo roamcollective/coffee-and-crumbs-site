@@ -3,1459 +3,2010 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Coffee & Crumbs VA | Handcrafted Coffee, Fresh Baked Goods & Salvadoran Quesadillas</title>
- <meta name="description" content="Coffee & Crumbs - Northern Virginia's home-based shop for handcrafted coffees, fresh baked goods, and authentic Salvadoran pastries. Order online for pickup!">
- <meta name="keywords" content="coffee shop Northern Virginia, Salvadoran pastries, handcrafted coffee, baked goods NoVA, quesadillas Virginia, coffee delivery pickup, Coffee and Crumbs VA">
+ <title>Coffee &amp; Crumbs VA | Salvadoran pastries, handcrafted coffee, and pickup in Northern Virginia</title>
+ <meta name="description" content="Coffee &amp; Crumbs is a Northern Virginia home-based coffee and pastry business serving handcrafted lattes, cookies, mini cakes, and Salvadoran favorites for pickup.">
+ <meta name="keywords" content="Coffee and Crumbs VA, Salvadoran pastries Northern Virginia, handcrafted coffee NoVA, mini cakes, cookies, quesadilla salvadorena, pickup coffee">
  <link rel="canonical" href="https://coffee-and-crumbs-site-vert.vercel.app/">
- <!-- Open Graph -->
  <meta property="og:type" content="website">
- <meta property="og:title" content="Coffee & Crumbs VA | Handcrafted Coffee, Fresh Baked Goods & Salvadoran Quesadillas">
- <meta property="og:description" content="Handcrafted coffees, fresh-baked goods & authentic Salvadoran pastries, made with love in Northern Virginia. Order online for pickup!">
+ <meta property="og:title" content="Coffee &amp; Crumbs VA | Salvadoran pastries and handcrafted coffee">
+ <meta property="og:description" content="A warm, home-based Northern Virginia pickup spot for signature coffees, pastries, mini cakes, cookies, and Salvadoran specialties.">
  <meta property="og:url" content="https://coffee-and-crumbs-site-vert.vercel.app/">
- <meta property="og:site_name" content="Coffee & Crumbs VA">
- <meta property="og:locale" content="en_US">
- <!-- Twitter -->
+ <meta property="og:site_name" content="Coffee &amp; Crumbs VA">
  <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:title" content="Coffee & Crumbs VA | Handcrafted Coffee & Salvadoran Pastries">
- <meta name="twitter:description" content="Handcrafted coffees, fresh-baked goods & authentic Salvadoran pastries in Northern Virginia. Order online for pickup!">
- <!-- Robots -->
+ <meta name="twitter:title" content="Coffee &amp; Crumbs VA">
+ <meta name="twitter:description" content="Handcrafted coffee, fresh pastries, and Salvadoran specialties for pickup in Northern Virginia.">
  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
- <!-- Structured Data -->
  <script type="application/ld+json">
  {
   "@context": "https://schema.org",
   "@type": "FoodEstablishment",
   "name": "Coffee & Crumbs VA",
-  "description": "Northern Virginia's home-based shop for handcrafted coffees, fresh baked goods, and authentic Salvadoran pastries.",
+  "description": "Northern Virginia home-based coffee and pastry business serving handcrafted drinks, baked goods, and Salvadoran specialties.",
   "url": "https://coffee-and-crumbs-site-vert.vercel.app/",
-  "servesCuisine": ["Coffee", "Salvadoran", "Bakery"],
+  "servesCuisine": ["Coffee", "Bakery", "Salvadoran"],
+  "priceRange": "$",
   "address": {
    "@type": "PostalAddress",
-   "addressRegion": "Virginia",
+   "addressRegion": "VA",
    "addressLocality": "Northern Virginia",
    "addressCountry": "US"
   },
   "sameAs": [
    "https://www.facebook.com/Coffeeandcrumbsva/",
-   "https://www.instagram.com/coffeeandcrumbsva/"
+   "https://www.instagram.com/coffeeandcrumbsva/",
+   "https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP"
   ],
-  "menu": "https://coffee-and-crumbs-site-vert.vercel.app/menu.html",
-  "hasMenu": {
-   "@type": "Menu",
-   "url": "https://coffee-and-crumbs-site-vert.vercel.app/menu.html"
-  },
-  "priceRange": "$",
-  "openingHoursSpecification": {
-   "@type": "OpeningHoursSpecification",
-   "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
-  }
+  "menu": "https://coffee-and-crumbs-site-vert.vercel.app/menu.html"
  }
  </script>
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
  <style>
- /* ===================== RESET & BASE ===================== */
- *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
- html { scroll-behavior: smooth; font-size: 16px; }
- body {
-  font-family: 'Lato', sans-serif;
-  color: #2a1f14;
-  background: #fdf8f3;
-  overflow-x: hidden;
-  line-height: 1.6;
- }
- img { max-width: 100%; display: block; }
- a { text-decoration: none; color: inherit; }
- ul { list-style: none; }
-
- /* ===================== COLORS / VARIABLES ===================== */
- :root {
-  --espresso: #1a0f0a;
-  --espresso-light: #2d1f17;
-  --espresso-mid: #3d2b1f;
-  --cream: #fdf8f3;
-  --cream-warm: #f5ead9;
-  --cream-dark: #e8d5bc;
-  --terracotta: #c75b39;
-  --terracotta-dark: #a84830;
-  --terracotta-light: #e8815f;
-  --gold: #d4a574;
-  --gold-light: #e8c9a0;
-  --coffee: #5c3d2e;
-  --coffee-light: #8b6a54;
-  --blue-sv: #0047AB;
-  --blue-deep: #003580;
-  --white: #ffffff;
-  --text-dark: #2a1f14;
-  --text-muted: #6b5a4e;
-  --shadow-soft: 0 4px 20px rgba(42, 31, 20, 0.08);
-  --shadow-medium: 0 8px 40px rgba(42, 31, 20, 0.12);
-  --shadow-heavy: 0 16px 60px rgba(42, 31, 20, 0.18);
-  --radius: 12px;
-  --radius-lg: 20px;
-  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
- }
-
- /* ===================== TYPOGRAPHY ===================== */
- h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.2; }
- .script { font-family: 'Dancing Script', cursive; }
-
- /* ===================== UTILITY ===================== */
- .container { width: 90%; max-width: 1200px; margin: 0 auto; }
- .section-pad { padding: 100px 0; }
- .text-center { text-align: center; }
- .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
-
- /* ===================== GRAIN OVERLAY ===================== */
- body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-size: 256px 256px;
- }
-
- /* ===================== ANIMATIONS ===================== */
- @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
- }
- @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
- }
- @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
- }
- @keyframes steam {
-  0% { opacity: 0; transform: translateY(0) scaleX(1); }
-  50% { opacity: 0.6; transform: translateY(-20px) scaleX(1.2); }
-  100% { opacity: 0; transform: translateY(-40px) scaleX(0.8); }
- }
- @keyframes parallaxFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(1deg); }
- }
- @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
- }
- @keyframes heroTextReveal {
-  from { opacity: 0; transform: translateY(30px); filter: blur(4px); }
-  to { opacity: 1; transform: translateY(0); filter: blur(0); }
- }
- @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
- }
-
- .animate-on-scroll {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
- }
- .animate-on-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
- }
- .stagger-children.visible > *:nth-child(1) { transition-delay: 0s; }
- .stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
- .stagger-children.visible > *:nth-child(3) { transition-delay: 0.2s; }
- .stagger-children.visible > *:nth-child(4) { transition-delay: 0.3s; }
- .stagger-children.visible > *:nth-child(5) { transition-delay: 0.4s; }
- .stagger-children > * {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
- }
- .stagger-children.visible > * {
-  opacity: 1;
-  transform: translateY(0);
- }
-
- /* ===================== NAVBAR ===================== */
- .navbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: transparent;
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  border-bottom: 1px solid transparent;
-  transition: all var(--transition);
- }
- .navbar.scrolled {
-  background: rgba(253, 248, 243, 0.97);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom-color: rgba(212, 165, 116, 0.15);
-  box-shadow: 0 2px 20px rgba(42, 31, 20, 0.08);
- }
- .nav-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 0;
-  transition: padding var(--transition);
- }
- .navbar.scrolled .nav-inner { padding: 10px 0; }
- .nav-logo {
-  display: flex; align-items: center; gap: 12px;
- }
- .nav-logo-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem; font-weight: 700;
-  color: var(--white);
-  transition: color var(--transition);
- }
- .navbar.scrolled .nav-logo-text { color: var(--coffee); }
- .nav-logo-text span {
-  display: block; font-size: 0.7rem;
-  font-family: 'Lato', sans-serif; font-weight: 300;
-  color: rgba(255,255,255,0.7); letter-spacing: 2px; text-transform: uppercase;
-  transition: color var(--transition);
- }
- .navbar.scrolled .nav-logo-text span { color: var(--text-muted); }
- .nav-links { display: flex; align-items: center; gap: 32px; }
- .nav-links a {
-  font-size: 0.9rem; font-weight: 400; color: rgba(255,255,255,0.85);
-  letter-spacing: 0.5px; transition: color var(--transition);
-  position: relative;
- }
- .navbar.scrolled .nav-links a { color: var(--text-muted); }
- .nav-links a::after {
-  content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
-  background: var(--gold); transition: width 0.3s; border-radius: 2px;
- }
- .nav-links a:hover { color: var(--white); }
- .navbar.scrolled .nav-links a:hover { color: var(--coffee); }
- .nav-links a:hover::after { width: 100%; }
- .nav-item-drinks { position: relative; }
- .nav-submenu {
-  position: absolute; top: 115%; left: 0;
-  background: rgba(253,248,243,0.98);
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(42,31,20,0.15);
-  padding: 10px 14px;
-  display: none; flex-direction: column; gap: 8px;
-  min-width: 160px; z-index: 1100;
- }
- .nav-item-drinks:hover .nav-submenu { display: flex; }
- .nav-submenu a { font-size: 0.85rem; color: var(--text-muted) !important; }
- .nav-submenu a::after { display: none; }
- .nav-submenu a:hover { color: var(--coffee) !important; }
- .nav-cta {
-  background: var(--terracotta) !important; color: var(--white) !important;
-  padding: 10px 24px !important; border-radius: 50px;
-  font-weight: 700 !important; letter-spacing: 0.5px;
-  transition: all var(--transition) !important; font-size: 0.85rem !important;
- }
- .nav-cta::after { display: none !important; }
- .nav-cta:hover {
-  background: var(--terracotta-dark) !important;
-  transform: scale(1.02) translateY(-2px);
-  box-shadow: 0 4px 20px rgba(199, 91, 57, 0.4);
- }
-
- /* Hamburger */
- .hamburger {
-  display: none; flex-direction: column; gap: 5px;
-  cursor: pointer; padding: 8px; background: none; border: none;
- }
- .hamburger span {
-  display: block; width: 24px; height: 2px;
-  background: var(--white); transition: all 0.3s; border-radius: 2px;
- }
- .navbar.scrolled .hamburger span { background: var(--coffee); }
- .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
- .hamburger.active span:nth-child(2) { opacity: 0; }
- .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
- /* ===================== HERO ===================== */
- .hero {
-  position: relative; min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  overflow: hidden;
- }
- .hero-bg {
-  position: absolute; inset: 0;
-  background: url('hero-table.jpg') center center / cover no-repeat;
-  transform: translateZ(0);
-  will-change: transform;
- }
- .hero-bg-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(160deg, rgba(26,15,10,0.88) 0%, rgba(45,31,23,0.82) 30%, rgba(61,43,31,0.78) 60%, rgba(26,15,10,0.92) 100%);
- }
- .hero-bg-pattern {
-  position: absolute; inset: 0; opacity: 0.06;
-  background-image:
-   radial-gradient(circle at 20% 80%, var(--gold) 1px, transparent 1px),
-   radial-gradient(circle at 80% 20%, var(--gold) 1px, transparent 1px),
-   radial-gradient(circle at 50% 50%, var(--gold) 0.5px, transparent 0.5px);
-  background-size: 80px 80px, 120px 120px, 40px 40px;
- }
- .hero-content {
-  position: relative; z-index: 2; text-align: center;
-  padding: 120px 20px 80px;
- }
- .hero-content > * {
-  animation: heroTextReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
- }
- .hero-content > *:nth-child(1) { animation-delay: 0.2s; }
- .hero-content > *:nth-child(2) { animation-delay: 0.4s; }
- .hero-content > *:nth-child(3) { animation-delay: 0.6s; }
- .hero-content > *:nth-child(4) { animation-delay: 0.8s; }
- .hero-content > *:nth-child(5) { animation-delay: 1s; }
-
- .hero-flag-accent {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,0.08); backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 8px 20px; border-radius: 50px;
-  margin-bottom: 30px;
-  font-size: 0.8rem; color: rgba(255,255,255,0.8);
-  letter-spacing: 2px; text-transform: uppercase;
- }
- .hero-flag-accent .flag-bar {
-  display: inline-block; width: 24px; height: 3px; border-radius: 2px;
- }
- .flag-blue { background: var(--blue-sv); }
- .flag-white { background: var(--white); }
-
- .hero-logo-main {
-  width: 140px; height: 140px; margin: 0 auto 30px;
-  animation: float 4s ease-in-out infinite;
- }
-
- .hero h1 {
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  color: var(--white);
-  margin-bottom: 8px;
-  text-shadow: 0 2px 40px rgba(0,0,0,0.3);
- }
- .hero h1 .ampersand {
-  font-family: 'Dancing Script', cursive;
-  color: var(--gold);
-  font-weight: 500;
- }
- .hero-sub {
-  font-family: 'Dancing Script', cursive;
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  color: var(--gold);
-  margin-bottom: 20px;
- }
- .hero-tagline {
-  font-size: 1.05rem; color: rgba(255,255,255,0.75);
-  max-width: 550px; margin: 0 auto 40px;
-  line-height: 1.7; font-weight: 300;
- }
- .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
- .btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 16px 36px; border-radius: 50px;
-  font-family: 'Lato', sans-serif; font-size: 0.95rem;
-  font-weight: 700; letter-spacing: 0.5px;
-  transition: all var(--transition); cursor: pointer; border: none;
- }
- .btn-primary {
-  background: var(--terracotta); color: var(--white);
-  box-shadow: 0 4px 20px rgba(199, 91, 57, 0.4);
- }
- .btn-primary:hover {
-  background: var(--terracotta-dark);
-  transform: scale(1.02) translateY(-3px);
-  box-shadow: 0 8px 30px rgba(199, 91, 57, 0.5);
- }
- .btn-outline {
-  background: transparent; color: var(--white);
-  border: 2px solid rgba(255,255,255,0.4);
- }
- .btn-outline:hover {
-  border-color: var(--gold); color: var(--gold);
-  transform: scale(1.02) translateY(-3px);
- }
-
- .hero-steam {
-  position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
-  background: linear-gradient(to top, var(--cream), transparent);
-  z-index: 3;
- }
-
- /* ===================== SECTION HEADERS ===================== */
- .section-header { margin-bottom: 60px; }
- .section-header .overline {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase;
-  color: var(--coffee-light); font-weight: 700; margin-bottom: 12px;
- }
- .section-header .overline::before,
- .section-header .overline::after {
-  content: ''; width: 30px; height: 1px; background: var(--gold);
- }
- .section-header h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--coffee);
-  margin-bottom: 16px;
- }
- .section-header p {
-  font-size: 1.05rem; color: var(--text-muted);
-  max-width: 600px; margin: 0 auto; line-height: 1.7;
- }
-
- /* ===================== ABOUT / STORY ===================== */
- .about { background: var(--cream); position: relative; }
- .about-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 60px; align-items: center;
- }
- .about-visual { position: relative; }
- .about-card {
-  background: var(--white); border-radius: var(--radius-lg);
-  padding: 40px; box-shadow: var(--shadow-medium);
-  position: relative; overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
- }
- .about-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-heavy);
- }
- .about-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-  background: linear-gradient(90deg, var(--terracotta), var(--gold), var(--terracotta-light));
- }
- .about-map-illustration {
-  width: 100%; aspect-ratio: 4/3;
-  background: linear-gradient(135deg, var(--cream-warm), var(--cream-dark));
-  border-radius: var(--radius);
-  display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
- }
- .about-map-illustration img {
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
- }
- .about-card:hover .about-map-illustration img {
-  transform: scale(1.05);
- }
- .about-badge {
-  position: absolute; bottom: -20px; right: -10px;
-  background: var(--terracotta); color: var(--white);
-  padding: 16px 24px; border-radius: var(--radius);
-  font-family: 'Dancing Script', cursive; font-size: 1.1rem;
-  box-shadow: var(--shadow-medium);
-  transform: rotate(3deg);
- }
- .about-text h2 {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: var(--coffee); margin-bottom: 20px;
- }
- .about-text h2 .highlight { color: var(--terracotta); }
- .about-text p {
-  color: var(--text-muted); line-height: 1.8; margin-bottom: 16px;
-  font-size: 1.02rem;
- }
- .about-features {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 16px; margin-top: 30px;
- }
- .about-feature {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 16px; background: var(--cream-warm);
-  border-radius: var(--radius);
-  transition: transform var(--transition), box-shadow var(--transition);
- }
- .about-feature:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
- }
- .about-feature-icon {
-  width: 40px; height: 40px; flex-shrink: 0;
-  background: var(--white); border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem;
- }
- .about-feature h4 { font-size: 0.9rem; color: var(--coffee); margin-bottom: 2px; font-family: 'Lato', sans-serif; font-weight: 700; }
- .about-feature p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; }
-
- /* ===================== MENU ===================== */
- .menu { background: var(--white); position: relative; }
- .menu::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0;
-  height: 300px;
-  background: linear-gradient(180deg, var(--cream-warm) 0%, var(--white) 100%);
- }
- .menu .container { position: relative; z-index: 1; }
- .menu-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
- }
- .menu-card {
-  background: var(--white); border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  cursor: default;
-  box-shadow: 0 2px 16px rgba(42, 31, 20, 0.06);
-  border: 1px solid var(--cream-dark);
-  position: relative;
- }
- .menu-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--terracotta), var(--gold));
-  opacity: 0; transition: opacity 0.4s;
-  z-index: 2;
- }
- .menu-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 48px rgba(42, 31, 20, 0.14);
-  border-color: var(--gold-light);
- }
- .menu-card:hover::before { opacity: 1; }
- .menu-card-image {
-  height: 320px; position: relative; overflow: hidden;
- }
- .menu-card-image .card-bg {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
- }
- .menu-card:hover .card-bg { transform: scale(1.08); }
- .menu-card-image .card-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(26,15,10,0.5) 0%, rgba(26,15,10,0.1) 40%, transparent 100%);
- }
- .menu-card-body { padding: 28px 28px 24px; }
- .menu-card-body h3 {
-  font-size: 1.4rem; color: var(--coffee); margin-bottom: 8px;
-  position: relative; display: inline-block;
- }
- .menu-card-body h3::after {
-  content: ''; display: block; width: 32px; height: 2px;
-  background: var(--terracotta); margin-top: 8px;
-  transition: width 0.4s;
- }
- .menu-card:hover .menu-card-body h3::after { width: 56px; }
- .menu-card-body p {
-  color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin-bottom: 20px;
- }
- .menu-items { display: flex; flex-direction: column; gap: 0; }
- .menu-item {
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(212, 165, 116, 0.2);
-  transition: padding-left 0.3s;
- }
- .menu-item:last-child { border-bottom: none; }
- .menu-card:hover .menu-item { padding-left: 4px; }
- .menu-item-name {
-  font-size: 0.9rem; color: var(--text-dark); font-weight: 400;
-  transition: color 0.3s;
- }
- .menu-card:hover .menu-item-name { color: var(--coffee); }
- .menu-item-dot {
-  flex: 1;
-  border-bottom: 1px dotted rgba(212, 165, 116, 0.35);
-  margin: 0 12px; min-width: 20px;
- }
- .menu-card-link {
-  display: inline-flex; align-items: center; gap: 6px;
-  margin-top: 20px; font-size: 0.85rem; font-weight: 700;
-  color: var(--terracotta); letter-spacing: 0.03em;
-  transition: gap 0.3s, color 0.3s;
- }
- .menu-card-link::after {
-  content: '\2192'; transition: transform 0.3s;
- }
- .menu-card:hover .menu-card-link { gap: 10px; }
- .menu-card:hover .menu-card-link::after { transform: translateX(3px); }
-
- .card-coffee { background: linear-gradient(135deg, #1a0f0a, #3d2b1f, #5c3d2e); }
- .card-baked { background: linear-gradient(135deg, var(--gold), var(--terracotta), #5c3d2e); }
- .card-salvadorian { background: linear-gradient(135deg, #3d2b1f, #5c3d2e, #1a0f0a); }
-
- /* ===================== GALLERY ===================== */
- .gallery { background: var(--cream-warm); position: relative; overflow: hidden; }
- .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
- }
- .gallery-item {
-  position: relative;
-  border-radius: var(--radius);
-  overflow: hidden;
-  aspect-ratio: 1;
-  cursor: pointer;
- }
- .gallery-item img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
- }
- .gallery-item:hover img { transform: scale(1.05); }
- .gallery-item::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(26,15,10,0.5), transparent 60%);
-  opacity: 0;
-  transition: opacity var(--transition);
- }
- .gallery-item:hover::after { opacity: 1; }
- .gallery-item-label {
-  position: absolute; bottom: 12px; left: 12px;
-  color: var(--white); font-size: 0.8rem; font-weight: 700;
-  letter-spacing: 1px; text-transform: uppercase;
-  z-index: 2; opacity: 0;
-  transition: opacity var(--transition), transform var(--transition);
-  transform: translateY(8px);
- }
- .gallery-item:hover .gallery-item-label {
-  opacity: 1;
-  transform: translateY(0);
- }
- .gallery-item:nth-child(1),
- .gallery-item:nth-child(6) {
-  grid-column: span 2;
-  grid-row: span 2;
-  aspect-ratio: auto;
- }
-
- /* ===================== EL SALVADOR BANNER ===================== */
- .sv-banner {
-  background: linear-gradient(135deg, var(--espresso-light) 0%, var(--espresso) 50%, var(--espresso-mid) 100%);
-  color: var(--white); position: relative; overflow: hidden;
-  padding: 80px 0;
- }
- .sv-banner-pattern {
-  position: absolute; inset: 0; opacity: 0.05;
-  background-image: repeating-linear-gradient(
-   45deg, transparent, transparent 20px, rgba(255,255,255,1) 20px, rgba(255,255,255,1) 21px
-  );
- }
- .sv-banner-inner {
-  position: relative; z-index: 1;
-  display: flex; align-items: center; gap: 60px;
- }
- .sv-banner-text { flex: 1; }
- .sv-banner-text .script { font-size: 1.3rem; color: var(--gold); margin-bottom: 8px; }
- .sv-banner-text h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  color: var(--white); margin-bottom: 16px;
- }
- .sv-banner-text p {
-  font-size: 1rem; color: rgba(255,255,255,0.8);
-  line-height: 1.7; max-width: 500px;
- }
- .sv-banner-visual {
-  flex-shrink: 0;
-  width: 280px; height: 280px;
-  position: relative;
- }
- .sv-banner-visual .sv-circle {
-  width: 100%; height: 100%;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.06);
-  border: 2px solid rgba(255,255,255,0.1);
-  display: flex; align-items: center; justify-content: center;
-  flex-direction: column; text-align: center; padding: 30px;
- }
- .sv-circle .sv-text { font-family: 'Dancing Script', cursive; font-size: 1.2rem; color: var(--gold); }
- .sv-circle .sv-subtext { font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 4px; letter-spacing: 2px; text-transform: uppercase; }
-
- /* ===================== ORDER ===================== */
- .order {
-  background: var(--cream-warm);
-  position: relative;
- }
- .order-wrapper {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-heavy);
-  overflow: hidden;
- }
- .order-top {
-  background: linear-gradient(135deg, var(--espresso-light), var(--espresso));
-  color: var(--white);
-  padding: 50px 40px;
-  text-align: center;
- }
- .order-top .script { font-size: 1.2rem; color: var(--gold); margin-bottom: 6px; }
- .order-top h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 12px; color: var(--white); }
- .order-top p { color: rgba(255,255,255,0.8); max-width: 500px; margin: 0 auto; font-size: 1rem; }
- .order-body { padding: 50px 40px; text-align: center; }
- .order-steps {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 30px; margin-bottom: 40px;
- }
- .order-step { padding: 24px; }
- .order-step-num {
-  width: 48px; height: 48px; border-radius: 50%;
-  background: var(--cream-warm); color: var(--terracotta);
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif; font-weight: 700;
-  font-size: 1.2rem; margin: 0 auto 16px;
- }
- .order-step h4 {
-  font-family: 'Lato', sans-serif; font-weight: 700;
-  font-size: 1rem; color: var(--coffee); margin-bottom: 8px;
- }
- .order-step p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
-
- .order-iframe-wrap {
-  margin-top: 30px;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--cream-dark);
- }
-
- .order-btn-wrap { margin-top: 10px; }
- .btn-order {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--terracotta); color: var(--white);
-  padding: 18px 48px; border-radius: 50px;
-  font-family: 'Lato', sans-serif; font-size: 1.1rem;
-  font-weight: 700; letter-spacing: 0.5px;
-  transition: all var(--transition); cursor: pointer; border: none;
-  box-shadow: 0 4px 20px rgba(199, 91, 57, 0.35);
- }
- .btn-order:hover {
-  background: var(--terracotta-dark);
-  transform: scale(1.02) translateY(-3px);
-  box-shadow: 0 8px 30px rgba(199, 91, 57, 0.45);
- }
- .btn-order svg { width: 20px; height: 20px; }
- .order-note {
-  margin-top: 20px; font-size: 0.82rem; color: var(--text-muted);
- }
- .order-note strong { color: var(--coffee); }
-
- /* ===================== TESTIMONIAL / QUOTE ===================== */
- .quote-section {
-  background: var(--espresso);
-  color: var(--white);
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
- }
- .quote-section::before {
-  content: ''; position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='%23D4A574' fill-opacity='0.06'/%3E%3C/svg%3E");
- }
- .quote-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
- .quote-marks {
-  font-size: 6rem; line-height: 1; color: var(--terracotta); opacity: 0.5;
-  font-family: 'Playfair Display', serif;
- }
- .quote-text {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-style: italic; line-height: 1.7;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 24px;
- }
- .quote-author {
-  font-size: 0.9rem; color: var(--gold);
-  letter-spacing: 2px; text-transform: uppercase;
- }
-
- /* ===================== CONTACT ===================== */
- .contact {
-  background: var(--cream);
-  position: relative;
- }
- .contact-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 60px; align-items: start;
- }
- .contact-info h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  color: var(--coffee); margin-bottom: 20px;
- }
- .contact-info > p {
-  color: var(--text-muted); line-height: 1.7; margin-bottom: 30px; font-size: 1.02rem;
- }
- .contact-details { display: flex; flex-direction: column; gap: 20px; }
- .contact-item { display: flex; align-items: flex-start; gap: 16px; }
- .contact-item-icon {
-  width: 48px; height: 48px; flex-shrink: 0;
-  background: var(--terracotta); color: var(--white);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  transition: transform var(--transition);
- }
- .contact-item:hover .contact-item-icon { transform: scale(1.05); }
- .contact-item-icon svg { width: 22px; height: 22px; }
- .contact-item-text h4 { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--coffee); margin-bottom: 2px; }
- .contact-item-text p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
- .contact-item-text a { color: var(--terracotta); transition: color var(--transition); }
- .contact-item-text a:hover { color: var(--terracotta-dark); }
-
- .contact-social { margin-top: 40px; }
- .contact-social h4 { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--coffee); margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
- .social-links { display: flex; gap: 12px; }
- .social-link {
-  width: 50px; height: 50px; border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  transition: all var(--transition); color: var(--white);
- }
- .social-link:hover { transform: translateY(-4px); }
- .social-link svg { width: 24px; height: 24px; }
- .social-facebook { background: #1877F2; }
- .social-facebook:hover { box-shadow: 0 6px 20px rgba(24,119,242,0.4); }
- .social-instagram { background: linear-gradient(135deg, #833AB4, #E1306C, #F77737); }
- .social-instagram:hover { box-shadow: 0 6px 20px rgba(225,48,108,0.4); }
- .social-square { background: var(--terracotta); }
- .social-square:hover { box-shadow: 0 6px 20px rgba(199,91,57,0.4); }
-
- .contact-map-card {
-  background: var(--white); border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-medium); overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
- }
- .contact-map-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-heavy);
- }
- .contact-map {
-  height: 240px;
-  background: linear-gradient(135deg, var(--cream-warm), var(--cream-dark), var(--cream));
-  display: flex; align-items: center; justify-content: center;
-  position: relative;
- }
- .contact-map-pin { text-align: center; }
- .contact-map-pin svg { width: 48px; height: 48px; margin-bottom: 8px; color: var(--terracotta); }
- .contact-map-pin p { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
- .contact-map-body { padding: 28px; }
- .contact-map-body h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--coffee); margin-bottom: 8px; }
- .contact-map-body p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
- .contact-map-body .btn-sm {
-  display: inline-flex; align-items: center; gap: 6px;
-  margin-top: 16px; padding: 10px 20px;
-  background: var(--terracotta); color: var(--white);
-  border-radius: 50px; font-size: 0.82rem; font-weight: 700;
-  transition: all var(--transition);
- }
- .contact-map-body .btn-sm:hover {
-  background: var(--terracotta-dark);
-  transform: scale(1.02);
- }
-
- /* ===================== FOOTER ===================== */
- .footer {
-  background: var(--espresso); color: rgba(255,255,255,0.6);
-  padding: 50px 0 30px;
- }
- .footer-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 20px;
- }
- .footer-brand {
-  display: flex; align-items: center; gap: 12px;
- }
- .footer-brand svg { width: 36px; height: 36px; }
- .footer-brand-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--white); }
- .footer-brand-text span { display: block; font-family: 'Lato', sans-serif; font-size: 0.7rem; color: rgba(255,255,255,0.4); letter-spacing: 2px; }
- .footer-links { display: flex; gap: 24px; }
- .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.5); transition: color var(--transition); }
- .footer-links a:hover { color: var(--gold); }
- .footer-bottom {
-  margin-top: 30px; padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  text-align: center; font-size: 0.8rem;
- }
- .footer-bottom .sv-love {
-  display: inline-flex; align-items: center; gap: 6px;
- }
- .footer-bottom .heart { color: var(--gold); }
-
- /* ===================== MOBILE MENU ===================== */
- .mobile-menu {
-  display: none; position: fixed; inset: 0; z-index: 999;
-  background: rgba(253, 248, 243, 0.98);
-  backdrop-filter: blur(20px);
-  flex-direction: column; align-items: center; justify-content: center;
-  gap: 24px; opacity: 0; pointer-events: none;
-  transition: opacity 0.3s;
- }
- .mobile-menu.open { opacity: 1; pointer-events: auto; }
- .mobile-menu a {
-  font-size: 1.4rem; font-family: 'Playfair Display', serif;
-  color: var(--coffee); transition: color var(--transition);
- }
- .mobile-menu a:hover { color: var(--terracotta); }
- .mobile-menu .nav-cta {
-  font-size: 1rem !important; padding: 14px 32px !important;
-  margin-top: 10px;
- }
-
- /* ===================== RESPONSIVE ===================== */
- @media (max-width: 1024px) {
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-visual { order: -1; }
-  .sv-banner-inner { flex-direction: column; text-align: center; }
-  .sv-banner-text p { margin: 0 auto; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
-  .gallery-item:nth-child(1),
-  .gallery-item:nth-child(6) {
-   grid-column: span 1;
-   grid-row: span 1;
-   aspect-ratio: 1;
+  :root {
+   --paper: #f7f0e5;
+   --paper-strong: #efe1cd;
+   --paper-ink: #e4d2b9;
+   --milk: #fffdf8;
+   --roast: #2a1814;
+   --roast-soft: #4f3027;
+   --roast-mute: #745548;
+   --terracotta: #b85c3f;
+   --terracotta-deep: #92452d;
+   --sesame: #d8b17a;
+   --sesame-soft: #e9cfac;
+   --blue: #245da8;
+   --blue-soft: #edf3fb;
+   --ink: #1d1715;
+   --muted: #5c4f49;
+   --line: rgba(42, 24, 20, 0.12);
+   --shadow-soft: 0 18px 48px rgba(55, 34, 23, 0.10);
+   --shadow-card: 0 22px 60px rgba(45, 28, 21, 0.14);
+   --radius-xl: 34px;
+   --radius-lg: 24px;
+   --radius-md: 18px;
+   --radius-sm: 12px;
+   --transition: 220ms ease;
   }
- }
- @media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .mobile-menu { display: flex; }
-  .menu-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
-  .order-steps { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto 40px; }
-  .about-features { grid-template-columns: 1fr; }
-  .order-top, .order-body { padding: 36px 24px; }
-  .footer-inner { flex-direction: column; text-align: center; }
-  .hero h1 { font-size: clamp(2.4rem, 8vw, 3.5rem); }
-  .sv-banner-visual { width: 200px; height: 200px; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-links { flex-wrap: wrap; justify-content: center; }
- }
- @media (max-width: 480px) {
-  .section-pad { padding: 60px 0; }
-  .hero-logo-main { width: 110px; height: auto; }
-  .hero-content { padding: 100px 16px 48px; }
-  .hero-sub { margin-bottom: 14px; }
-  .hero-tagline { font-size: 0.95rem; margin-bottom: 24px; }
-  .hero-buttons { flex-direction: column; align-items: center; gap: 10px; }
-  .btn { width: 100%; max-width: 280px; justify-content: center; min-height: 48px; font-size: 0.95rem; }
-  .menu-grid { gap: 20px; }
-  .menu-card-body { padding: 20px; }
-  .gallery-grid { gap: 6px; border-radius: 8px; }
-  .contact-grid { gap: 24px; }
-  .about-features { gap: 16px; }
-  .order-embed-wrapper iframe { min-height: 450px; max-height: 75vh; }
-  .sv-banner { padding: 48px 16px; }
-  .quote-section { padding: 48px 16px; }
-  h2 { font-size: clamp(1.6rem, 6vw, 2rem); }
-  .mobile-menu a { font-size: 1.2rem; min-height: 48px; display: flex; align-items: center; }
- }
+
+  *, *::before, *::after {
+   box-sizing: border-box;
+  }
+
+  html {
+   scroll-behavior: smooth;
+  }
+
+  body {
+   margin: 0;
+   font-family: "Manrope", sans-serif;
+   color: var(--ink);
+   background:
+    radial-gradient(circle at top left, rgba(216, 177, 122, 0.22), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(36, 93, 168, 0.08), transparent 24%),
+    linear-gradient(180deg, #fbf6ee 0%, #f7f0e5 45%, #fffaf3 100%);
+   line-height: 1.6;
+   overflow-x: hidden;
+  }
+
+  body::before {
+   content: "";
+   position: fixed;
+   inset: 0;
+   pointer-events: none;
+   opacity: 0.18;
+   background-image:
+    linear-gradient(rgba(42, 24, 20, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 24, 20, 0.02) 1px, transparent 1px);
+   background-size: 28px 28px;
+   mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
+  }
+
+  img {
+   display: block;
+   max-width: 100%;
+  }
+
+  a {
+   color: inherit;
+   text-decoration: none;
+  }
+
+  button {
+   font: inherit;
+  }
+
+  .page-shell {
+   position: relative;
+   isolation: isolate;
+  }
+
+  .container {
+   width: min(1180px, calc(100% - 40px));
+   margin: 0 auto;
+  }
+
+  .section {
+   padding: 110px 0;
+   position: relative;
+  }
+
+  .eyebrow {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 0.78rem;
+   font-weight: 800;
+   letter-spacing: 0.18em;
+   text-transform: uppercase;
+   color: var(--terracotta-deep);
+  }
+
+  .eyebrow::before {
+   content: "";
+   width: 42px;
+   height: 1px;
+   background: currentColor;
+  }
+
+  .section-heading {
+   max-width: 720px;
+   margin-bottom: 36px;
+  }
+
+  .section-heading h2,
+  .section-heading h3 {
+   margin: 14px 0 12px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: clamp(2.6rem, 4.2vw, 4.5rem);
+   line-height: 0.92;
+   letter-spacing: -0.03em;
+  }
+
+  .section-heading p {
+   margin: 0;
+   font-size: 1.02rem;
+   color: var(--muted);
+  }
+
+  .site-nav {
+   position: fixed;
+   top: 18px;
+   left: 0;
+   right: 0;
+   z-index: 50;
+   transition: transform var(--transition), background var(--transition), box-shadow var(--transition), border-color var(--transition);
+  }
+
+  .nav-shell {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+   padding: 14px 18px;
+   border: 1px solid rgba(42, 24, 20, 0.08);
+   border-radius: 999px;
+   background: rgba(255, 253, 248, 0.75);
+   backdrop-filter: blur(16px);
+   box-shadow: 0 18px 40px rgba(41, 24, 19, 0.08);
+  }
+
+  .site-nav.scrolled .nav-shell {
+   background: rgba(255, 251, 245, 0.96);
+   border-color: rgba(42, 24, 20, 0.12);
+   box-shadow: 0 18px 42px rgba(41, 24, 19, 0.13);
+  }
+
+  .brand-lockup {
+   display: inline-flex;
+   align-items: center;
+   gap: 14px;
+   min-width: 0;
+  }
+
+  .brand-mark {
+   width: 50px;
+   height: 50px;
+   border-radius: 999px;
+   background: #ffffff;
+   border: 1px solid rgba(42, 24, 20, 0.10);
+   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+   padding: 0;
+   object-fit: cover;
+   overflow: hidden;
+   flex: 0 0 auto;
+  }
+
+  .brand-text {
+   min-width: 0;
+  }
+
+  .brand-text strong {
+   display: block;
+   font-size: 1rem;
+   font-weight: 800;
+   letter-spacing: -0.02em;
+  }
+
+  .brand-text span {
+   display: block;
+   font-size: 0.72rem;
+   letter-spacing: 0.16em;
+   text-transform: uppercase;
+   color: var(--muted);
+  }
+
+  .nav-links {
+   display: flex;
+   align-items: center;
+   gap: 24px;
+   font-size: 0.92rem;
+   color: var(--roast-soft);
+  }
+
+  .nav-links a {
+   position: relative;
+   padding-bottom: 2px;
+   transition: color var(--transition);
+  }
+
+  .nav-links a::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: -1px;
+   width: 100%;
+   height: 1px;
+   background: var(--terracotta);
+   transform: scaleX(0);
+   transform-origin: left;
+   transition: transform var(--transition);
+  }
+
+  .nav-links a:hover {
+   color: var(--terracotta-deep);
+  }
+
+  .nav-links a:hover::after {
+   transform: scaleX(1);
+  }
+
+  .nav-actions {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+  }
+
+  .btn {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   min-height: 50px;
+   padding: 0 22px;
+   border-radius: 999px;
+   border: 1px solid transparent;
+   font-size: 0.92rem;
+   font-weight: 800;
+   letter-spacing: 0.01em;
+   transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition), color var(--transition);
+   cursor: pointer;
+  }
+
+  .btn:hover {
+   transform: translateY(-2px);
+  }
+
+  .btn-primary {
+   color: var(--milk);
+   background: linear-gradient(135deg, var(--terracotta) 0%, #cc7a4f 100%);
+   box-shadow: 0 18px 30px rgba(184, 92, 63, 0.24);
+  }
+
+  .btn-primary:hover {
+   box-shadow: 0 20px 38px rgba(184, 92, 63, 0.32);
+  }
+
+  .btn-secondary {
+   color: var(--roast);
+   background: rgba(255, 255, 255, 0.55);
+   border-color: rgba(42, 24, 20, 0.14);
+  }
+
+  .btn-secondary:hover {
+   background: rgba(255, 255, 255, 0.88);
+   border-color: rgba(42, 24, 20, 0.22);
+  }
+
+  .btn-linkish {
+   color: var(--terracotta-deep);
+   background: transparent;
+   padding-inline: 0;
+   min-height: auto;
+   border-radius: 0;
+  }
+
+  .btn-linkish:hover {
+   transform: translateX(2px);
+  }
+
+  .nav-toggle {
+   display: none;
+   width: 48px;
+   height: 48px;
+   border: 1px solid rgba(42, 24, 20, 0.12);
+   border-radius: 999px;
+   background: rgba(255, 255, 255, 0.72);
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+  }
+
+  .nav-toggle span {
+   position: relative;
+   display: block;
+   width: 18px;
+   height: 2px;
+   background: var(--roast);
+   transition: background var(--transition);
+  }
+
+  .nav-toggle span::before,
+  .nav-toggle span::after {
+   content: "";
+   position: absolute;
+   left: 0;
+   width: 18px;
+   height: 2px;
+   background: var(--roast);
+   transition: transform var(--transition), top var(--transition);
+  }
+
+  .nav-toggle span::before {
+   top: -6px;
+  }
+
+  .nav-toggle span::after {
+   top: 6px;
+  }
+
+  .nav-toggle.active span {
+   background: transparent;
+  }
+
+  .nav-toggle.active span::before {
+   top: 0;
+   transform: rotate(45deg);
+  }
+
+  .nav-toggle.active span::after {
+   top: 0;
+   transform: rotate(-45deg);
+  }
+
+  .mobile-drawer {
+   position: fixed;
+   inset: 90px 20px auto;
+   padding: 22px;
+   border: 1px solid rgba(42, 24, 20, 0.12);
+   border-radius: 28px;
+   background: rgba(255, 251, 245, 0.97);
+   box-shadow: 0 24px 60px rgba(39, 22, 17, 0.14);
+   opacity: 0;
+   transform: translateY(-12px);
+   pointer-events: none;
+   transition: opacity var(--transition), transform var(--transition);
+   z-index: 48;
+  }
+
+  .mobile-drawer.open {
+   opacity: 1;
+   transform: translateY(0);
+   pointer-events: auto;
+  }
+
+  .mobile-drawer nav {
+   display: grid;
+   gap: 16px;
+  }
+
+  .mobile-drawer a {
+   font-size: 1rem;
+   font-weight: 700;
+   color: var(--roast-soft);
+  }
+
+  .hero {
+   padding: 150px 0 90px;
+  }
+
+  .hero-grid {
+   display: grid;
+   grid-template-columns: 1.08fr 0.92fr;
+   gap: 44px;
+   align-items: center;
+  }
+
+  .hero-copy {
+   position: relative;
+   z-index: 1;
+  }
+
+  .hero-copy h1 {
+   margin: 18px 0 18px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: clamp(4rem, 7vw, 7.4rem);
+   line-height: 0.9;
+   letter-spacing: -0.05em;
+   max-width: 10ch;
+  }
+
+  .hero-copy p {
+   margin: 0 0 18px;
+   max-width: 58ch;
+   font-size: 1.05rem;
+   color: var(--muted);
+  }
+
+  .hero-actions {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 14px;
+   margin-top: 28px;
+  }
+
+  .hero-pills {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+   margin-top: 28px;
+  }
+
+  .hero-pill {
+   display: inline-flex;
+   align-items: center;
+   gap: 10px;
+   padding: 11px 15px;
+   border-radius: 999px;
+   background: rgba(255, 255, 255, 0.58);
+   border: 1px solid rgba(42, 24, 20, 0.10);
+   box-shadow: 0 10px 24px rgba(42, 24, 20, 0.06);
+   font-size: 0.88rem;
+   font-weight: 700;
+   color: var(--roast-soft);
+  }
+
+  .hero-pill i {
+   width: 9px;
+   height: 9px;
+   border-radius: 999px;
+   background: var(--terracotta);
+   display: inline-block;
+   flex: 0 0 auto;
+  }
+
+  .hero-note {
+   margin-top: 26px;
+   padding: 18px 18px 16px;
+   border-left: 3px solid var(--sesame);
+   max-width: 470px;
+   background: rgba(255, 255, 255, 0.45);
+   color: var(--roast-soft);
+   font-size: 0.94rem;
+  }
+
+  .hero-stage {
+   position: relative;
+   min-height: 690px;
+  }
+
+  .stage-ribbon {
+   position: absolute;
+   top: 10px;
+   right: 24px;
+   width: 120px;
+   height: 180px;
+   border-radius: 0 0 26px 26px;
+   background:
+    linear-gradient(90deg, var(--blue) 0%, var(--blue) 28%, #ffffff 28%, #ffffff 72%, var(--blue) 72%, var(--blue) 100%);
+   box-shadow: 0 20px 50px rgba(36, 93, 168, 0.18);
+   transform: rotate(5deg);
+   opacity: 0.9;
+  }
+
+  .stage-ribbon::after {
+   content: "";
+   position: absolute;
+   left: 50%;
+   bottom: -22px;
+   width: 72px;
+   height: 30px;
+   background: inherit;
+   clip-path: polygon(0 0, 100% 0, 50% 100%);
+   transform: translateX(-50%);
+  }
+
+  .hero-card {
+   position: absolute;
+   overflow: hidden;
+   border-radius: 28px;
+   background: var(--milk);
+   border: 1px solid rgba(42, 24, 20, 0.10);
+   box-shadow: var(--shadow-card);
+  }
+
+  .hero-card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  }
+
+  .hero-card-main {
+   top: 70px;
+   left: 0;
+   width: 58%;
+   height: 470px;
+   transform: rotate(-4deg);
+  }
+
+  .hero-card-tall {
+   top: 0;
+   right: 0;
+   width: 43%;
+   height: 330px;
+   transform: rotate(3deg);
+  }
+
+  .hero-card-wide {
+   right: 36px;
+   bottom: 56px;
+   width: 52%;
+   height: 240px;
+   transform: rotate(-3deg);
+  }
+
+  .hero-caption {
+   position: absolute;
+   left: 18px;
+   right: 18px;
+   bottom: 18px;
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   gap: 10px;
+   padding: 16px 18px;
+   border-radius: 18px;
+   background: linear-gradient(180deg, rgba(42, 24, 20, 0) 0%, rgba(42, 24, 20, 0.86) 100%);
+   color: var(--milk);
+  }
+
+  .hero-caption strong {
+   display: block;
+   font-size: 1.05rem;
+  }
+
+  .hero-caption span {
+   display: block;
+   font-size: 0.82rem;
+   opacity: 0.85;
+  }
+
+  .stage-stamp {
+   position: absolute;
+   left: 28px;
+   bottom: 18px;
+   max-width: 240px;
+   padding: 18px 18px 16px;
+   border-radius: 22px;
+   background: rgba(255, 250, 243, 0.9);
+   border: 1px solid rgba(42, 24, 20, 0.12);
+   box-shadow: 0 18px 40px rgba(42, 24, 20, 0.10);
+  }
+
+  .stage-stamp img {
+   width: 132px;
+   margin-bottom: 14px;
+  }
+
+  .stage-stamp p {
+   margin: 0;
+   font-size: 0.88rem;
+   color: var(--roast-soft);
+  }
+
+  .band {
+   padding: 30px 0;
+  }
+
+  .band-grid {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(0, 1fr));
+   gap: 16px;
+  }
+
+  .band-card {
+   position: relative;
+   min-height: 170px;
+   padding: 24px;
+   border-radius: 24px;
+   background: rgba(255, 255, 255, 0.6);
+   border: 1px solid rgba(42, 24, 20, 0.10);
+   box-shadow: var(--shadow-soft);
+   overflow: hidden;
+  }
+
+  .band-card::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background:
+    linear-gradient(145deg, rgba(216, 177, 122, 0.18), transparent 45%),
+    linear-gradient(320deg, rgba(36, 93, 168, 0.05), transparent 40%);
+   pointer-events: none;
+  }
+
+  .band-card small {
+   position: relative;
+   display: inline-block;
+   margin-bottom: 30px;
+   font-size: 0.72rem;
+   font-weight: 800;
+   letter-spacing: 0.16em;
+   text-transform: uppercase;
+   color: var(--terracotta-deep);
+  }
+
+  .band-card h3 {
+   position: relative;
+   margin: 0 0 8px;
+   font-size: 1.18rem;
+   font-weight: 800;
+   line-height: 1.15;
+  }
+
+  .band-card p {
+   position: relative;
+   margin: 0;
+   font-size: 0.93rem;
+   color: var(--muted);
+  }
+
+  .story-grid {
+   display: grid;
+   grid-template-columns: 0.95fr 1.05fr;
+   gap: 34px;
+   align-items: start;
+  }
+
+  .story-card,
+  .paper-card {
+   padding: 30px;
+   border-radius: var(--radius-xl);
+   background: rgba(255, 255, 255, 0.72);
+   border: 1px solid rgba(42, 24, 20, 0.11);
+   box-shadow: var(--shadow-soft);
+  }
+
+  .story-card blockquote {
+   margin: 0 0 22px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: clamp(2rem, 3vw, 3rem);
+   line-height: 0.98;
+   letter-spacing: -0.03em;
+  }
+
+  .story-list {
+   display: grid;
+   gap: 16px;
+   margin-top: 22px;
+  }
+
+  .story-list-item {
+   display: grid;
+   grid-template-columns: 46px 1fr;
+   gap: 14px;
+   align-items: start;
+  }
+
+  .story-index {
+   width: 46px;
+   height: 46px;
+   border-radius: 14px;
+   background: var(--sesame-soft);
+   color: var(--terracotta-deep);
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 0.9rem;
+   font-weight: 800;
+  }
+
+  .story-list-item h4 {
+   margin: 0 0 4px;
+   font-size: 1rem;
+   font-weight: 800;
+  }
+
+  .story-list-item p {
+   margin: 0;
+   color: var(--muted);
+   font-size: 0.92rem;
+  }
+
+  .story-visual {
+   position: relative;
+   display: grid;
+   gap: 18px;
+  }
+
+  .city-card {
+   overflow: hidden;
+   padding: 16px;
+  }
+
+  .city-card figure {
+   margin: 0;
+   overflow: hidden;
+   border-radius: 24px;
+  }
+
+  .city-card img {
+   width: 100%;
+   aspect-ratio: 1.15 / 1;
+   object-fit: cover;
+  }
+
+  .city-card figcaption {
+   padding: 16px 6px 4px;
+   font-size: 0.94rem;
+   color: var(--muted);
+  }
+
+  .menu-grid {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 20px;
+  }
+
+  .menu-card {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   border-radius: 30px;
+   background: var(--milk);
+   border: 1px solid rgba(42, 24, 20, 0.12);
+   box-shadow: var(--shadow-card);
+  }
+
+  .menu-card-media {
+   position: relative;
+   overflow: hidden;
+   aspect-ratio: 0.92 / 1;
+  }
+
+  .menu-card-media img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 400ms ease;
+  }
+
+  .menu-card:hover .menu-card-media img {
+   transform: scale(1.04);
+  }
+
+  .menu-card-body {
+   padding: 24px 24px 26px;
+  }
+
+  .menu-tag {
+   display: inline-block;
+   margin-bottom: 12px;
+   padding: 8px 12px;
+   border-radius: 999px;
+   background: var(--paper);
+   font-size: 0.75rem;
+   font-weight: 800;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+   color: var(--terracotta-deep);
+  }
+
+  .menu-card h3 {
+   margin: 0 0 12px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: 2.2rem;
+   line-height: 0.95;
+   letter-spacing: -0.03em;
+  }
+
+  .menu-card p {
+   margin: 0 0 16px;
+   color: var(--muted);
+  }
+
+  .menu-list {
+   display: grid;
+   gap: 10px;
+   margin: 0 0 18px;
+   padding: 0;
+   list-style: none;
+  }
+
+  .menu-list li {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-size: 0.92rem;
+   color: var(--roast-soft);
+  }
+
+  .menu-list li::before {
+   content: "";
+   width: 7px;
+   height: 7px;
+   border-radius: 999px;
+   background: var(--sesame);
+   flex: 0 0 auto;
+  }
+
+  .special-section {
+   padding-top: 20px;
+  }
+
+  .special-grid {
+   display: grid;
+   grid-template-columns: 1fr 0.95fr;
+   gap: 24px;
+   align-items: stretch;
+  }
+
+  .special-left {
+   position: relative;
+   overflow: hidden;
+   padding: 40px;
+   border-radius: 34px;
+   background: linear-gradient(135deg, rgba(42, 24, 20, 0.98), rgba(85, 51, 37, 0.96));
+   color: var(--milk);
+   box-shadow: var(--shadow-card);
+  }
+
+  .special-left::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background:
+    radial-gradient(circle at 18% 24%, rgba(216, 177, 122, 0.22), transparent 32%),
+    radial-gradient(circle at 84% 76%, rgba(36, 93, 168, 0.15), transparent 30%);
+   pointer-events: none;
+  }
+
+  .special-left > * {
+   position: relative;
+  }
+
+  .special-left h2 {
+   margin: 16px 0 12px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: clamp(3rem, 4vw, 4.6rem);
+   line-height: 0.92;
+   letter-spacing: -0.04em;
+  }
+
+  .special-left p {
+   margin: 0 0 28px;
+   max-width: 56ch;
+   color: rgba(255, 248, 240, 0.82);
+  }
+
+  .special-points {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 18px;
+  }
+
+  .special-point {
+   padding: 18px;
+   border-radius: 22px;
+   background: rgba(255, 255, 255, 0.07);
+   border: 1px solid rgba(255, 255, 255, 0.10);
+  }
+
+  .special-point strong {
+   display: block;
+   margin-bottom: 6px;
+   font-size: 1rem;
+  }
+
+  .special-point span {
+   display: block;
+   font-size: 0.9rem;
+   color: rgba(255, 248, 240, 0.78);
+  }
+
+  .special-right {
+   display: grid;
+   gap: 20px;
+  }
+
+  .special-note {
+   padding: 28px;
+  }
+
+  .special-note h3 {
+   margin: 0 0 10px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: 2.2rem;
+   line-height: 0.95;
+  }
+
+  .special-note p {
+   margin: 0 0 18px;
+   color: var(--muted);
+  }
+
+  .special-note ul {
+   margin: 0;
+   padding-left: 18px;
+   color: var(--muted);
+  }
+
+  .special-note li + li {
+   margin-top: 8px;
+  }
+
+  .order-section {
+   padding-top: 30px;
+  }
+
+  .order-shell {
+   overflow: hidden;
+   border-radius: 38px;
+   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(251, 245, 236, 0.94));
+   border: 1px solid rgba(42, 24, 20, 0.12);
+   box-shadow: var(--shadow-card);
+  }
+
+  .order-header {
+   display: grid;
+   grid-template-columns: 0.95fr 1.05fr;
+   gap: 22px;
+   padding: 38px 38px 0;
+  }
+
+  .order-header h2 {
+   margin: 16px 0 12px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: clamp(3rem, 4vw, 4.4rem);
+   line-height: 0.92;
+   letter-spacing: -0.04em;
+  }
+
+  .order-header p {
+   margin: 0;
+   color: var(--muted);
+  }
+
+  .order-points {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 14px;
+   align-self: end;
+  }
+
+  .order-point {
+   padding: 18px;
+   border-radius: 24px;
+   background: rgba(255, 255, 255, 0.74);
+   border: 1px solid rgba(42, 24, 20, 0.10);
+  }
+
+  .order-point strong {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 36px;
+   height: 36px;
+   margin-bottom: 12px;
+   border-radius: 12px;
+   background: var(--paper);
+   color: var(--terracotta-deep);
+   font-size: 0.92rem;
+  }
+
+  .order-point h3 {
+   margin: 0 0 6px;
+   font-size: 0.98rem;
+  }
+
+  .order-point p {
+   margin: 0;
+   font-size: 0.88rem;
+   color: var(--muted);
+  }
+
+  .order-body {
+   display: grid;
+   grid-template-columns: 0.74fr 1.26fr;
+   gap: 24px;
+   padding: 30px 38px 38px;
+  }
+
+  .order-aside {
+   display: grid;
+   gap: 20px;
+   align-content: start;
+  }
+
+  .order-card {
+   padding: 24px;
+  }
+
+  .order-card h3 {
+   margin: 0 0 12px;
+   font-size: 1.12rem;
+  }
+
+  .order-card p,
+  .order-card li {
+   color: var(--muted);
+   font-size: 0.92rem;
+  }
+
+  .order-card ul {
+   margin: 0;
+   padding-left: 18px;
+  }
+
+  .order-embed {
+   position: relative;
+   overflow: hidden;
+   min-height: 820px;
+   border-radius: 30px;
+   border: 1px solid rgba(42, 24, 20, 0.12);
+   background: #ffffff;
+   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  .order-embed iframe {
+   width: 100%;
+   height: 100%;
+   min-height: 820px;
+   border: 0;
+   background: #ffffff;
+  }
+
+  .catering-grid {
+   display: grid;
+   grid-template-columns: 0.9fr 1.1fr;
+   gap: 24px;
+   align-items: start;
+  }
+
+  .catering-left {
+   display: grid;
+   gap: 18px;
+  }
+
+  .catering-card {
+   padding: 28px;
+  }
+
+  .catering-card h3 {
+   margin: 0 0 12px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: 2.4rem;
+   line-height: 0.95;
+  }
+
+  .catering-card p {
+   margin: 0 0 16px;
+   color: var(--muted);
+  }
+
+  .catering-card ul {
+   margin: 0;
+   padding-left: 18px;
+   color: var(--muted);
+  }
+
+  .catering-card li + li {
+   margin-top: 8px;
+  }
+
+  .catering-packages {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 16px;
+  }
+
+  .package {
+   padding: 24px;
+  }
+
+  .package small {
+   display: block;
+   margin-bottom: 18px;
+   font-size: 0.76rem;
+   font-weight: 800;
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+   color: var(--terracotta-deep);
+  }
+
+  .package h4 {
+   margin: 0 0 10px;
+   font-size: 1.04rem;
+  }
+
+  .package p {
+   margin: 0;
+   font-size: 0.9rem;
+   color: var(--muted);
+  }
+
+  .connect-grid {
+   display: grid;
+   grid-template-columns: 0.9fr 1.1fr;
+   gap: 22px;
+   align-items: stretch;
+  }
+
+  .connect-panel {
+   padding: 30px;
+  }
+
+  .connect-panel h3 {
+   margin: 0 0 14px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: 2.5rem;
+   line-height: 0.95;
+  }
+
+  .connect-panel p {
+   margin: 0 0 18px;
+   color: var(--muted);
+  }
+
+  .contact-list {
+   display: grid;
+   gap: 16px;
+   margin-top: 24px;
+  }
+
+  .contact-item {
+   padding-bottom: 16px;
+   border-bottom: 1px solid rgba(42, 24, 20, 0.10);
+  }
+
+  .contact-item:last-child {
+   padding-bottom: 0;
+   border-bottom: 0;
+  }
+
+  .contact-item strong {
+   display: block;
+   margin-bottom: 5px;
+   font-size: 0.92rem;
+   text-transform: uppercase;
+   letter-spacing: 0.12em;
+   color: var(--terracotta-deep);
+  }
+
+  .contact-item span,
+  .contact-item a {
+   color: var(--roast-soft);
+   font-size: 0.95rem;
+  }
+
+  .connect-visual {
+   position: relative;
+   overflow: hidden;
+   min-height: 520px;
+   border-radius: 34px;
+   border: 1px solid rgba(42, 24, 20, 0.12);
+   box-shadow: var(--shadow-card);
+  }
+
+  .connect-visual img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  }
+
+  .connect-overlay {
+   position: absolute;
+   inset: auto 22px 22px 22px;
+   padding: 24px;
+   border-radius: 24px;
+   background: rgba(255, 251, 245, 0.92);
+   border: 1px solid rgba(42, 24, 20, 0.10);
+   box-shadow: 0 16px 40px rgba(42, 24, 20, 0.12);
+  }
+
+  .connect-overlay strong {
+   display: block;
+   margin-bottom: 8px;
+   font-size: 1rem;
+  }
+
+  .connect-overlay p {
+   margin: 0;
+   font-size: 0.92rem;
+   color: var(--muted);
+  }
+
+  .footer {
+   padding: 34px 0 42px;
+   background: linear-gradient(180deg, #281914 0%, #1c120f 100%);
+   color: rgba(255, 249, 242, 0.9);
+  }
+
+  .footer-grid {
+   display: grid;
+   grid-template-columns: 1fr auto;
+   gap: 20px;
+   align-items: end;
+  }
+
+  .footer-brand {
+   display: inline-flex;
+   align-items: center;
+   gap: 14px;
+  }
+
+  .footer-brand .brand-mark {
+   background: rgba(255, 255, 255, 0.08);
+   border-color: rgba(255, 255, 255, 0.10);
+  }
+
+  .footer-brand .brand-text strong,
+  .footer-brand .brand-text span {
+   color: rgba(255, 249, 242, 0.9);
+  }
+
+  .footer-links {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 16px 20px;
+   justify-content: flex-end;
+   font-size: 0.92rem;
+  }
+
+  .footer-links a {
+   color: rgba(255, 249, 242, 0.72);
+   transition: color var(--transition);
+  }
+
+  .footer-links a:hover {
+   color: var(--sesame-soft);
+  }
+
+  .footer-bottom {
+   margin-top: 22px;
+   padding-top: 18px;
+   border-top: 1px solid rgba(255, 255, 255, 0.08);
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px 20px;
+   justify-content: space-between;
+   font-size: 0.86rem;
+   color: rgba(255, 249, 242, 0.62);
+  }
+
+  .footer-credit {
+   color: var(--sesame-soft);
+   font-weight: 700;
+  }
+
+  [data-reveal] {
+   opacity: 0;
+   transform: translateY(28px);
+   transition: opacity 700ms ease, transform 700ms ease;
+  }
+
+  [data-reveal].is-visible {
+   opacity: 1;
+   transform: translateY(0);
+  }
+
+  @media (max-width: 1100px) {
+   .hero-grid,
+   .story-grid,
+   .special-grid,
+   .order-header,
+   .order-body,
+   .catering-grid,
+   .connect-grid {
+    grid-template-columns: 1fr;
+   }
+
+   .band-grid,
+   .menu-grid,
+   .catering-packages,
+   .order-points,
+   .special-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+
+   .hero-stage {
+    min-height: 620px;
+   }
+
+   .connect-visual {
+    min-height: 440px;
+   }
+  }
+
+  @media (max-width: 860px) {
+   .site-nav {
+    top: 14px;
+   }
+
+   .nav-links,
+   .nav-actions .btn-primary {
+    display: none;
+   }
+
+   .nav-toggle {
+    display: inline-flex;
+   }
+
+   .hero {
+    padding-top: 130px;
+   }
+
+   .hero-stage {
+    min-height: 560px;
+   }
+
+   .stage-ribbon {
+    width: 98px;
+    height: 145px;
+   }
+
+   .hero-card-main {
+    width: 62%;
+    height: 390px;
+   }
+
+   .hero-card-tall {
+    width: 44%;
+    height: 260px;
+   }
+
+   .hero-card-wide {
+    width: 56%;
+    height: 190px;
+    right: 12px;
+   }
+
+   .band-grid,
+   .menu-grid,
+   .catering-packages,
+   .order-points,
+   .special-points {
+    grid-template-columns: 1fr;
+   }
+
+   .footer-grid,
+   .footer-bottom {
+    grid-template-columns: 1fr;
+    justify-content: start;
+   }
+
+   .footer-links {
+    justify-content: flex-start;
+   }
+  }
+
+  @media (max-width: 640px) {
+   .container {
+    width: min(100% - 28px, 1180px);
+   }
+
+   .section {
+    padding: 82px 0;
+   }
+
+   .hero-copy h1 {
+    font-size: clamp(3rem, 17vw, 4.6rem);
+   }
+
+   .section-heading h2,
+   .section-heading h3,
+   .special-left h2,
+   .order-header h2 {
+    font-size: clamp(2.5rem, 14vw, 3.5rem);
+   }
+
+   .hero-stage {
+    min-height: 500px;
+   }
+
+   .hero-card-main {
+    width: 66%;
+    height: 330px;
+   }
+
+   .hero-card-tall {
+    width: 44%;
+    height: 220px;
+   }
+
+   .hero-card-wide {
+    width: 58%;
+    height: 170px;
+    right: 0;
+    bottom: 78px;
+   }
+
+   .stage-stamp {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    max-width: none;
+   }
+
+   .story-card,
+   .paper-card,
+   .special-left,
+   .connect-panel,
+   .order-card,
+   .order-shell,
+   .menu-card-body,
+   .catering-card,
+   .package {
+    padding: 22px;
+   }
+
+   .order-header {
+    padding: 28px 22px 0;
+   }
+
+   .order-body {
+    padding: 22px;
+   }
+
+   .order-embed {
+    min-height: 700px;
+   }
+
+   .order-embed iframe {
+    min-height: 700px;
+   }
+
+   .connect-visual {
+    min-height: 380px;
+   }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+   html {
+    scroll-behavior: auto;
+   }
+
+   *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+   }
+  }
  </style>
 </head>
 <body>
+ <div class="page-shell">
+  <header class="site-nav" id="siteNav">
+   <div class="container">
+    <div class="nav-shell">
+     <a href="#top" class="brand-lockup" aria-label="Coffee and Crumbs home">
+      <img class="brand-mark" src="branding/IMG_2941.png" alt="Coffee and Crumbs logo">
+      <div class="brand-text">
+       <strong>Coffee &amp; Crumbs</strong>
+       <span>Northern Virginia</span>
+      </div>
+     </a>
+     <nav class="nav-links" aria-label="Primary">
+      <a href="#story">Our Story</a>
+      <a href="#favorites">Menu</a>
+      <a href="#order">Order</a>
+      <a href="/catering.html">Catering</a>
+      <a href="#connect">Contact</a>
+     </nav>
+     <div class="nav-actions">
+      <a class="btn btn-primary" href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&amp;fulfillment=PICKUP" target="_blank" rel="noopener">Order Pickup</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Open menu">
+       <span></span>
+      </button>
+     </div>
+    </div>
+   </div>
+  </header>
 
- <!-- ============ NAVBAR ============ -->
- <nav class="navbar" id="navbar" aria-label="Main navigation">
-  <div class="container nav-inner">
-   <a href="#" class="nav-logo">
-    <div class="nav-logo-text">
-     Coffee & Crumbs
-     <span>Northern Virginia</span>
-    </div>
-   </a>
-   <div class="nav-links">
-    <div class="nav-item-drinks">
-     <a href="/menu.html#drinks">Drinks</a>
-     <div class="nav-submenu">
-      <a href="/menu.html#drinks">Coffees</a>
-      <a href="/menu.html#drinks">Teas</a>
-      <a href="/menu.html#drinks">Juices</a>
-      <a href="/menu.html#drinks">Lemonades</a>
-     </div>
-    </div>
-    <div class="nav-item-drinks">
-     <a href="/menu.html#crumbs">Crumbs</a>
-     <div class="nav-submenu">
-      <a href="/menu.html#crumbs">Cookies</a>
-      <a href="/menu.html#crumbs">Mini cakes</a>
-      <a href="/menu.html#crumbs">Cinnamon rolls</a>
-      <a href="/menu.html#crumbs">Turnovers</a>
-     </div>
-    </div>
-    <a href="/menu.html#salvadoran">Salvadoran specials</a>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile navigation">
+   <nav>
+    <a href="#story">Our Story</a>
+    <a href="#favorites">Menu</a>
     <a href="#order">Order</a>
     <a href="/catering.html">Catering</a>
-    <a href="#contact">Contact</a>
-    <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="nav-cta">Order Now</a>
-   </div>
-   <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-   </button>
+    <a href="#connect">Contact</a>
+    <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&amp;fulfillment=PICKUP" target="_blank" rel="noopener">Order Pickup</a>
+   </nav>
   </div>
- </nav>
 
- <!-- Mobile Menu -->
- <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
-  <a href="/menu.html#drinks" onclick="closeMobile()">Drinks</a>
-  <a href="/menu.html#crumbs" onclick="closeMobile()">Crumbs</a>
-  <a href="/menu.html#salvadoran" onclick="closeMobile()">Salvadoran specials</a>
-  <a href="#order" onclick="closeMobile()">Order</a>
-  <a href="#catering" onclick="closeMobile()">Catering</a>
-  <a href="#contact" onclick="closeMobile()">Contact</a>
-  <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="nav-cta">Order Now</a>
+  <main id="top">
+   <section class="hero">
+    <div class="container">
+     <div class="hero-grid">
+      <div class="hero-copy" data-reveal>
+       <span class="eyebrow">Coffee, crumbs, and cafecito culture</span>
+       <h1>Salvadoran pastries and handcrafted coffee, made for pickup.</h1>
+       <p>Coffee &amp; Crumbs is a Northern Virginia home-based business serving signature lattes, cookies, mini cakes, and Salvadoran favorites with a warm, personal touch.</p>
+       <p>The goal is simple: beautiful drinks, real baked goods, and flavors that feel homemade instead of mass-produced.</p>
+       <div class="hero-actions">
+        <a class="btn btn-primary" href="#order">Order on the Site</a>
+        <a class="btn btn-secondary" href="/menu.html#drinks">See the Full Menu</a>
+       </div>
+       <div class="hero-pills" aria-label="Coffee and Crumbs highlights">
+        <span class="hero-pill"><i></i>Pickup in Northern Virginia</span>
+        <span class="hero-pill"><i></i>Signature lattes and sweets</span>
+        <span class="hero-pill"><i></i>Square checkout built into the site</span>
+       </div>
+       <div class="hero-note">This version of the site keeps the ordering experience inside the brand as much as possible today, while leaving room for deeper Square features and printer-ticket workflows later.</div>
+      </div>
+
+      <div class="hero-stage" data-reveal>
+       <div class="stage-ribbon" aria-hidden="true"></div>
+       <article class="hero-card hero-card-main">
+        <img src="Drinks/IMG_3705.webp" alt="Iced handcrafted latte from Coffee and Crumbs">
+        <div class="hero-caption">
+         <div>
+          <strong>Signature coffees</strong>
+          <span>Horchata, fresas con crema, banana cream, and rotating specials</span>
+         </div>
+        </div>
+      </article>
+       <article class="hero-card hero-card-tall">
+        <img src="Cookies/IMG_3573.webp" alt="Fresh Coffee and Crumbs cookie">
+        <div class="hero-caption">
+         <div>
+          <strong>Crumbs</strong>
+          <span>Cookies, mini cakes, cinnamon rolls, and sweet little extras</span>
+         </div>
+        </div>
+       </article>
+       <article class="hero-card hero-card-wide">
+        <img src="menu-quesadilla.webp" alt="Salvadoran quesadilla from Coffee and Crumbs">
+        <div class="hero-caption">
+         <div>
+          <strong>Salvadoran favorites</strong>
+          <span>Quesadilla, peperechas, and pastries that deserve more attention</span>
+         </div>
+        </div>
+       </article>
+       <div class="stage-stamp">
+        <img src="branding/IMG_2941.png" alt="Coffee and Crumbs logo">
+        <p>Hecho con amor, poured and baked for Northern Virginia with a little more personality than the average cafe page.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <section class="band">
+    <div class="container">
+     <div class="band-grid">
+      <article class="band-card" data-reveal>
+       <small>01</small>
+       <h3>Not a generic coffee template</h3>
+       <p>The site leads with your actual products, not filler copy or placeholder cafe language.</p>
+      </article>
+      <article class="band-card" data-reveal>
+       <small>02</small>
+       <h3>Salvadoran identity stays visible</h3>
+       <p>That piece is what makes Coffee &amp; Crumbs memorable, and it should feel central, not secondary.</p>
+      </article>
+      <article class="band-card" data-reveal>
+       <small>03</small>
+       <h3>Pickup is clear and easy</h3>
+       <p>Everything points toward a simple order flow for local customers without sending them on a scavenger hunt.</p>
+      </article>
+      <article class="band-card" data-reveal>
+       <small>04</small>
+       <h3>Catering can grow from here</h3>
+       <p>The home page now makes room for custom spreads, event orders, and future operational features.</p>
+      </article>
+     </div>
+    </div>
+   </section>
+
+   <section class="section" id="story">
+    <div class="container">
+     <div class="story-grid">
+      <div class="story-card" data-reveal>
+       <span class="eyebrow">The heart of the brand</span>
+       <blockquote>A warm home kitchen, strong coffee, and flavors shaped by Salvadoran tradition.</blockquote>
+       <p>Coffee &amp; Crumbs is strongest when it feels personal. The business is not trying to be a giant cafe chain. It is about thoughtful drinks, fresh sweets, and recipes that carry real family and cultural context.</p>
+       <div class="story-list">
+        <div class="story-list-item">
+         <span class="story-index">01</span>
+         <div>
+          <h4>Handmade on purpose</h4>
+          <p>Every drink and pastry should look like somebody cared when making it, because somebody did.</p>
+         </div>
+        </div>
+        <div class="story-list-item">
+         <span class="story-index">02</span>
+         <div>
+          <h4>Salvadoran specialties deserve the spotlight</h4>
+          <p>Quesadilla and peperechas are not side notes. They are part of what makes the menu feel special.</p>
+         </div>
+        </div>
+        <div class="story-list-item">
+         <span class="story-index">03</span>
+         <div>
+          <h4>Pickup, but still memorable</h4>
+          <p>The experience should still feel branded, warm, and intentional even though orders are placed ahead for pickup.</p>
+         </div>
+        </div>
+       </div>
+      </div>
+
+      <div class="story-visual" data-reveal>
+       <div class="paper-card city-card">
+        <figure>
+         <img src="el-salvador-city.jpg" alt="Aerial view of El Salvador">
+         <figcaption>Rooted in Salvadoran flavor and reinterpreted for a Northern Virginia customer base that loves coffee runs, sweet breads, and custom pickup treats.</figcaption>
+        </figure>
+       </div>
+       <div class="paper-card">
+        <span class="eyebrow">A note on the menu</span>
+        <h3 style="margin: 14px 0 10px; font-family: 'Cormorant Garamond', serif; font-size: 2.3rem; line-height: 0.95;">Explain the specialties instead of assuming everyone already knows them.</h3>
+        <p style="margin: 0; color: var(--muted);">The next version of the site should help first-time customers understand why Salvadoran quesadilla is special, what peperechas are, and which signature drinks they should start with.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <section class="section" id="favorites">
+    <div class="container">
+     <div class="section-heading" data-reveal>
+      <span class="eyebrow">What to order first</span>
+      <h2>A menu preview that feels more like a bakery counter than a template grid.</h2>
+      <p>The full menu still lives on its own page, but the homepage now gives people a faster feel for what Coffee &amp; Crumbs actually sells and why it looks worth ordering.</p>
+     </div>
+
+     <div class="menu-grid">
+      <article class="menu-card" data-reveal>
+       <div class="menu-card-media">
+        <img src="Drinks/IMG_3705.webp" alt="Iced signature coffee from Coffee and Crumbs">
+       </div>
+       <div class="menu-card-body">
+        <span class="menu-tag">Signature Sips</span>
+        <h3>Coffees</h3>
+        <p>Built around creamy, flavorful drinks that still feel handcrafted rather than over-engineered.</p>
+        <ul class="menu-list">
+         <li>Horchata latte</li>
+         <li>Fresas con crema latte</li>
+         <li>Banana cream latte</li>
+         <li>Vanilla latte and custom specials</li>
+        </ul>
+        <a class="btn btn-linkish" href="/menu.html#drinks">Open drinks menu</a>
+       </div>
+      </article>
+
+      <article class="menu-card" data-reveal>
+       <div class="menu-card-media">
+        <img src="Cookies/IMG_3573.webp" alt="Cookie from Coffee and Crumbs">
+       </div>
+       <div class="menu-card-body">
+        <span class="menu-tag">The Crumb Case</span>
+        <h3>Sweets</h3>
+        <p>The side of the menu that makes people add one more thing to the order before checkout.</p>
+        <ul class="menu-list">
+         <li>Cookies with generous toppings and drizzle</li>
+         <li>Mini cakes and loaf cakes</li>
+         <li>Cinnamon rolls and pastries</li>
+         <li>Small-batch seasonal extras</li>
+        </ul>
+        <a class="btn btn-linkish" href="/menu.html#crumbs">Browse crumbs</a>
+       </div>
+      </article>
+
+      <article class="menu-card" data-reveal>
+       <div class="menu-card-media">
+        <img src="menu-quesadilla.webp" alt="Salvadoran quesadilla baked by Coffee and Crumbs">
+       </div>
+       <div class="menu-card-body">
+        <span class="menu-tag">Salvadoran Favorites</span>
+        <h3>Classics</h3>
+        <p>These are the items that separate the brand from every other local coffee stop.</p>
+        <ul class="menu-list">
+         <li>Salvadoran quesadilla with sesame</li>
+         <li>Peperechas and sweet breads</li>
+         <li>Pastries worth pairing with cafecito</li>
+         <li>Family-inspired flavors from the region</li>
+        </ul>
+        <a class="btn btn-linkish" href="/menu.html#salvadoran">See Salvadoran specials</a>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+
+   <section class="section special-section">
+    <div class="container">
+     <div class="special-grid">
+      <div class="special-left" data-reveal>
+       <span class="eyebrow" style="color: var(--sesame-soft);">Why the brand works</span>
+       <h2>It is the mix of comfort, craft, and culture that makes the menu feel different.</h2>
+       <p>When the site speaks clearly about the business, customers do not just see "coffee and pastries." They see a local brand with a point of view.</p>
+       <div class="special-points">
+        <div class="special-point">
+         <strong>Small-batch feel</strong>
+         <span>Everything should read like it came from a real kitchen, not a stock bakery page.</span>
+        </div>
+        <div class="special-point">
+         <strong>Strong visual rhythm</strong>
+         <span>Layered cards, textured paper, and asymmetry make the site feel designed rather than auto-generated.</span>
+        </div>
+        <div class="special-point">
+         <strong>Signature items first</strong>
+         <span>Customers should meet horchata lattes and Salvadoran pastries before generic cafe copy.</span>
+        </div>
+        <div class="special-point">
+         <strong>Built to evolve</strong>
+         <span>This layout leaves room for the updated logo, a deeper Square integration, and printer-driven order ops later.</span>
+        </div>
+       </div>
+      </div>
+
+      <div class="special-right">
+       <div class="paper-card special-note" data-reveal>
+        <span class="eyebrow">A better story for new customers</span>
+        <h3>Explain what makes Salvadoran quesadilla special.</h3>
+        <p>A lot of people still do not know that this is a lightly sweet, sesame-topped cheese bread. That explanation should sit next to the product instead of getting buried somewhere else.</p>
+        <ul>
+         <li>Lead with flavor, not just category labels.</li>
+         <li>Use real photography to build trust.</li>
+         <li>Keep the ordering path visible from every major section.</li>
+        </ul>
+       </div>
+
+       <div class="paper-card special-note" data-reveal>
+        <span class="eyebrow">What stays true</span>
+        <h3>The site can feel elevated without losing the home-based warmth.</h3>
+        <p>That balance matters. It should feel premium, but still close, local, and human enough that a customer can picture the order being packed with care.</p>
+        <a class="btn btn-secondary" href="/catering.html">See catering page</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <section class="section order-section" id="order">
+    <div class="container">
+     <div class="order-shell" data-reveal>
+      <div class="order-header">
+       <div>
+        <span class="eyebrow">Order directly through the site</span>
+        <h2>Keep people in the Coffee &amp; Crumbs world while Square handles the checkout.</h2>
+        <p>This is the cleanest immediate version of the goal: customers can browse and start their order without feeling like they have been dropped onto a completely separate experience.</p>
+       </div>
+       <div class="order-points">
+        <article class="order-point">
+         <strong>1</strong>
+         <h3>Browse the pickup menu</h3>
+         <p>Drinks, sweets, and Salvadoran specialties stay easy to find.</p>
+        </article>
+        <article class="order-point">
+         <strong>2</strong>
+         <h3>Add notes if needed</h3>
+         <p>Custom details and future catering cues can stay attached to the order flow.</p>
+        </article>
+        <article class="order-point">
+         <strong>3</strong>
+         <h3>Pick up local</h3>
+         <p>The whole experience still feels branded and pickup-focused.</p>
+        </article>
+       </div>
+      </div>
+
+      <div class="order-body">
+       <aside class="order-aside">
+        <div class="paper-card order-card">
+         <h3>What this solves right now</h3>
+         <p>Customers can start their order without immediately bouncing to another site, which keeps the brand experience stronger and makes the homepage work harder.</p>
+        </div>
+        <div class="paper-card order-card">
+         <h3>What can come later</h3>
+         <ul>
+          <li>Deeper Square-powered custom checkout</li>
+          <li>Printer tickets routed to the pickup location</li>
+          <li>Smarter catering intake and custom order notes</li>
+         </ul>
+        </div>
+        <div class="paper-card order-card">
+         <h3>Prefer the full shop?</h3>
+         <p>If someone wants the native Square flow, the full shop is still available as a direct link.</p>
+         <a class="btn btn-secondary" href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&amp;fulfillment=PICKUP" target="_blank" rel="noopener">Open Square shop</a>
+        </div>
+       </aside>
+
+       <div class="order-embed" aria-label="Embedded Square ordering experience">
+        <iframe src="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&amp;fulfillment=PICKUP" title="Coffee and Crumbs Square ordering" loading="lazy"></iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <section class="section" id="catering">
+    <div class="container">
+     <div class="catering-grid">
+      <div class="catering-left">
+       <div class="paper-card catering-card" data-reveal>
+        <span class="eyebrow">For office runs and gatherings</span>
+        <h3>Catering should feel just as personal as the coffee counter.</h3>
+        <p>The site now makes space for larger orders without forcing catering to feel like an afterthought.</p>
+        <ul>
+         <li>Morning coffee runs and pastry assortments</li>
+         <li>Brunch spreads with Salvadoran specialties</li>
+         <li>Custom dessert tables, mini cakes, and sweets</li>
+        </ul>
+        <div style="margin-top: 18px;">
+         <a class="btn btn-primary" href="/catering.html">Explore catering details</a>
+        </div>
+       </div>
+      </div>
+
+      <div class="catering-packages">
+       <article class="paper-card package" data-reveal>
+        <small>Package 01</small>
+        <h4>Morning coffee drop</h4>
+        <p>Lattes, coffee, and pastries for team meetings, realtor opens, and small office gatherings.</p>
+       </article>
+       <article class="paper-card package" data-reveal>
+        <small>Package 02</small>
+        <h4>Sweet table spread</h4>
+        <p>Cookies, mini cakes, and crowd-pleasing dessert options that still feel homemade and custom.</p>
+       </article>
+       <article class="paper-card package" data-reveal>
+        <small>Package 03</small>
+        <h4>Salvadoran feature table</h4>
+        <p>Quesadillas, sweet breads, and regional favorites that give events something more memorable than a standard pastry tray.</p>
+       </article>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <section class="section" id="connect">
+    <div class="container">
+     <div class="connect-grid">
+      <div class="paper-card connect-panel" data-reveal>
+       <span class="eyebrow">Stay connected</span>
+       <h3>Built from home, picked up local, shared online.</h3>
+       <p>Customers should know exactly how to find the brand, how to place an order, and where to keep up with new menu drops.</p>
+       <div class="contact-list">
+        <div class="contact-item">
+          <strong>Pickup Area</strong>
+          <span>Northern Virginia</span>
+        </div>
+        <div class="contact-item">
+          <strong>Instagram</strong>
+          <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener">@coffeeandcrumbsva</a>
+        </div>
+        <div class="contact-item">
+          <strong>Facebook</strong>
+          <a href="https://www.facebook.com/Coffeeandcrumbsva/" target="_blank" rel="noopener">Coffee and Crumbs VA</a>
+        </div>
+        <div class="contact-item">
+          <strong>Order Online</strong>
+          <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&amp;fulfillment=PICKUP" target="_blank" rel="noopener">Square pickup ordering</a>
+        </div>
+       </div>
+      </div>
+
+      <div class="connect-visual" data-reveal>
+       <img src="Cakes/IMG_3317.webp" alt="Mini cake from Coffee and Crumbs">
+       <div class="connect-overlay">
+        <strong>Fresh-baked and pickup-ready</strong>
+        <p>The new direction leans into real product shots, warm neutrals, and a more personal brand voice from top to bottom.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+
+  <footer class="footer" aria-label="Site footer">
+   <div class="container">
+    <div class="footer-grid">
+     <div class="footer-brand">
+      <img class="brand-mark" src="branding/IMG_2941.png" alt="Coffee and Crumbs logo">
+      <div class="brand-text">
+       <strong>Coffee &amp; Crumbs</strong>
+       <span>Northern Virginia</span>
+      </div>
+     </div>
+     <div class="footer-links">
+      <a href="#story">Our Story</a>
+      <a href="/menu.html#drinks">Menu</a>
+      <a href="#order">Order</a>
+      <a href="/catering.html">Catering</a>
+      <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/Coffeeandcrumbsva/" target="_blank" rel="noopener">Facebook</a>
+     </div>
+    </div>
+    <div class="footer-bottom">
+     <span>&copy; 2026 Coffee &amp; Crumbs VA. All rights reserved.</span>
+     <span class="footer-credit">Built By Roam Collective</span>
+    </div>
+   </div>
+  </footer>
  </div>
 
- <!-- ============ HERO ============ -->
- <section class="hero" aria-label="Welcome to Coffee and Crumbs">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-bg-overlay"></div>
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-content">
-   <div class="hero-logo-main">
-    <img src="coffee-crumbs-logo.webp" alt="Coffee & Crumbs" style="width:320px;height:auto;object-fit:contain;filter:drop-shadow(0 12px 40px rgba(0,0,0,0.7));" />
-   </div>
-   <h1>Coffee <span class="ampersand">&</span> Crumbs</h1>
-   <p class="hero-sub">Hecho con amor en Virginia</p>
-   <p class="hero-tagline">Handcrafted coffees, fresh-baked goods & authentic Salvadoran pastries, made with love in Northern Virginia.</p>
-   <div class="hero-buttons">
-    <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="btn btn-primary">
-     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-     Order for Pickup
-    </a>
-    <a href="#menu" class="btn btn-outline">Explore the Menu</a>
-   </div>
-  </div>
-  <div class="hero-steam"></div>
- </section>
-
- <!-- ============ ABOUT ============ -->
- <section class="about section-pad" id="about" aria-label="Our story">
-  <div class="container">
-   <div class="about-grid">
-    <div class="about-visual animate-on-scroll">
-     <div class="about-card">
-      <div class="about-map-illustration">
-       <img src="el-salvador-city.jpg" alt="Aerial view of a city in El Salvador with mountains in the background" style="width:100%;height:100%;object-fit:cover;" />
-      </div>
-      <div class="about-badge">Pura Vida!</div>
-     </div>
-    </div>
-    <div class="about-text animate-on-scroll">
-     <h2>A Taste of <span class="highlight">El Salvador</span>,<br>Right at Home</h2>
-     <p>Coffee & Crumbs was born from a deep love for Salvadoran culture and the art of handcrafted coffee. We bring the rich flavors and warm traditions of El Salvador to Northern Virginia, one cup at a time.</p>
-     <p>Every coffee is made by hand with care and intention. Our Salvadoran pastries follow recipes passed down through generations. Every baked good is fresh from our kitchen to your table.</p>
-     <div class="about-features stagger-children" id="aboutFeatures">
-      <div class="about-feature">
-       <div class="about-feature-icon">&#9749;</div>
-       <div>
-        <h4>Handcrafted Coffee</h4>
-        <p>Made to order with premium beans</p>
-       </div>
-      </div>
-      <div class="about-feature">
-       <div class="about-feature-icon">&#127838;</div>
-       <div>
-        <h4>Fresh Baked Goods</h4>
-        <p>Baked fresh from our home kitchen</p>
-       </div>
-      </div>
-      <div class="about-feature">
-       <div class="about-feature-icon">&#127480;&#127483;</div>
-       <div>
-        <h4>Salvadoran Quesadillas</h4>
-        <p>Authentic family recipes</p>
-       </div>
-      </div>
-      <div class="about-feature">
-       <div class="about-feature-icon">&#10084;</div>
-       <div>
-        <h4>Made with Love</h4>
-        <p>Home-based, community focused</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </div>
- </section>
-
- <!-- ============ MENU ============ -->
- <section class="menu section-pad" id="menu" aria-label="Our menu">
-  <div class="container">
-   <div class="section-header text-center animate-on-scroll">
-    <div class="overline">What We Serve</div>
-    <h2>Our Menu</h2>
-    <p>From handcrafted coffee to authentic Salvadoran flavors, every item is made with love and the freshest ingredients.</p>
-   </div>
-   <div class="menu-grid stagger-children" id="menuGrid">
-    <!-- Coffee Card -->
-    <div class="menu-card" id="coffees">
-     <div class="menu-card-image">
-      <div class="card-bg card-coffee" style="width:100%;height:100%;overflow:hidden;">
-       <img src="menu-coffee.webp" alt="Coffee & Crumbs drink" style="width:100%;height:100%;object-fit:cover;" />
-      </div>
-      <div class="card-overlay"></div>
-     </div>
-     <div class="menu-card-body">
-      <h3>Handcrafted Drinks</h3>
-      <p>A few of our favorite sips, always made by hand.</p>
-      <div class="menu-items">
-       <div class="menu-item">
-        <span class="menu-item-name">Fresas con Crema Latte</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">Horchata Latte</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">Banana Cream Latte</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">Vanilla Latte</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">& More Custom Creations</span>
-        <span class="menu-item-dot"></span>
-       </div>
-      </div>
-      <a href="/menu.html#drinks" class="menu-card-link">View full menu</a>
-     </div>
-    </div>
-    <!-- Baked Goods Card -->
-    <div class="menu-card" id="crumbs">
-     <div id="crumbs-cookies"></div>
-     <div id="crumbs-mini-cakes"></div>
-     <div id="crumbs-cinnamon-rolls"></div>
-     <div id="crumbs-turnovers"></div>
-     <div id="crumbs-salvadoran"></div>
-     <div class="menu-card-image">
-      <div class="card-bg card-baked" style="width:100%;height:100%;overflow:hidden;">
-       <img src="menu-crumbs.webp" alt="Cookie from Coffee & Crumbs" style="width:100%;height:100%;object-fit:cover;" />
-      </div>
-      <div class="card-overlay"></div>
-     </div>
-     <div class="menu-card-body">
-      <h3>Crumbs</h3>
-      <p>All the little sweets that make Coffee &amp; Crumbs feel like home.</p>
-      <div class="menu-items">
-       <div class="menu-item">
-        <span class="menu-item-name">Mini cakes</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">Cookies</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">Muffins</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">Cinnamon rolls</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">& More Crumbs</span>
-        <span class="menu-item-dot"></span>
-       </div>
-      </div>
-      <a href="/menu.html#crumbs" class="menu-card-link">View full menu</a>
-     </div>
-    </div>
-    <!-- Salvadoran Card -->
-    <div class="menu-card" id="lemonades">
-     <div class="menu-card-image">
-      <div class="card-bg card-salvadorian" style="width:100%;height:100%;overflow:hidden;">
-       <img src="menu-quesadilla.webp" alt="Salvadoran quesadilla from Coffee & Crumbs" style="width:100%;height:100%;object-fit:cover;" />
-      </div>
-      <div class="card-overlay"></div>
-     </div>
-     <div class="menu-card-body">
-      <h3>Salvadoran Specials</h3>
-      <p>Family recipes from El Salvador that pair perfectly with your morning coffee.</p>
-      <div class="menu-items">
-       <div class="menu-item">
-        <span class="menu-item-name">Quesadillas</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">Peperechas</span>
-        <span class="menu-item-dot"></span>
-       </div>
-       <div class="menu-item">
-        <span class="menu-item-name">& More Salvadoran Sweets</span>
-        <span class="menu-item-dot"></span>
-       </div>
-      </div>
-      <a href="/menu.html#salvadoran" class="menu-card-link">View full menu</a>
-     </div>
-    </div>
-   </div>
-  </div>
- </section>
-
- <!-- ============ PHOTO GALLERY ============ -->
- <section class="gallery section-pad" aria-label="Photo gallery">
-  <div class="container">
-   <div class="section-header text-center animate-on-scroll">
-    <div class="overline">From Our Kitchen</div>
-    <h2>The Gallery</h2>
-    <p>A peek at what comes out of our kitchen every week.</p>
-   </div>
-   <div class="gallery-grid stagger-children" id="galleryGrid">
-    <div class="gallery-item">
-     <img src="Cakes/IMG_3317.webp" alt="Handmade cake from Coffee & Crumbs" loading="lazy" />
-     <span class="gallery-item-label">Cakes</span>
-    </div>
-    <div class="gallery-item">
-     <img src="Drinks/IMG_3705.webp" alt="Handcrafted drink from Coffee & Crumbs" loading="lazy" />
-     <span class="gallery-item-label">Drinks</span>
-    </div>
-    <div class="gallery-item">
-     <img src="Cookies/IMG_3573.webp" alt="Fresh baked cookies from Coffee & Crumbs" loading="lazy" />
-     <span class="gallery-item-label">Cookies</span>
-    </div>
-    <div class="gallery-item">
-     <img src="Cakes/A58B23F7-F72C-4D9C-95C2-D9ECC7428908.webp" alt="Decorated cake from Coffee & Crumbs" loading="lazy" />
-     <span class="gallery-item-label">Cakes</span>
-    </div>
-    <div class="gallery-item">
-     <img src="Drinks/IMG_3994.webp" alt="Specialty latte from Coffee & Crumbs" loading="lazy" />
-     <span class="gallery-item-label">Drinks</span>
-    </div>
-    <div class="gallery-item">
-     <img src="Cookies/IMG_3860.webp" alt="Cookie assortment from Coffee & Crumbs" loading="lazy" />
-     <span class="gallery-item-label">Cookies</span>
-    </div>
-    <div class="gallery-item">
-     <img src="Cakes/FA9EDFF3-C5E9-4F1C-B082-CF10368E706A.webp" alt="Mini cake from Coffee & Crumbs" loading="lazy" />
-     <span class="gallery-item-label">Cakes</span>
-    </div>
-    <div class="gallery-item">
-     <img src="Drinks/IMG_3265.webp" alt="Iced latte from Coffee & Crumbs" loading="lazy" />
-     <span class="gallery-item-label">Drinks</span>
-    </div>
-   </div>
-  </div>
- </section>
-
- <!-- ============ EL SALVADOR BANNER ============ -->
- <section class="sv-banner" aria-label="Salvadoran heritage">
-  <div class="sv-banner-pattern"></div>
-  <div class="container">
-   <div class="sv-banner-inner">
-    <div class="sv-banner-text animate-on-scroll">
-     <p class="script">De El Salvador con amor</p>
-     <h2>Rooted in Salvadoran Tradition</h2>
-     <p>El Salvador is one of the world's premier coffee-growing regions, known for beans with rich, complex flavors shaped by volcanic soil and ideal altitude. We carry that tradition forward in every cup we craft — bringing the heart of Central America to your doorstep in Northern Virginia.</p>
-    </div>
-    <div class="sv-banner-visual animate-on-scroll">
-     <div class="sv-circle">
-      <img src="flag-el-salvador.png" alt="Flag of El Salvador" style="width:80px;height:auto;border-radius:6px;overflow:hidden;margin-bottom:12px;" />
-      <div class="sv-text">El Salvador</div>
-      <div class="sv-subtext">Coffee Region</div>
-     </div>
-    </div>
-   </div>
-  </div>
- </section>
-
- <!-- ============ ORDER ============ -->
- <section class="order section-pad" id="order" aria-label="Order online">
-  <div class="container">
-   <div class="order-wrapper animate-on-scroll">
-    <div class="order-top">
-     <p class="script">Ready to taste the difference?</p>
-     <h2>Order for Pickup</h2>
-     <p>Browse our full menu and place your order online. We'll have it fresh and ready for you!</p>
-    </div>
-    <div class="order-body">
-     <div class="order-steps stagger-children" id="orderSteps">
-      <div class="order-step">
-       <div class="order-step-num">1</div>
-       <h4>Browse Our Menu</h4>
-       <p>Explore our handcrafted coffees, baked goods, and Salvadoran quesadillas</p>
-      </div>
-      <div class="order-step">
-       <div class="order-step-num">2</div>
-       <h4>Place Your Order</h4>
-       <p>Order through our secure online shop powered by Square</p>
-      </div>
-      <div class="order-step">
-       <div class="order-step-num">3</div>
-       <h4>Pick Up & Enjoy</h4>
-       <p>Grab your fresh order and enjoy the authentic flavors of El Salvador</p>
-      </div>
-     </div>
-     <div class="order-iframe-wrap">
-      <iframe src="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" width="100%" height="700" frameborder="0" style="border:0; border-radius:16px; min-height:500px; max-height:85vh;" title="Coffee and Crumbs Square ordering" loading="lazy"></iframe>
-     </div>
-     <div class="order-btn-wrap" style="margin-top:30px;">
-      <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="btn-order">
-       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-       Order Online Now
-      </a>
-     </div>
-     <p class="order-note"><strong>Pickup only</strong> &mdash; serving the Northern Virginia community from our home kitchen.</p>
-    </div>
-   </div>
-  </div>
- </section>
-
- <!-- ============ QUOTE ============ -->
- <section class="quote-section" aria-label="Testimonial">
-  <div class="container">
-   <div class="quote-content animate-on-scroll">
-    <div class="quote-marks">&ldquo;</div>
-    <p class="quote-text">Every cup of coffee is a small act of love, a tradition carried from the mountains of El Salvador to the heart of Virginia.</p>
-    <p class="quote-author">Coffee & Crumbs</p>
-   </div>
-  </div>
- </section>
-
- <!-- ============ CONTACT ============ -->
- <section class="contact section-pad" id="contact" aria-label="Contact us">
-  <div class="container">
-   <div class="contact-grid">
-    <div class="contact-info animate-on-scroll">
-     <h2>Let's Connect</h2>
-     <p>Have a question, special request, or want to learn more about our offerings? We'd love to hear from you. Follow us on social media for the latest updates!</p>
-     <div class="contact-details">
-      <div class="contact-item">
-       <div class="contact-item-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-       </div>
-       <div class="contact-item-text">
-        <h4>Location</h4>
-        <p>Northern Virginia<br><span style="font-size:0.8rem;color:var(--gold);">Home-based &bull; Pickup orders</span></p>
-       </div>
-      </div>
-      <div class="contact-item">
-       <div class="contact-item-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><polyline points="2,3 12,13 22,3"/></svg>
-       </div>
-       <div class="contact-item-text">
-        <h4>Online Ordering</h4>
-        <p><a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener">Order on our Square Shop &rarr;</a></p>
-       </div>
-      </div>
-     </div>
-     <div class="contact-social">
-      <h4>Follow Us</h4>
-      <div class="social-links">
-       <a href="https://www.facebook.com/Coffeeandcrumbsva/" target="_blank" rel="noopener" class="social-link social-facebook" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-       </a>
-       <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener" class="social-link social-instagram" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-       </a>
-       <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="social-link social-square" aria-label="Square Shop">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-       </a>
-      </div>
-     </div>
-    </div>
-    <div class="contact-map-card animate-on-scroll">
-     <div class="contact-map">
-      <div class="contact-map-pin">
-       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-       <p>Northern Virginia</p>
-      </div>
-     </div>
-     <div class="contact-map-body">
-      <h4>Coffee & Crumbs VA</h4>
-      <p>We're a home-based shop proudly serving the Northern Virginia community. All orders are available for local pickup.</p>
-      <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&fulfillment=PICKUP" target="_blank" rel="noopener" class="btn-sm">
-       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-       Order for Pickup
-      </a>
-     </div>
-    </div>
-   </div>
-  </div>
- </section>
-
- <!-- ============ FOOTER ============ -->
- <footer class="footer" aria-label="Site footer">
-  <div class="container">
-   <div class="footer-inner">
-    <div class="footer-brand">
-     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="48" fill="rgba(255,255,255,0.05)" stroke="rgba(212,165,116,0.3)" stroke-width="2"/>
-      <line x1="27" y1="38" x2="69" y2="38" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
-      <path d="M27 38 L29 64 C30 71, 38 75, 50 75 C62 75, 70 71, 71 64 L73 38" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linejoin="round"/>
-      <path d="M69 44 C78 44, 82 50, 82 56 C82 62, 78 66, 69 66" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
-     </svg>
-     <div class="footer-brand-text">
-      Coffee & Crumbs
-      <span>Northern Virginia</span>
-     </div>
-    </div>
-    <div class="footer-links">
-     <a href="#about">Our Story</a>
-     <a href="#menu">Menu</a>
-     <a href="#order">Order</a>
-     <a href="#contact">Contact</a>
-     <a href="https://www.facebook.com/Coffeeandcrumbsva/" target="_blank" rel="noopener">Facebook</a>
-     <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener">Instagram</a>
-    </div>
-   </div>
-   <div class="footer-bottom">
-    <p>&copy; 2026 Coffee & Crumbs VA. All rights reserved.</p>
-    <p class="sv-love" style="margin-top:6px;">
-     Built &amp; powered by Roam Collective.
-    </p>
-   </div>
-  </div>
- </footer>
-
- <!-- ============ JAVASCRIPT ============ -->
  <script>
-  // Navbar scroll effect
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-   navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
+  const nav = document.getElementById("siteNav");
+  const navToggle = document.getElementById("navToggle");
+  const mobileDrawer = document.getElementById("mobileDrawer");
 
-  // Hamburger menu
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  hamburger.addEventListener('click', () => {
-   hamburger.classList.toggle('active');
-   mobileMenu.classList.toggle('open');
-   document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-  });
-  function closeMobile() {
-   hamburger.classList.remove('active');
-   mobileMenu.classList.remove('open');
-   document.body.style.overflow = '';
+  function syncNavState() {
+   nav.classList.toggle("scrolled", window.scrollY > 14);
   }
 
-  // Scroll animations with Intersection Observer
-  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-  const observer = new IntersectionObserver((entries) => {
-   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-     entry.target.classList.add('visible');
-     observer.unobserve(entry.target);
-    }
-   });
-  }, observerOptions);
-  document.querySelectorAll('.animate-on-scroll, .stagger-children').forEach(el => observer.observe(el));
+  function closeDrawer() {
+   navToggle.classList.remove("active");
+   navToggle.setAttribute("aria-expanded", "false");
+   mobileDrawer.classList.remove("open");
+   document.body.style.overflow = "";
+  }
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-   anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-     e.preventDefault();
-     const offset = navbar.offsetHeight + 20;
-     const top = target.getBoundingClientRect().top + window.scrollY - offset;
-     window.scrollTo({ top, behavior: 'smooth' });
+  syncNavState();
+  window.addEventListener("scroll", syncNavState, { passive: true });
+
+  navToggle.addEventListener("click", () => {
+   const isOpen = mobileDrawer.classList.toggle("open");
+   navToggle.classList.toggle("active", isOpen);
+   navToggle.setAttribute("aria-expanded", String(isOpen));
+   document.body.style.overflow = isOpen ? "hidden" : "";
+  });
+
+  mobileDrawer.querySelectorAll("a").forEach((link) => {
+   link.addEventListener("click", closeDrawer);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+   anchor.addEventListener("click", (event) => {
+    const href = anchor.getAttribute("href");
+    if (!href || href === "#") {
+     return;
     }
+    const target = document.querySelector(href);
+    if (!target) {
+     return;
+    }
+    event.preventDefault();
+    const top = target.getBoundingClientRect().top + window.scrollY - 110;
+    window.scrollTo({ top, behavior: "smooth" });
    });
   });
 
-  // Parallax effect on hero background
-  const heroBg = document.getElementById('heroBg');
-  if (heroBg) {
-   window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    if (scrolled < window.innerHeight) {
-     heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+  const revealItems = document.querySelectorAll("[data-reveal]");
+  const revealObserver = new IntersectionObserver((entries) => {
+   entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+     return;
     }
-   }, { passive: true });
-  }
+    entry.target.classList.add("is-visible");
+    revealObserver.unobserve(entry.target);
+   });
+  }, { threshold: 0.16, rootMargin: "0px 0px -50px 0px" });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
  </script>
 </body>
 </html>
