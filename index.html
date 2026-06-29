@@ -1204,6 +1204,10 @@
    color: var(--muted);
   }
 
+  .connect-actions {
+   margin: 20px 0 8px;
+  }
+
   .contact-list {
    display: grid;
    gap: 16px;
@@ -1270,6 +1274,163 @@
    margin: 0;
    font-size: 0.92rem;
    color: var(--muted);
+  }
+
+  .inquiry-wrap {
+   margin-top: 26px;
+   display: grid;
+   grid-template-columns: 0.92fr 1.08fr;
+   gap: 22px;
+   align-items: start;
+  }
+
+  .inquiry-copy h3,
+  .contact-form h3 {
+   margin: 14px 0 12px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: clamp(2.1rem, 3vw, 3rem);
+   line-height: 0.96;
+   letter-spacing: -0.03em;
+  }
+
+  .inquiry-copy p {
+   margin: 0 0 18px;
+   color: var(--muted);
+  }
+
+  .inquiry-list {
+   display: grid;
+   gap: 12px;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+  }
+
+  .inquiry-list li {
+   position: relative;
+   padding-left: 18px;
+   font-size: 0.93rem;
+   color: var(--roast-soft);
+  }
+
+  .inquiry-list li::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 10px;
+   width: 7px;
+   height: 7px;
+   border-radius: 999px;
+   background: var(--terracotta);
+  }
+
+  .contact-form {
+   background: #fff;
+   border-radius: var(--radius-xl);
+   border: 1px solid rgba(42, 24, 20, 0.11);
+   box-shadow: var(--shadow-soft);
+   padding: 28px 26px;
+  }
+
+  .contact-form h3 {
+   margin-top: 0;
+  }
+
+  .contact-form-intro {
+   margin: 0 0 18px;
+   font-size: 0.92rem;
+   color: var(--muted);
+  }
+
+  .form-success {
+   display: none;
+   margin-bottom: 18px;
+   padding: 14px 16px;
+   border-radius: 16px;
+   background: rgba(184, 92, 63, 0.08);
+   border: 1px solid rgba(184, 92, 63, 0.18);
+   color: var(--roast-soft);
+   font-size: 0.9rem;
+  }
+
+  .form-success.is-visible {
+   display: block;
+  }
+
+  .form-grid {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 14px;
+  }
+
+  .form-field {
+   display: grid;
+   gap: 7px;
+  }
+
+  .form-field-full {
+   grid-column: 1 / -1;
+  }
+
+  .form-field label {
+   font-size: 0.74rem;
+   font-weight: 800;
+   letter-spacing: 0.14em;
+   text-transform: uppercase;
+   color: var(--terracotta-deep);
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+   width: 100%;
+   border: 1px solid rgba(42, 24, 20, 0.12);
+   border-radius: 16px;
+   background: #fffdf9;
+   color: var(--ink);
+   padding: 14px 15px;
+   font: inherit;
+   transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+  }
+
+  .form-field textarea {
+   min-height: 154px;
+   resize: vertical;
+  }
+
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+   outline: none;
+   border-color: rgba(184, 92, 63, 0.55);
+   box-shadow: 0 0 0 4px rgba(184, 92, 63, 0.12);
+   background: #fff;
+  }
+
+  .form-actions {
+   margin-top: 18px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px 14px;
+   align-items: center;
+  }
+
+  .form-note {
+   font-size: 0.84rem;
+   color: var(--muted);
+   max-width: 30rem;
+  }
+
+  .visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border: 0;
   }
 
   .footer {
@@ -1353,7 +1514,9 @@
    .order-header,
    .order-body,
    .catering-grid,
-   .connect-grid {
+   .connect-grid,
+   .inquiry-wrap,
+   .form-grid {
     grid-template-columns: 1fr;
    }
 
@@ -1488,6 +1651,7 @@
    .paper-card,
    .special-left,
    .connect-panel,
+   .contact-form,
    .order-card,
    .order-shell,
    .menu-card-body,
@@ -1501,6 +1665,10 @@
    }
 
    .order-body {
+    padding: 22px;
+   }
+
+   .inquiry-copy {
     padding: 22px;
    }
 
@@ -1546,7 +1714,6 @@
      <nav class="nav-links" aria-label="Primary">
       <a href="#favorites">Menu</a>
       <a href="#order">Order</a>
-      <a href="/catering.html#inquiry-form">Catering / Events</a>
       <a href="#story">Our Story</a>
       <a href="#connect">Contact</a>
      </nav>
@@ -1564,7 +1731,6 @@
    <nav>
     <a href="#favorites">Menu</a>
     <a href="#order">Order</a>
-    <a href="/catering.html#inquiry-form">Catering / Events</a>
     <a href="#story">Our Story</a>
     <a href="#connect">Contact</a>
     <a href="https://coffeeandcrumbsva.square.site/?location_id=LNXKS13FJ3QTS&amp;fulfillment=PICKUP" target="_blank" rel="noopener">Order Pickup</a>
@@ -1585,9 +1751,9 @@
         <a class="btn btn-secondary" href="#order">Order Online</a>
        </div>
        <div class="hero-pills" aria-label="Coffee and Crumbs highlights">
-        <span class="hero-pill"><i></i>Pickup in Manassas, VA</span>
-        <span class="hero-pill"><i></i>Salvadoran pastries and cafecito</span>
-        <span class="hero-pill"><i></i>Cookies, mini cakes, and catering</span>
+       <span class="hero-pill"><i></i>Pickup in Manassas, VA</span>
+       <span class="hero-pill"><i></i>Salvadoran pastries and cafecito</span>
+        <span class="hero-pill"><i></i>Cookies, mini cakes, and custom orders</span>
        </div>
       </div>
 
@@ -1739,46 +1905,6 @@
     </div>
    </section>
 
-   <section class="section" id="catering">
-    <div class="container">
-     <div class="catering-grid">
-      <div class="catering-left">
-       <div class="paper-card catering-card" data-reveal>
-        <span class="eyebrow">For office runs and gatherings</span>
-        <h3>Catering / events for coffee runs, dessert tables, and celebrations.</h3>
-        <p>From office mornings to birthdays and showers, Coffee &amp; Crumbs can help with drinks, pastries, sweets, and custom pickup orders.</p>
-        <ul>
-         <li>Morning coffee runs and pastry assortments</li>
-         <li>Brunch spreads with Salvadoran specialties</li>
-         <li>Custom dessert tables, mini cakes, and sweets</li>
-        </ul>
-        <div style="margin-top: 18px;">
-         <a class="btn btn-primary" href="/catering.html#inquiry-form">Start a catering inquiry</a>
-        </div>
-       </div>
-      </div>
-
-      <div class="catering-packages">
-       <article class="paper-card package" data-reveal>
-        <small>Package 01</small>
-        <h4>Morning coffee drop</h4>
-        <p>Lattes, coffee, and pastries for team meetings, realtor opens, and small office gatherings.</p>
-       </article>
-       <article class="paper-card package" data-reveal>
-        <small>Package 02</small>
-        <h4>Sweet table spread</h4>
-        <p>Cookies, mini cakes, and crowd-pleasing dessert options that still feel homemade and custom.</p>
-       </article>
-       <article class="paper-card package" data-reveal>
-        <small>Package 03</small>
-        <h4>Salvadoran feature table</h4>
-        <p>Quesadillas, sweet breads, and regional favorites that give events something more memorable than a standard pastry tray.</p>
-       </article>
-      </div>
-     </div>
-    </div>
-   </section>
-
    <section class="section" id="story">
     <div class="container">
      <div class="story-grid">
@@ -1805,7 +1931,7 @@
          <span class="story-index">03</span>
          <div>
           <h4>Pickup and custom orders</h4>
-          <p>Weekday coffee runs, family gatherings, and event orders all start with simple online ordering and real follow-up.</p>
+          <p>Weekday coffee runs, family gatherings, and larger custom orders all start with simple online ordering and real follow-up.</p>
          </div>
         </div>
        </div>
@@ -1833,8 +1959,11 @@
      <div class="connect-grid">
       <div class="paper-card connect-panel" data-reveal>
        <span class="eyebrow">Contact</span>
-       <h3>Find us, follow us, or place a pickup order.</h3>
-       <p>Everything you need to order ahead, ask a question, or keep up with new menu drops is right here.</p>
+       <h3>Find us, follow us, or ask about a larger order.</h3>
+       <p>Everything you need to order ahead, ask a question, or plan something bigger is right here.</p>
+       <div class="connect-actions">
+        <a class="btn btn-secondary" href="#inquiry-form">Ask about a larger order</a>
+       </div>
        <div class="contact-list">
         <div class="contact-item">
           <strong>Pickup Area</strong>
@@ -1863,9 +1992,78 @@
        <img src="Cakes/IMG_3317.webp" alt="Mini cake from Coffee and Crumbs">
        <div class="connect-overlay">
         <strong>Fresh-baked and ready for pickup</strong>
-        <p>Mini cakes, crumbs, drinks, and custom orders made in small batches in Manassas.</p>
+        <p>Mini cakes, crumbs, drinks, and larger custom orders made in small batches in Manassas.</p>
        </div>
       </div>
+     </div>
+
+     <div class="inquiry-wrap" data-reveal>
+      <div class="paper-card inquiry-copy">
+       <span class="eyebrow">Larger Orders</span>
+       <h3>Planning a coffee run, dessert pickup, or something bigger?</h3>
+       <p>Use this form for office mornings, birthdays, baby showers, brunch tables, and custom dessert spreads. Share the basics and Coffee &amp; Crumbs will follow up by email with availability and next steps.</p>
+       <ul class="inquiry-list">
+        <li>Tell us the date, guest count, and what you&apos;d like to serve.</li>
+        <li>Every inquiry goes straight to <strong>coffeeandcrumbsva@gmail.com</strong>.</li>
+        <li>If you need a faster answer, Instagram DM at <strong>@coffeeandcrumbsva</strong> is a good backup.</li>
+       </ul>
+      </div>
+
+      <form class="contact-form" id="inquiry-form" action="https://formsubmit.co/coffeeandcrumbsva@gmail.com" method="POST">
+       <input type="hidden" name="_subject" value="New Coffee & Crumbs larger order inquiry">
+       <input type="hidden" name="_next" value="https://coffeeandcrumbsva.com/?submitted=true#inquiry-form">
+       <input type="hidden" name="_captcha" value="false">
+       <input type="hidden" name="_template" value="table">
+       <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off">
+
+       <h3>Ask about a larger order</h3>
+       <p class="contact-form-intro">Fill this out and Coffee &amp; Crumbs will reply by email with availability, pickup details, and menu recommendations.</p>
+       <div class="form-success" id="formSuccess">Thanks for reaching out. Your inquiry was sent and the team will follow up at the email you provided.</div>
+
+       <div class="form-grid">
+        <div class="form-field">
+         <label for="full-name">Full name</label>
+         <input id="full-name" name="Full Name" type="text" required>
+        </div>
+        <div class="form-field">
+         <label for="email-address">Email</label>
+         <input id="email-address" name="Email" type="email" required>
+        </div>
+        <div class="form-field">
+         <label for="phone-number">Phone</label>
+         <input id="phone-number" name="Phone" type="tel">
+        </div>
+        <div class="form-field">
+         <label for="event-date">Needed by</label>
+         <input id="event-date" name="Needed By" type="date">
+        </div>
+        <div class="form-field">
+         <label for="guest-count">Estimated guest count</label>
+         <input id="guest-count" name="Estimated Guest Count" type="number" min="1" placeholder="25">
+        </div>
+        <div class="form-field">
+         <label for="order-type">Order type</label>
+         <select id="order-type" name="Order Type" required>
+          <option value="">Select one</option>
+          <option>Office coffee run</option>
+          <option>Birthday</option>
+          <option>Baby shower</option>
+          <option>Family gathering</option>
+          <option>Pop-up / vendor event</option>
+          <option>Custom celebration</option>
+         </select>
+        </div>
+        <div class="form-field form-field-full">
+         <label for="menu-ideas">What are you hoping to order?</label>
+         <textarea id="menu-ideas" name="Menu Ideas / Order Details" placeholder="Tell us what you have in mind: coffees, mini cakes, cookies, Salvadoran pastries, timing, pickup window, or any special requests." required></textarea>
+        </div>
+       </div>
+
+       <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Send inquiry</button>
+        <div class="form-note">This form sends directly to <strong>coffeeandcrumbsva@gmail.com</strong>. Pickup in Manassas, VA.</div>
+       </div>
+      </form>
      </div>
     </div>
    </section>
@@ -1882,9 +2080,8 @@
       </div>
      </div>
      <div class="footer-links">
-      <a href="#favorites">Menu</a>
-      <a href="#order">Order</a>
-      <a href="/catering.html#inquiry-form">Catering / Events</a>
+     <a href="#favorites">Menu</a>
+     <a href="#order">Order</a>
       <a href="#story">Our Story</a>
       <a href="#connect">Contact</a>
       <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener">Instagram</a>
@@ -1945,6 +2142,18 @@
    });
   });
 
+  function scrollToHashTarget(hash) {
+   if (!hash) {
+    return;
+   }
+   const target = document.querySelector(hash);
+   if (!target) {
+    return;
+   }
+   const top = target.getBoundingClientRect().top + window.scrollY - 110;
+   window.scrollTo({ top, behavior: "smooth" });
+  }
+
   const revealItems = document.querySelectorAll("[data-reveal]");
   const revealObserver = new IntersectionObserver((entries) => {
    entries.forEach((entry) => {
@@ -1957,6 +2166,18 @@
   }, { threshold: 0.16, rootMargin: "0px 0px -50px 0px" });
 
   revealItems.forEach((item) => revealObserver.observe(item));
+
+  const formSuccess = document.getElementById("formSuccess");
+  const pageParams = new URLSearchParams(window.location.search);
+  if (formSuccess && pageParams.get("submitted") === "true") {
+   formSuccess.classList.add("is-visible");
+  }
+
+  if (window.location.hash) {
+   window.addEventListener("load", () => {
+    scrollToHashTarget(window.location.hash);
+   });
+  }
  </script>
 </body>
 </html>
