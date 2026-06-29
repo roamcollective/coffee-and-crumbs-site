@@ -154,7 +154,7 @@
 
  /* MENU HERO */
  .menu-hero {
-  padding-top: 90px; min-height: 80vh;
+  padding-top: 90px; min-height: 88vh;
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
   color: #fff;
@@ -170,7 +170,7 @@
  }
  .menu-hero-inner {
   position: relative; z-index: 2;
-  padding: 80px 0 70px; text-align: center;
+  padding: 74px 0 76px;
  }
  .menu-hero-inner > * {
   animation: heroTextReveal 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -179,10 +179,75 @@
  .menu-hero-inner > *:nth-child(2) { animation-delay: 0.4s; }
  .menu-hero-inner > *:nth-child(3) { animation-delay: 0.6s; }
  .menu-hero-inner > *:nth-child(4) { animation-delay: 0.8s; }
- .menu-hero-kicker { font-size: .8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 10px; }
- .menu-hero h1 { font-size: clamp(2.4rem, 5vw, 3.3rem); margin-bottom: 10px; text-shadow: 0 2px 30px rgba(0,0,0,0.4); }
- .menu-hero p { max-width: 560px; margin: 0 auto 24px; font-size: .98rem; color: rgba(255,255,255,0.9); }
- .menu-hero-tabs { display: inline-flex; gap: 10px; padding: 4px; border-radius: 999px; background: rgba(0,0,0,0.35); backdrop-filter: blur(10px); }
+ .menu-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 38px;
+  align-items: center;
+ }
+ .menu-hero-copy { max-width: 620px; }
+ .menu-hero-kicker { font-size: .8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 12px; }
+ .menu-hero h1 { font-size: clamp(2.6rem, 5vw, 4.1rem); margin-bottom: 14px; text-shadow: 0 2px 30px rgba(0,0,0,0.4); }
+ .menu-hero p { max-width: 54ch; margin: 0 0 24px; font-size: 1rem; color: rgba(255,255,255,0.9); }
+ .hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+ }
+ .hero-button-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.24);
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  transition: all var(--transition);
+ }
+ .hero-button-ghost:hover {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.42);
+  transform: translateY(-2px);
+ }
+ .menu-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+ }
+ .menu-hero-badges span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.84rem;
+ }
+ .menu-hero-badges i {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--gold-light);
+  display: inline-block;
+ }
+ .menu-hero-tabs {
+  display: inline-flex;
+  gap: 10px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+ }
  .menu-hero-tab {
   padding: 8px 18px; border-radius: 999px; font-size: 0.85rem;
   color: rgba(255,255,255,0.8); cursor: pointer;
@@ -190,15 +255,215 @@
  }
  .menu-hero-tab:hover { color: var(--white); }
  .menu-hero-tab-active { background: var(--white); color: var(--text-dark); }
+ .menu-hero-aside {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(160px, 0.9fr);
+  gap: 18px;
+  align-items: end;
+ }
+ .menu-hero-photo,
+ .hero-stack-card,
+ .hero-note-card {
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--shadow-heavy);
+ }
+ .menu-hero-photo {
+  min-height: 100%;
+  border: 1px solid rgba(255,255,255,0.18);
+ }
+ .menu-hero-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+ }
+ .hero-stack {
+  display: grid;
+  gap: 18px;
+ }
+ .hero-stack-card {
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.16);
+ }
+ .hero-stack-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1.14;
+  object-fit: cover;
+ }
+ .hero-stack-card .hero-stack-copy {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 16px 16px 18px;
+  background: linear-gradient(180deg, rgba(26,15,10,0) 0%, rgba(26,15,10,0.84) 100%);
+ }
+ .hero-stack-copy small {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+ }
+ .hero-stack-copy strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.15rem;
+ }
+ .hero-stack-copy span {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.82);
+ }
+ .hero-note-card {
+  padding: 22px 20px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(14px);
+ }
+ .hero-note-card small {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+ }
+ .hero-note-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.88);
+ }
+
+ /* COUNTER STRIP */
+ .counter-strip {
+  position: relative;
+  z-index: 3;
+  margin-top: -42px;
+  margin-bottom: 32px;
+ }
+ .counter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+ }
+ .counter-card {
+  background: rgba(255,255,255,0.94);
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(92, 61, 46, 0.1);
+  box-shadow: var(--shadow-medium);
+ }
+ .counter-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+ }
+ .counter-card-body {
+  padding: 18px 18px 20px;
+ }
+ .counter-card small {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 700;
+ }
+ .counter-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: var(--coffee);
+ }
+ .counter-card p {
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+ }
+ .counter-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--coffee);
+ }
+ .counter-link::after {
+  content: "→";
+  transition: transform var(--transition);
+ }
+ .counter-link:hover::after {
+  transform: translateX(4px);
+ }
 
  /* MENU SECTIONS */
  .menu-section-header { margin-bottom: 26px; display: flex; align-items: baseline; gap: 10px; justify-content: space-between; flex-wrap: wrap; }
  .menu-section-header h2 { font-size: 1.8rem; color: var(--coffee); }
  .menu-section-header p { font-size: .95rem; color: var(--text-muted); max-width: 460px; }
+ .section-spotlight {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 24px;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(245,234,217,0.92));
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(92, 61, 46, 0.1);
+  box-shadow: var(--shadow-soft);
+ }
+ .section-spotlight-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+ }
+ .section-spotlight-copy {
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+ .section-spotlight-copy small {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.74rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 700;
+ }
+ .section-spotlight-copy h3 {
+  margin-bottom: 10px;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  color: var(--coffee);
+ }
+ .section-spotlight-copy p {
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+ }
+ .section-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+ }
+ .section-badges span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(92, 61, 46, 0.12);
+  font-size: 0.82rem;
+  color: var(--coffee);
+ }
 
  .menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
  .menu-card {
-  background: var(--cream); border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(253,248,243,0.92));
+  border: 1px solid rgba(92, 61, 46, 0.08);
+  border-radius: var(--radius-lg);
   overflow: hidden; box-shadow: var(--shadow-soft);
   transition: transform var(--transition), box-shadow var(--transition);
  }
@@ -206,16 +471,39 @@
   transform: translateY(-4px);
   box-shadow: var(--shadow-medium);
  }
- .menu-card-body { padding: 20px 22px 18px; }
- .menu-card-body h3 { font-size: 1.05rem; color: var(--coffee); margin-bottom: 4px; }
+ .menu-card-body { padding: 22px 22px 20px; }
+ .menu-card-label {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(232, 213, 188, 0.54);
+  color: var(--coffee-light);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+ }
+ .menu-card-body h3 { font-size: 1.12rem; color: var(--coffee); margin-bottom: 6px; }
  .menu-subheading {
   border-top: 2px solid rgba(42,31,20,0.9);
   padding-top: 10px;
   margin-top: 16px;
  }
- .menu-card-body p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 8px; }
- .menu-items { display: flex; flex-direction: column; gap: 4px; }
- .menu-item { font-size: 0.9rem; color: var(--text-dark); padding: 4px 0; transition: color var(--transition); }
+ .menu-card-body p { font-size: 0.91rem; color: var(--text-muted); margin-bottom: 12px; }
+ .menu-items { display: flex; flex-direction: column; gap: 0; }
+ .menu-item {
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  padding: 9px 0;
+  border-top: 1px solid rgba(92, 61, 46, 0.08);
+  transition: color var(--transition);
+ }
+ .menu-item:first-child {
+  padding-top: 0;
+  border-top: none;
+ }
  .menu-item:hover { color: var(--terracotta); }
  .menu-item-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 6px; }
 
@@ -224,12 +512,14 @@
 
  /* ORDER IFRAME */
  .order-section {
-  margin-top: 60px;
+  margin-top: 70px;
   padding: 60px 0;
-  background: var(--cream-warm);
+  background: linear-gradient(135deg, rgba(245,234,217,0.96), rgba(255,255,255,0.92));
   border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(92, 61, 46, 0.08);
+  box-shadow: var(--shadow-medium);
  }
  .order-section-header {
   text-align: center;
@@ -246,6 +536,29 @@
  }
  .order-section-header h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--coffee); margin-bottom: 10px; }
  .order-section-header p { font-size: 0.95rem; color: var(--text-muted); max-width: 500px; margin: 0 auto; }
+ .order-helper-links {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+ }
+ .order-helper-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(92, 61, 46, 0.1);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--coffee);
+ }
+ .order-helper-links a:hover {
+  background: rgba(255,255,255,0.96);
+ }
  .order-iframe-wrap {
   border-radius: 16px;
   overflow: hidden;
@@ -313,6 +626,17 @@
  .footer-credit { margin-top: 12px; text-align: center; font-size: 0.78rem; color: rgba(255,255,255,0.5); }
 
  @media (max-width: 900px) {
+  .menu-hero-layout,
+  .section-spotlight {
+   grid-template-columns: 1fr;
+  }
+  .menu-hero-copy {
+   max-width: none;
+  }
+  .menu-hero-photo img {
+   min-height: 360px;
+  }
+  .counter-grid,
   .menu-grid { grid-template-columns: 1fr; }
  }
 
@@ -324,14 +648,34 @@
   .menu-hero-overlay {
    background: linear-gradient(180deg, rgba(26,15,10,0.9) 0%, rgba(45,31,23,0.78) 45%, rgba(26,15,10,0.92) 100%);
   }
-  .menu-hero-inner { padding: 72px 0 56px; }
+  .menu-hero-inner { padding: 66px 0 52px; }
+  .menu-hero-layout { gap: 28px; }
   .menu-hero p { max-width: 34ch; font-size: 0.94rem; }
+  .hero-actions {
+   align-items: stretch;
+  }
+  .hero-actions .btn-order,
+  .hero-actions .hero-button-ghost {
+   width: 100%;
+  }
+  .menu-hero-aside {
+   grid-template-columns: 1fr;
+  }
+  .menu-hero-photo img {
+   min-height: 320px;
+  }
+  .hero-stack {
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hero-note-card {
+   grid-column: 1 / -1;
+  }
   .menu-hero-tabs {
    display: flex;
    flex-wrap: wrap;
    width: min(100%, 340px);
    justify-content: center;
-   margin: 0 auto;
+   margin: 0;
    gap: 8px;
    border-radius: 24px;
   }
@@ -344,6 +688,12 @@
    text-align: center;
    padding: 10px 14px;
   }
+  .counter-strip {
+   margin-top: -24px;
+  }
+  .section-spotlight-copy {
+   padding: 24px 22px;
+  }
   .order-section { padding: 42px 18px; }
   .order-section-header { margin-bottom: 22px; }
   .mobile-order-card { display: block; }
@@ -355,9 +705,22 @@
 
  @media (max-width: 480px) {
   .section-pad { padding: 60px 0; }
-  .menu-hero-inner { padding: 60px 0 44px; }
+  .menu-hero-inner { padding: 54px 0 40px; }
   .menu-hero h1 { line-height: 0.98; }
+  .menu-hero-badges span {
+   width: 100%;
+   justify-content: center;
+  }
+  .hero-stack {
+   grid-template-columns: 1fr;
+  }
+  .counter-card-body {
+   padding: 16px;
+  }
   .menu-section-header { align-items: flex-start; }
+  .section-spotlight-copy h3 {
+   font-size: 1.6rem;
+  }
   .order-section { padding: 38px 0; }
   .mobile-order-card { padding: 22px 18px; }
   .btn { min-height: 48px; font-size: 0.95rem; }
@@ -374,9 +737,9 @@
    Coffee &amp; Crumbs
    <span>Manassas, VA</span>
   </a>
-  <div class="nav-links">
+ <div class="nav-links">
    <a href="/">Home</a>
-   <a href="#drinks">Menu</a>
+   <a href="#drinks" data-menu-target="drinks">Menu</a>
    <a href="#order-online">Order</a>
    <a href="/catering.html#inquiry-form">Catering / Events</a>
    <a href="/#story">Our Story</a>
@@ -391,7 +754,7 @@
 
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
  <a href="/" onclick="closeMobile()">Home</a>
- <a href="#drinks" onclick="closeMobile()">Menu</a>
+ <a href="#drinks" data-menu-target="drinks" onclick="closeMobile()">Menu</a>
  <a href="#order-online" onclick="closeMobile()">Order</a>
  <a href="/catering.html#inquiry-form" onclick="closeMobile()">Catering / Events</a>
  <a href="/#story" onclick="closeMobile()">Our Story</a>
@@ -403,13 +766,87 @@
  <div class="menu-hero-bg" id="menuHeroBg"></div>
  <div class="menu-hero-overlay"></div>
  <div class="container menu-hero-inner">
-  <div class="menu-hero-kicker">OUR MENU</div>
-  <h1>Handcrafted drinks, crumbs &amp; Salvadoran specials</h1>
-  <p>Browse what we&apos;re pouring and baking at Coffee &amp; Crumbs. Order online through our Square shop and pick up in Manassas, VA.</p>
-  <div class="menu-hero-tabs">
-   <a href="#drinks" class="menu-hero-tab menu-hero-tab-active">Drinks</a>
-   <a href="#crumbs" class="menu-hero-tab">Crumbs</a>
-   <a href="#salvadoran" class="menu-hero-tab">Salvadoran specials</a>
+  <div class="menu-hero-layout">
+   <div class="menu-hero-copy">
+    <div class="menu-hero-kicker">The Pickup Menu</div>
+    <h1>Built more like a bakery counter than a plain list.</h1>
+    <p>Use this page to get a real feel for what Coffee &amp; Crumbs does best, then jump into the live Square checkout when you&apos;re ready to place a pickup order in Manassas.</p>
+    <div class="hero-actions">
+     <a href="#drinks" data-menu-target="drinks" class="btn-order">Browse the menu</a>
+     <a href="#order-online" class="hero-button-ghost">Open ordering</a>
+    </div>
+    <div class="menu-hero-badges">
+     <span><i></i>Pickup in Manassas, VA</span>
+     <span><i></i>Rotating sweets and drink specials</span>
+     <span><i></i>Salvadoran classics worth adding to the order</span>
+    </div>
+    <div class="menu-hero-tabs">
+     <a href="#drinks" class="menu-hero-tab menu-hero-tab-active">Drinks</a>
+     <a href="#crumbs" class="menu-hero-tab">Crumbs</a>
+     <a href="#salvadoran" class="menu-hero-tab">Salvadoran specials</a>
+    </div>
+   </div>
+   <div class="menu-hero-aside">
+    <div class="menu-hero-photo">
+     <img src="Drinks/IMG_3910.webp" alt="Coffee and Crumbs iced drinks topped with banana slices">
+    </div>
+    <div class="hero-stack">
+     <article class="hero-stack-card">
+      <img src="Cookies/IMG_3876.webp" alt="Decorated cookie from Coffee and Crumbs">
+      <div class="hero-stack-copy">
+       <small>Crumbs</small>
+       <strong>Cookies that look custom-made.</strong>
+       <span>Loaded toppings, drizzles, and small-batch extras.</span>
+      </div>
+     </article>
+     <article class="hero-stack-card">
+      <img src="menu-quesadilla.webp" alt="Salvadoran quesadilla from Coffee and Crumbs">
+      <div class="hero-stack-copy">
+       <small>Favorites</small>
+       <strong>Quesadilla and Salvadoran sweets.</strong>
+       <span>The part of the menu people remember after the coffee is gone.</span>
+      </div>
+     </article>
+     <article class="hero-note-card">
+      <small>How to use this page</small>
+      <p>Look through the menu sections here, then use the live ordering area below for real-time availability, pickup timing, and checkout.</p>
+     </article>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="counter-strip animate-on-scroll" aria-label="Menu preview categories">
+ <div class="container">
+  <div class="counter-grid stagger-children">
+   <article class="counter-card">
+    <img src="Drinks/IMG_3994.webp" alt="Handcrafted iced coffee drinks from Coffee and Crumbs">
+    <div class="counter-card-body">
+     <small>Start here</small>
+     <h3>Drinks</h3>
+     <p>Creamy lattes, matcha, cold foam add-ons, and cafe drinks that still feel homemade.</p>
+     <a class="counter-link" href="#drinks" data-menu-target="drinks">See drink favorites</a>
+    </div>
+   </article>
+   <article class="counter-card">
+    <img src="Cookies/IMG_3876.webp" alt="Coffee and Crumbs cookie with toppings">
+    <div class="counter-card-body">
+     <small>Fresh from the kitchen</small>
+     <h3>Crumbs</h3>
+     <p>Cookies, mini cakes, cinnamon rolls, and small-batch sweets that make people add one more item.</p>
+     <a class="counter-link" href="#crumbs" data-menu-target="crumbs">Browse the crumb case</a>
+    </div>
+   </article>
+   <article class="counter-card">
+    <img src="menu-quesadilla.webp" alt="Salvadoran quesadilla with sesame seeds">
+    <div class="counter-card-body">
+     <small>Worth the detour</small>
+     <h3>Salvadoran specials</h3>
+     <p>Traditional quesadilla, peperechas, and favorites that make the menu feel like Coffee &amp; Crumbs.</p>
+     <a class="counter-link" href="#salvadoran" data-menu-target="salvadoran">View Salvadoran favorites</a>
+    </div>
+   </article>
   </div>
  </div>
 </section>
@@ -424,10 +861,26 @@
      <p>Lattes inspired by Salvadoran flavors plus a few cozy cafe classics.</p>
     </div>
    </div>
+   <article class="section-spotlight">
+    <div class="section-spotlight-media">
+     <img src="Drinks/IMG_3910.webp" alt="Coffee and Crumbs iced drinks on display">
+    </div>
+    <div class="section-spotlight-copy">
+     <small>Most ordered</small>
+     <h3>Sweet, creamy coffees made for pickup, not rushed gas-station cups.</h3>
+     <p>Horchata, banana cream, fresas con crema, and seasonal ideas all live here. Everything is built to feel like a treat you planned for, not an afterthought.</p>
+     <div class="section-badges">
+      <span>Hot or iced</span>
+      <span>Milk swaps available</span>
+      <span>Seasonal cold foam add-ons</span>
+     </div>
+    </div>
+   </article>
    <div class="menu-grid stagger-children" id="drinksGrid">
     <article class="menu-card">
      <div class="menu-card-body">
-      <h3>Latte's</h3>
+      <span class="menu-card-label">Core drinks</span>
+      <h3>Lattes</h3>
       <p>All available hot or iced.</p>
       <div class="menu-items">
        <div class="menu-item">Fresas con Crema Latte</div>
@@ -441,6 +894,7 @@
 
     <article class="menu-card">
      <div class="menu-card-body">
+      <span class="menu-card-label">Choose your base</span>
       <h3>Milk Options</h3>
       <p>Pick the base that works best for you.</p>
       <div class="menu-items">
@@ -453,7 +907,9 @@
 
     <article class="menu-card">
      <div class="menu-card-body">
-      <h3>Matcha's &amp; Chai's</h3>
+      <span class="menu-card-label">Non-coffee favorites</span>
+      <h3>Matchas &amp; Chais</h3>
+      <p>Great if you want something cozy without espresso.</p>
       <div class="menu-items">
        <div class="menu-item">Iced matcha</div>
        <div class="menu-item">Strawberry banana matcha</div>
@@ -464,6 +920,7 @@
 
     <article class="menu-card">
      <div class="menu-card-body">
+      <span class="menu-card-label">Add-on</span>
       <h3>Cold Foam Options</h3>
       <p>Add a little extra on top.</p>
       <div class="menu-items">
@@ -476,7 +933,8 @@
 
     <article class="menu-card">
      <div class="menu-card-body">
-      <h3>Juice's &amp; Lemonade's</h3>
+      <span class="menu-card-label">Refreshers</span>
+      <h3>Juices &amp; Lemonades</h3>
       <p>Refreshing options, great for kids or non-coffee drinkers.</p>
       <div class="menu-items">
        <div class="menu-item">Rotating fresh juices</div>
@@ -497,10 +955,27 @@
      <p>Small-batch sweets baked in our home kitchen.</p>
     </div>
    </div>
+   <article class="section-spotlight">
+    <div class="section-spotlight-media">
+     <img src="Cookies/IMG_3876.webp" alt="Fresh Coffee and Crumbs cookie with drizzle and topping">
+    </div>
+    <div class="section-spotlight-copy">
+     <small>The crumb case</small>
+     <h3>The side of the menu that makes people add one more thing before checkout.</h3>
+     <p>Cookies, mini cakes, and rotating bakes keep this section feeling personal. It should feel like the display case you look at twice before you leave.</p>
+     <div class="section-badges">
+      <span>Rotating flavors</span>
+      <span>Mini cakes for gifting</span>
+      <span>Weekend-worthy sweets</span>
+     </div>
+    </div>
+   </article>
    <div class="menu-grid stagger-children" id="crumbsGrid">
     <article class="menu-card">
      <div class="menu-card-body">
+      <span class="menu-card-label">Celebration-ready</span>
       <h3>Mini cakes</h3>
+      <p>Small, cute, and easy to bring to birthdays, pickups, or coffee dates.</p>
       <div class="menu-items">
        <div class="menu-item">Strawberry mini cakes</div>
        <div class="menu-item">Cookies &amp; cream mini cakes</div>
@@ -510,7 +985,9 @@
     </article>
     <article class="menu-card">
      <div class="menu-card-body">
+      <span class="menu-card-label">Best with coffee</span>
       <h3>Cookies</h3>
+      <p>Generous toppings, drizzles, and flavors that feel more bakery than grocery-store tray.</p>
       <div class="menu-items">
        <div class="menu-item">Assorted cookies</div>
        <div class="menu-item">Rotating flavors</div>
@@ -519,7 +996,9 @@
     </article>
     <article class="menu-card">
      <div class="menu-card-body">
+      <span class="menu-card-label">Fresh extras</span>
       <h3>More crumbs</h3>
+      <p>Ask what came out of the kitchen this week.</p>
       <div class="menu-items">
        <div class="menu-item">Muffins</div>
        <div class="menu-item">Cinnamon rolls</div>
@@ -538,10 +1017,27 @@
      <p>Family recipes from El Salvador that pair perfectly with coffee or weekend brunch.</p>
     </div>
    </div>
+   <article class="section-spotlight">
+    <div class="section-spotlight-media">
+     <img src="menu-quesadilla.webp" alt="Round Salvadoran quesadilla baked by Coffee and Crumbs">
+    </div>
+    <div class="section-spotlight-copy">
+     <small>What sets the menu apart</small>
+     <h3>The Salvadoran side of the menu gives the whole brand its point of view.</h3>
+     <p>This is where the order starts feeling specific to Coffee &amp; Crumbs. Add something traditional to the coffee and pastries, and the whole pickup feels more memorable.</p>
+     <div class="section-badges">
+      <span>Traditional quesadilla</span>
+      <span>Sweet breads and pastries</span>
+      <span>Great for sharing</span>
+     </div>
+    </div>
+   </article>
    <div class="menu-grid stagger-children" id="salvadoranGrid">
     <article class="menu-card">
      <div class="menu-card-body">
+      <span class="menu-card-label">Classic order</span>
       <h3>Quesadillas</h3>
+      <p>Soft, lightly sweet, and finished with sesame on top.</p>
       <div class="menu-items">
        <div class="menu-item">Traditional Salvadoran quesadillas</div>
        <div class="menu-item">Mini quesadillas (perfect for sharing)</div>
@@ -550,7 +1046,9 @@
     </article>
     <article class="menu-card">
      <div class="menu-card-body">
-      <h3>Peperechas</h3>
+      <span class="menu-card-label">Rotating favorites</span>
+      <h3>Peperechas &amp; more</h3>
+      <p>Regional sweets and extras worth asking about when the menu updates.</p>
       <div class="menu-items">
        <div class="menu-item">Peperechas</div>
        <div class="menu-item">Other rotating Salvadoran sweets</div>
@@ -565,8 +1063,12 @@
    <div class="container">
     <div class="order-section-header">
      <div class="overline">Order Now</div>
-     <h2>Order Without Leaving This Page</h2>
-     <p>Ready to order? See live availability and pricing on our Square site.</p>
+     <h2>Use the live pickup menu when you&apos;re ready to check out.</h2>
+     <p>Preview the menu here, then use the live Square experience below for real-time availability, customizations, and pickup checkout.</p>
+     <div class="order-helper-links">
+      <a href="/catering.html#inquiry-form">Need a larger order?</a>
+      <a href="https://www.instagram.com/coffeeandcrumbsva/" target="_blank" rel="noopener">Watch for new drops</a>
+     </div>
     </div>
     <div class="mobile-order-card">
      <strong>Ordering on a phone?</strong>
@@ -594,7 +1096,7 @@
   <div class="footer-brand-text">Coffee &amp; Crumbs &middot; Manassas, VA</div>
   <div class="footer-links">
    <a href="/">Home</a>
-   <a href="#drinks">Menu</a>
+   <a href="#drinks" data-menu-target="drinks">Menu</a>
    <a href="#order-online">Order</a>
    <a href="/catering.html#inquiry-form">Catering / Events</a>
    <a href="/#connect">Contact</a>
@@ -644,6 +1146,13 @@
   salvadoran: document.getElementById('salvadoran'),
  };
 
+ function scrollToSection(el, extraOffset = 18) {
+  if (!el) return;
+  const offset = navbar.offsetHeight + extraOffset;
+  const top = el.getBoundingClientRect().top + window.scrollY - offset;
+  window.scrollTo({ top, behavior: 'smooth' });
+ }
+
  function showSection(key) {
   Object.entries(sections).forEach(([name, el]) => {
    if (!el) return;
@@ -665,8 +1174,8 @@
    if (!target || !sections[target]) return;
    e.preventDefault();
    showSection(target);
-   const top = document.querySelector('.menu-hero').offsetTop + 10;
-   window.scrollTo({ top, behavior: 'smooth' });
+   window.history.replaceState(null, '', '#' + target);
+   scrollToSection(sections[target]);
   });
  });
 
@@ -677,8 +1186,8 @@
    if (!target || !sections[target]) return;
    e.preventDefault();
    showSection(target);
-   const top = document.querySelector('.menu-hero').offsetTop + 10;
-   window.scrollTo({ top, behavior: 'smooth' });
+   window.history.replaceState(null, '', '#' + target);
+   scrollToSection(sections[target]);
   });
  });
 
@@ -686,6 +1195,9 @@
  const hash = window.location.hash.replace('#', '');
  if (hash && sections[hash]) {
   showSection(hash);
+  window.addEventListener('load', () => {
+   scrollToSection(sections[hash], 12);
+  });
  } else {
   showSection('drinks');
  }
