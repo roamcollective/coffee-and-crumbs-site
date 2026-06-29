@@ -1204,10 +1204,6 @@
    color: var(--muted);
   }
 
-  .connect-actions {
-   margin: 20px 0 8px;
-  }
-
   .contact-list {
    display: grid;
    gap: 16px;
@@ -1277,11 +1273,15 @@
   }
 
   .inquiry-wrap {
-   margin-top: 26px;
+   margin-top: 0;
    display: grid;
    grid-template-columns: 0.92fr 1.08fr;
    gap: 22px;
    align-items: start;
+  }
+
+  .inquiry-section-heading {
+   margin: 34px 0 26px;
   }
 
   .inquiry-copy h3,
@@ -1959,11 +1959,8 @@
      <div class="connect-grid">
       <div class="paper-card connect-panel" data-reveal>
        <span class="eyebrow">Contact</span>
-       <h3>Find us, follow us, or ask about a larger order.</h3>
-       <p>Everything you need to order ahead, ask a question, or plan something bigger is right here.</p>
-       <div class="connect-actions">
-        <a class="btn btn-secondary" href="#inquiry-form">Ask about a larger order</a>
-       </div>
+       <h3>Find us, follow us, or place a pickup order.</h3>
+       <p>Everything you need to order ahead, ask a question, or keep up with new menu drops is right here.</p>
        <div class="contact-list">
         <div class="contact-item">
           <strong>Pickup Area</strong>
@@ -1997,11 +1994,17 @@
       </div>
      </div>
 
+     <div class="section-heading inquiry-section-heading" data-reveal>
+      <span class="eyebrow">Larger Orders</span>
+      <h3>Event coming up?</h3>
+      <p>Use the form below for office coffee runs, birthdays, baby showers, brunch tables, and custom dessert pickups. Tell us the basics and Coffee &amp; Crumbs will follow up by email.</p>
+     </div>
+
      <div class="inquiry-wrap" data-reveal>
       <div class="paper-card inquiry-copy">
-       <span class="eyebrow">Larger Orders</span>
-       <h3>Planning a coffee run, dessert pickup, or something bigger?</h3>
-       <p>Use this form for office mornings, birthdays, baby showers, brunch tables, and custom dessert spreads. Share the basics and Coffee &amp; Crumbs will follow up by email with availability and next steps.</p>
+       <span class="eyebrow">What to include</span>
+       <h3>Share the basics and we&apos;ll build around it.</h3>
+       <p>Let us know what you&apos;re planning, how many people you&apos;re feeding, and the kind of spread you have in mind. We&apos;ll reply with availability, pickup details, and menu guidance.</p>
        <ul class="inquiry-list">
         <li>Tell us the date, guest count, and what you&apos;d like to serve.</li>
         <li>Every inquiry goes straight to <strong>coffeeandcrumbsva@gmail.com</strong>.</li>
@@ -2010,13 +2013,13 @@
       </div>
 
       <form class="contact-form" id="inquiry-form" action="https://formsubmit.co/coffeeandcrumbsva@gmail.com" method="POST">
-       <input type="hidden" name="_subject" value="New Coffee & Crumbs larger order inquiry">
+       <input type="hidden" name="_subject" value="New Coffee & Crumbs event inquiry">
        <input type="hidden" name="_next" value="https://coffeeandcrumbsva.com/?submitted=true#inquiry-form">
        <input type="hidden" name="_captcha" value="false">
        <input type="hidden" name="_template" value="table">
        <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off">
 
-       <h3>Ask about a larger order</h3>
+       <h3>Event inquiry form</h3>
        <p class="contact-form-intro">Fill this out and Coffee &amp; Crumbs will reply by email with availability, pickup details, and menu recommendations.</p>
        <div class="form-success" id="formSuccess">Thanks for reaching out. Your inquiry was sent and the team will follow up at the email you provided.</div>
 
