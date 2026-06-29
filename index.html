@@ -764,9 +764,23 @@
    object-fit: cover;
   }
 
-  .city-card figcaption {
-   padding: 16px 6px 4px;
-   font-size: 0.94rem;
+  .story-callout {
+   margin-top: 16px;
+   padding: 18px 8px 6px;
+   border-top: 1px solid rgba(42, 24, 20, 0.10);
+  }
+
+  .story-callout h3 {
+   margin: 12px 0 10px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: clamp(2rem, 2.7vw, 3rem);
+   line-height: 0.95;
+   letter-spacing: -0.03em;
+   max-width: 11ch;
+  }
+
+  .story-callout p {
+   margin: 0;
    color: var(--muted);
   }
 
@@ -1943,13 +1957,12 @@
        <div class="paper-card city-card">
         <figure>
          <img src="Cakes/IMG_3317.webp" alt="Chocolate mini cake from Coffee and Crumbs">
-         <figcaption>From everyday pickup orders to party tables, everything is made to feel personal, fresh, and worth sharing.</figcaption>
         </figure>
-       </div>
-       <div class="paper-card">
-        <span class="eyebrow">Made to share</span>
-        <h3 style="margin: 14px 0 10px; font-family: 'Cormorant Garamond', serif; font-size: 2.3rem; line-height: 0.95;">Coffee for the run. Pastries for the house.</h3>
-        <p style="margin: 0; color: var(--muted);">Whether you&apos;re grabbing one latte or planning a whole dessert spread, the goal stays the same: simple ordering and flavors people remember.</p>
+        <div class="story-callout">
+         <span class="eyebrow">Made to share</span>
+         <h3>Coffee for the run. Pastries for the house.</h3>
+         <p>From everyday pickup orders to party tables, everything is made to feel personal, fresh, and worth sharing.</p>
+        </div>
        </div>
       </div>
      </div>
